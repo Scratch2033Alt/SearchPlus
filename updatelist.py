@@ -45,7 +45,7 @@ TOR_PROXY = {
     'http': 'socks5h://127.0.0.1:9050',
     'https': 'socks5h://127.0.0.1:9050'
 }
-TOR_CONTROL_PORT = 9051
+TOR_CONTROL_PORT = 5090
 TOR_CONTROL_PASSWORD = None  # Set if you have a password
 
 # --- Global Data Structures (Thread-Safe) ---
