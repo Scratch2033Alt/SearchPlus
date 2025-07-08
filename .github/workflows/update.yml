@@ -24,7 +24,7 @@ jobs:
         run: |
           sudo apt install python3 python3-pip tor -y
           pip3 install requests bs4 tqdm stem fake_useragent PySocks
-          killall tor
+          sudo killall tor || echo "No tor is running"
           cat > torrc <<EOF
           SocksPort 9052
           ControlPort 5090
