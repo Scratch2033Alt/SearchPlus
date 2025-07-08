@@ -34,7 +34,7 @@ def count_newlines(filepath):
         return "Error: File not found."
     except Exception as e:
         return f"An error occurred: {e}"
-TARGET_WEBSITE_LIMIT = count_newlines("seed.txt") + 2000
+TARGET_WEBSITES_LIMIT = count_newlines("seed.txt") + 2000
 # Output control
 CRAWLED_PRINT_INTERVAL = 5 # Print crawled count every 5 pages
 CLEAR_OUTPUT_INTERVAL = 25 # Clear output every 25 crawled pages
@@ -385,19 +385,18 @@ def make_request(url, timeout=30):
 def main():
     global tqdm_bar, domain_queue_for_main, USER_AGENT, crawled_page_count
 
-    try:
-        os.makedirs('/content/crawlergit', exist_ok=True)
-        os.chdir('/content/crawlergit')
-        print("Changed working directory to /content/crawlergit")
-    except OSError as e:
-        print(f"Error changing directory to /content/crawlergit: {e}")
 
 
     # Initialize files
     if not os.path.exists(SEED_FILE):
+        import random
+
+        websites = ["wikipedia.org", "bing.com", "github.com", "reddit.com"]
+        random_website = random.choice(websites) + "\n"
+
         with open(SEED_FILE, 'w') as f:
-            f.write("https://www.google.com/\n")
-        print(f"'{SEED_FILE}' created with a default google URL.")
+            f.write(random_website)
+        print(f"'{SEED_FILE}' created with a {random_website} URL.")
 
     if not os.path.exists(WEBPAGES_FILE):
         open(WEBPAGES_FILE, 'w').close()
