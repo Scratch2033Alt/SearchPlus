@@ -20,7 +20,6 @@ import sys
 # --- Configuration ---
 SEED_FILE = "seed.txt"
 WEBPAGES_FILE = "WEBPAGES.TXT"
-TARGET_WEBSITES_LIMIT = 2000  # Stop crawling after discovering this many unique root domains
 USER_AGENT = "SearchPlus-Crawler_by_Scratch2033 " + UserAgent().random # For spoofing Cloudflare CAPTCHAs
 MAX_THREADS_PER_DOMAIN = 5
 MAX_GLOBAL_CRAWL_THREADS = 10
