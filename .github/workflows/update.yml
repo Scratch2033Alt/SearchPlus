@@ -22,13 +22,12 @@ jobs:
 
       - name: Run update script
         run: |
-          sudo apt install python3 tor -y
-          python3 -m ensurepip
+          sudo apt install python3 python3-pip tor -y
           pip3 install requests bs4 tqdm stem fake_useragent PySocks
           service tor start
           python3 updatelist.py
 
-      - name: Run a multi-line script
+      - name: Commit to repo
         run: |
           sudo apt install git -y
           git config user.email "204460195+Scratch2033Alt@users.noreply.github.com"
