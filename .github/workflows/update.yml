@@ -24,8 +24,9 @@ jobs:
         run: |
           sudo apt install python3 python3-pip tor -y
           pip3 install requests bs4 tqdm stem fake_useragent PySocks
+          killall tor
           cat > torrc <<EOF
-          SocksPort 9050
+          SocksPort 9052
           ControlPort 5090
           CookieAuthentication 0
           EOF
