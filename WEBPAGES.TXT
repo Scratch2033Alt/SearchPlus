@@ -10,14 +10,12 @@ http://www.w3.org/2002/07/owl
 http://www.w3.org/2003/g/data-view
 http://www.w3.org/Consortium/Legal/copyright-software
 http://www.w3.org/TR/.
-http://www.w3.org/TR/html4/loose.dtd
 http://www.w3.org/TR/owl2-mapping-to-rdf/
 http://www.w3.org/TR/owl2-rdf-based-semantics/
 http://www.w3.org/TR/owl2-rdf-based-semantics/.
 http://www.w3.org/TR/owl2-syntax/
 http://www.w3.org/TR/rdf-plain-literal/
 http://www.w3.org/TR/rdf11-concepts/
-http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd
 http://www.w3.org/XML/1998/namespace
 https://donate.wikimedia.org/
 https://en.wikipedia.org/
