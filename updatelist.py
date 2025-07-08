@@ -41,8 +41,8 @@ CLEAR_OUTPUT_INTERVAL = 25 # Clear output every 25 crawled pages
 
 # TOR Configuration
 TOR_PROXY = {
-    'http': 'socks5h://127.0.0.1:9050',
-    'https': 'socks5h://127.0.0.1:9050'
+    'http': 'socks5h://127.0.0.1:9052',
+    'https': 'socks5h://127.0.0.1:9052'
 }
 TOR_CONTROL_PORT = 5090
 TOR_CONTROL_PASSWORD = None  # Set if you have a password
