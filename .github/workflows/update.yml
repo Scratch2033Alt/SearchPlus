@@ -24,7 +24,12 @@ jobs:
         run: |
           sudo apt install python3 python3-pip tor -y
           pip3 install requests bs4 tqdm stem fake_useragent PySocks
-          sudo tor --ControlPort 5090 --CookieAuthentication 0
+          cat > torrc <<EOF
+          SocksPort 9050
+          ControlPort 5090
+          CookieAuthentication 0
+          EOF
+          sudo tor -f torrc & 
           sudo netstat -tulnp | grep tor
           python3 updatelist.py
 
