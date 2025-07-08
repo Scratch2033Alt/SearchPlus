@@ -1,0 +1,607 @@
+<!doctype html>
+<html dir="ltr" lang="en" class="no-js">
+<head>
+    <title>E-commerce | Business Ecosystems | W3C</title>
+
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="home" href="https://www.w3.org/"/>
+<link rel="icon" type="image/png" href="https://www.w3.org/assets/logos/w3c/favicon-32.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://www.w3.org/assets/logos/w3c/favicon-180.png"/>
+
+<link rel="stylesheet" href="https://www.w3.org/assets/website-2021/styles/core.css?ver=1.4" media="screen"/>
+
+<!--
+CSS Mustard Cut
+Print (Edge doesn't apply to print otherwise)
+Edge, Chrome 39+, Opera 26+, Safari 9+, iOS 9+, Android ~5+, Android UCBrowser ~11.8+
+FF 47+
+-->
+<link rel="stylesheet" id="advanced-stylesheet"
+      href="https://www.w3.org/assets/website-2021/styles/advanced.css?ver=1.4" media="
+            only print,
+            only all and (pointer: fine), only all and (pointer: coarse), only all and (pointer: none),
+            only all and (min--moz-device-pixel-ratio:0) and (display-mode:browser), (min--moz-device-pixel-ratio:0) and (display-mode:fullscreen)
+        ">
+<link rel="stylesheet" href="https://www.w3.org/assets/website-2021/styles/print.css" media="print"/>
+
+<script src="https://www.w3.org/assets/website-2021/js/libraries/fontfaceobserver.js"></script>
+
+<script>
+    var myFont = new FontFaceObserver('Noto Sans');
+
+    Promise.all([myFont.load()]).then(function () {
+        document.documentElement.className += " fonts-loaded";
+    });
+
+    (function () {
+        var linkEl = document.getElementById('advanced-stylesheet');
+        if (window.matchMedia && window.matchMedia(linkEl.media).matches) {
+            var script = document.createElement('script');
+            script.src = 'https://www.w3.org/assets/website-2021/js/main.js?ver=1.4';
+            script.defer = true;
+            document.querySelector('head').appendChild(script);
+            (function (H) {
+                H.className = H.className.replace(/\bno-js\b/, 'js')
+            })(document.documentElement);
+        }
+    })();
+</script>
+
+
+    <meta name="description" content="The page introduces the concept of payments and commerce applied to the web, and what is done for them at the Web Consortium."/>
+    <meta name="thumbnail" content="https://www.w3.org/assets/website-2021/images/w3c-opengraph-image.png"/>
+    <meta property="og:url" content="https://www.w3.org/ecosystems/e-commerce/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="E-commerce"/>
+    <meta property="og:image" content="https://www.w3.org/assets/website-2021/images/w3c-opengraph-image.png"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:description" content="The page introduces the concept of payments and commerce applied to the web, and what is done for them at the Web Consortium."/>
+    <meta property="og:site_name" content="W3C"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="w3c"/>
+    <meta name="twitter:url" content="https://www.w3.org/ecosystems/e-commerce/"/>
+    <meta name="twitter:title" content="E-commerce"/>
+    <meta name="twitter:description" content="The page introduces the concept of payments and commerce applied to the web, and what is done for them at the Web Consortium."/>
+    <meta name="twitter:image" content="https://www.w3.org/assets/website-2021/images/w3c-opengraph-image.png"/>
+    
+        
+        <script>
+        var membersData = [{"name":"1Password","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/131682.png?x-version=1"},{"name":"360","logo":null},{"name":"Adobe","logo":null},{"name":"Airbnb Inc","logo":null},{"name":"Akamai Technologies","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/61566.png?x-version=3"},{"name":"Amazon","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/108617.png?x-version=4"},{"name":"American Express Company","logo":null},{"name":"Ant Group Co., Ltd.","logo":null},{"name":"Apeleg Limited","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/140493.png?x-version=6"},{"name":"Apple Inc.","logo":null},{"name":"Bitwarden","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/139249.png?x-version=2"},{"name":"Block, Inc.","logo":null},{"name":"Brave Software Inc.","logo":null},{"name":"British Broadcasting Corporation","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/1120.png?x-version=6"},{"name":"CANTON CONSULTING","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/69906.png?x-version=1"},{"name":"Capital One Financial","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/98428.png?x-version=1"},{"name":"Center for Democracy and Technology","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/9848.png?x-version=3"},{"name":"Cisco","logo":null},{"name":"Conexxus","logo":null},{"name":"CRITAC","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/102975.png?x-version=1"},{"name":"Criteo","logo":null},{"name":"Defense Information Systems Agency","logo":null},{"name":"Discover Financial Services LLC","logo":null},{"name":"Duck Duck Go, Inc.","logo":null},{"name":"Entersekt","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/116845.png?x-version=4"},{"name":"eyeo GmbH","logo":null},{"name":"Fastly","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/71673.png?x-version=1"},{"name":"FIME","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/102258.png?x-version=1"},{"name":"Google LLC","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/35662.png?x-version=1"},{"name":"HM Government","logo":null},{"name":"Huawei","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/49753.png?x-version=2"},{"name":"HUMAN","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/82663.png?x-version=2"},{"name":"IAB Technology Laboratory, Inc.","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/70941.png?x-version=3"},{"name":"IBM Corporation","logo":null},{"name":"Ignite Retail Technology","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/151838.png?x-version=1"},{"name":"Interledger Foundation","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/134143.png?x-version=1"},{"name":"JCB CO., LTD.","logo":null},{"name":"Jiangsu TPBlock Technology Co., Ltd. \uff08\u6c5f\u82cf\u7b2c\u4e09\u6781\u533a\u5757\u94fe\u79d1\u6280\u6709\u9650\u516c\u53f8\uff09","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/131154.png?x-version=3"},{"name":"KDDI CORPORATION","logo":null},{"name":"Keio University","logo":null},{"name":"Knowbility","logo":null},{"name":"LY Corporation","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/54991.png?x-version=1"},{"name":"Mastercard Incorporated","logo":null},{"name":"Mattr Limited","logo":null},{"name":"Merchant Advisory Group","logo":null},{"name":"Meta","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/46877.png?x-version=1"},{"name":"Microsoft Corporation","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/1066.png?x-version=1"},{"name":"MITRE Corporation","logo":null},{"name":"Mozilla Foundation","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/35507.png?x-version=1"},{"name":"National Institute of Standards and Technology (NIST)","logo":null},{"name":"Navy Federal Credit Union","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/125874.png?x-version=3"},{"name":"NCSC","logo":null},{"name":"Netcetera","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/150912.png?x-version=2"},{"name":"Netflix Inc.","logo":null},{"name":"NextRoll","logo":null},{"name":"Nippon Telegraph & Telephone Corp. (NTT)","logo":null},{"name":"Nok Nok Labs","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/84446.png?x-version=3"},{"name":"Okta","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/131353.png?x-version=1"},{"name":"Oracle Corporation","logo":null},{"name":"PayPal","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/83781.png?x-version=1"},{"name":"Ping Identity","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/108522.png?x-version=3"},{"name":"Rakuten Group, Inc.","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/47545.png?x-version=4"},{"name":"Samsung Electronics Co., Ltd.","logo":null},{"name":"Shopify","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/79706.png?x-version=1"},{"name":"Spherical Cow Consulting","logo":null},{"name":"Spruce Systems, Inc.","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/126165.png?x-version=2"},{"name":"The Washington Post","logo":null},{"name":"Visa","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/76927.png?x-version=1"},{"name":"WebDINO Japan","logo":null},{"name":"Yahoo Holdings Inc.","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/133378.png?x-version=3"},{"name":"Yubico","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/86485.png?x-version=3"}];
+    </script>
+    
+                        <link href="/ecosystems/e-commerce/feed/" title="W3C - E-commerce Ecosystem" rel="alternate" type="application/rss+xml" />
+            
+    </head>
+
+<body class="ecosystem">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="grid-wrap">
+    <div class="wrap">
+        <header class="global-header">
+            <span role="status" aria-live="polite"></span>
+                                        
+                                            <nav id="lang-nav" aria-label="Language options">
+        <div class="l-center">
+            <div class="l-cluster">
+                <ul class="clean-list" role="list">
+                        <li><a href="https://www.w3.org/ja/" hreflang="ja" lang="ja">日本語ホームページ<span class="visuallyhidden" lang="en">Japanese website</span></a></li>
+                        <li><a href="https://www.w3.org/zh-hans/" hreflang="zh-hans" lang="zh-hans">简体中文首页<span class="visuallyhidden" lang="en">Chinese website</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                                        <nav id="global-nav" aria-label="Main">
+    <div class="global-nav__inner l-center">
+        <a class="logo-link" href="https://www.w3.org/" hreflang="en">
+            <span class="logo">
+                <img src="https://www.w3.org/assets/logos/w3c/w3c-no-bars.svg" alt="W3C" role="img"/>
+            </span>
+            <span class="visuallyhidden">Visit the W3C homepage</span>
+        </a>
+        <button type="button" class="button button--ghost with-icon--after with-icon--larger" data-trigger="mobile-nav"
+                style="display: none;"></button>
+        <ul data-component="nav-double-intro">
+                <li class="top-nav-item has-children">
+                    <a href="https://www.w3.org/standards/" class="nav-link">Standards</a>
+                    <div class="nav__submenu" data-nav="submenu" style="display: none;">
+                        <div class="l-center">
+                            <div class="nav__submenu__intro">
+                                <h2 class="nav__submenu__intro__heading">Standards</h2>
+                                <div class="nav__submenu__intro__text">
+                                        <p>Understand the various specifications, their maturity levels on the web standards track, and their adoption.</p>
+                                        <a href="https://www.w3.org/standards/">Explore web standards</a>
+                                </div>
+                            </div>
+                            <ul>
+                                        <li><a href="https://www.w3.org/standards/about/">About W3C web standards</a></li>
+                                        <li><a href="https://www.w3.org/TR/">W3C standards &amp; drafts</a></li>
+                                        <li><a href="https://www.w3.org/standards/types/">Types of documents W3C publishes</a></li>
+                                        <li><a href="https://www.w3.org/translations/">Translations of W3C standards &amp; drafts</a></li>
+                                        <li><a href="https://www.w3.org/standards/review/">Reviews &amp; public feedback</a></li>
+                                        <li><a href="https://www.w3.org/liaisons/">Liaisons</a></li>
+                                        <li><a href="https://www.w3.org/get-involved/promote/">Promote web standards</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="top-nav-item has-children">
+                    <a href="https://www.w3.org/groups/" class="nav-link">Groups</a>
+                    <div class="nav__submenu" data-nav="submenu" style="display: none;">
+                        <div class="l-center">
+                            <div class="nav__submenu__intro">
+                                <h2 class="nav__submenu__intro__heading">Groups</h2>
+                                <div class="nav__submenu__intro__text">
+                                        <p>A variety of groups develop Web Standards, guidelines, or supporting materials.</p>
+                                        <a href="https://www.w3.org/groups/">About W3C groups</a>
+                                </div>
+                            </div>
+                            <ul>
+                                        <li><a href="https://www.w3.org/groups/wg/">Working Groups</a></li>
+                                        <li><a href="https://www.w3.org/groups/ig/">Interest Groups</a></li>
+                                        <li><a href="https://www.w3.org/groups/cg/">Community Groups</a></li>
+                                        <li><a href="https://www.w3.org/groups/bg/">Business Groups</a></li>
+                                        <li><a href="https://www.w3.org/groups/other/tag/">Technical Architecture Group</a></li>
+                                        <li><a href="https://www.w3.org/invited-experts/">Invited Experts</a></li>
+                                        <li><a href="https://www.w3.org/guide/">Participant guidebook</a></li>
+                                        <li><a href="https://www.w3.org/about/positive-work-environment/">Positive work environment</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="top-nav-item has-children">
+                    <a href="https://www.w3.org/get-involved/" class="nav-link">Get involved</a>
+                    <div class="nav__submenu" data-nav="submenu" style="display: none;">
+                        <div class="l-center">
+                            <div class="nav__submenu__intro">
+                                <h2 class="nav__submenu__intro__heading">Get involved</h2>
+                                <div class="nav__submenu__intro__text">
+                                        <p>W3C works at the nexus of core technology, industry needs, and societal needs.</p>
+                                        <a href="https://www.w3.org/get-involved/">Find ways to get involved</a>
+                                </div>
+                            </div>
+                            <ul>
+                                        <li><a href="https://www.w3.org/ecosystems/">Browse our work by industry</a></li>
+                                        <li><a href="https://www.w3.org/membership/">Become a Member</a></li>
+                                        <li><a href="https://www.w3.org/Member/">Member Home (restricted)</a></li>
+                                        <li><a href="https://www.w3.org/email/">Mailing lists</a></li>
+                                        <li><a href="https://www.w3.org/donate/">Make a donation</a></li>
+                                        <li><a href="https://www.w3.org/sponsor/">Sponsor an event</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="top-nav-item has-children">
+                    <a href="https://www.w3.org/resources/" class="nav-link">Resources</a>
+                    <div class="nav__submenu" data-nav="submenu" style="display: none;">
+                        <div class="l-center">
+                            <div class="nav__submenu__intro">
+                                <h2 class="nav__submenu__intro__heading">Resources</h2>
+                                <div class="nav__submenu__intro__text">
+                                        <p>Master Web fundamentals, use our developer tools, or contribute code.</p>
+                                        <a href="https://www.w3.org/resources/">Learn from W3C resources</a>
+                                </div>
+                            </div>
+                            <ul>
+                                        <li><a href="https://www.w3.org/developers/">Developers</a></li>
+                                        <li><a href="https://www.w3.org/developers/tools/">Validators &amp; tools</a></li>
+                                        <li><a href="https://www.w3.org/WAI/fundamentals/">Accessibility fundamentals</a></li>
+                                        <li><a href="https://www.w3.org/International/i18n-drafts/nav/about">Internationalization</a></li>
+                                        <li><a href="https://www.w3.org/translations/">Translations of W3C standards and drafts</a></li>
+                                        <li><a href="https://www.w3.org/policies/code-of-conduct/">Code of conduct</a></li>
+                                        <li><a href="https://www.w3.org/reports/">Reports</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="top-nav-item has-children">
+                    <a href="https://www.w3.org/news-events/" class="nav-link">News &amp; events</a>
+                    <div class="nav__submenu" data-nav="submenu" style="display: none;">
+                        <div class="l-center">
+                            <div class="nav__submenu__intro">
+                                <h2 class="nav__submenu__intro__heading">News &amp; events</h2>
+                                <div class="nav__submenu__intro__text">
+                                        <p>Recent content across news, blogs, press releases, media; upcoming events.</p>
+                                        <a href="https://www.w3.org/news-events/">Explore news &amp; events</a>
+                                </div>
+                            </div>
+                            <ul>
+                                        <li><a href="https://www.w3.org/news/">News</a></li>
+                                        <li><a href="https://www.w3.org/blog/">Blog</a></li>
+                                        <li class="break-after"><a href="https://www.w3.org/press-releases/">Press releases</a></li>
+                                        <li><a href="https://www.w3.org/about/press-media/">Press &amp; media</a></li>
+                                        <li><a href="https://www.w3.org/events/">Events</a></li>
+                                        <li><a href="https://www.w3.org/news-events/w3c-tpac/">Annual W3C Conference (TPAC)</a></li>
+                                        <li><a href="https://www.w3.org/policies/code-of-conduct/">Code of conduct</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="top-nav-item has-children">
+                    <a href="https://www.w3.org/about/" class="nav-link">About</a>
+                    <div class="nav__submenu" data-nav="submenu" style="display: none;">
+                        <div class="l-center">
+                            <div class="nav__submenu__intro">
+                                <h2 class="nav__submenu__intro__heading">About</h2>
+                                <div class="nav__submenu__intro__text">
+                                        <p>Understand our values and principles, learn our history, look into our policies, meet our people.</p>
+                                        <a href="https://www.w3.org/about/">Find out more about us</a>
+                                </div>
+                            </div>
+                            <ul>
+                                        <li><a href="https://www.w3.org/mission/">Our mission</a></li>
+                                        <li><a href="https://www.w3.org/about/leadership/">Leadership</a></li>
+                                        <li><a href="https://www.w3.org/staff/">Staff</a></li>
+                                        <li><a href="https://www.w3.org/evangelists/">Evangelists</a></li>
+                                        <li class="break-after"><a href="https://www.w3.org/careers/">Careers</a></li>
+                                        <li><a href="https://www.w3.org/about/diversity/">Diversity</a></li>
+                                        <li><a href="https://www.w3.org/about/corporation/">Corporation</a></li>
+                                        <li><a href="https://www.w3.org/sponsor/">Sponsoring W3C</a></li>
+                                        <li><a href="https://www.w3.org/about/press-media/">Media kit</a></li>
+                                        <li><a href="https://www.w3.org/contact/">Contact</a></li>
+                                        <li><a href="https://www.w3.org/policies/">Policies &amp; legal information</a></li>
+                                        <li><a href="https://www.w3.org/help/">Help</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                </li>
+            <li class="top-nav-item">
+                                                                                    <a hreflang="en" href="https://www.w3.org/help/search/" class="nav-link icon-link">
+                    <img class="icon" src="https://www.w3.org/assets/website-2021/svg/search.svg" width="24" height="24" alt aria-hidden="true"><span class="hide-at-max-width">Search</span>
+                </a>
+            </li>
+            <li class="top-nav-item">
+                <a hreflang="en" href="https://www.w3.org/users/myprofile/" id="account-login-link" class="account-login icon-link with-icon--after">
+                    My account
+                    <span class="avatar avatar--small icon"><img src="https://www.w3.org/assets/website-2021/svg/avatar.svg" width="24" height="24" alt aria-hidden="true"/></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+                    </header>
+                        
+<nav id="breadcrumb" aria-label="Breadcrumb">
+    <div class="l-center">
+        <div class="l-cluster">
+            <ol class="breadcrumbs clean-list" role="list">
+                                                                    <li><a href="/">Home</a></li>
+
+        <li><a href="/ecosystems/">Business Ecosystems</a></li>
+
+        <li><a href="/ecosystems/e-commerce/" aria-current="page">E-commerce</a></li>
+
+                            </ol>
+        </div>
+    </div>
+</nav>
+                <main id="main" >
+                                            
+
+                                
+
+                                
+
+                                
+
+                            <div class="u-full-width hero">
+    <div class="l-center">
+        <div class="l-sidebar">
+            <div>
+                <div class="not-sidebar">
+                    <h1>E-commerce</h1>
+                                                                        <nav aria-label="Translations" class="translations">
+    <div class="l-sidebar">
+        <div>
+            <div class="sidebar">
+                <span lang="en">Read this page in:</span>
+            </div>
+            <div class="not-sidebar">
+    <div class="l-cluster">
+        <ul class="clean-list translation-list">
+                            <li>
+                    <a href="/zh-hans/ecosystems/e-commerce/"
+                       hreflang="zh-Hans"
+                       lang="zh-Hans"
+                       dir="auto"
+                    >
+                        中文（简体）
+                    </a>
+                </li>
+                    </ul>
+    </div>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+                                                <p class="lead">Making payments and commerce easier and more secure on the web.</p>
+                                    </div>
+                                    <div class="sidebar">
+                        <img src="https://www.w3.org/cms-uploads/Hero-illustrations/webpayments.svg" alt/>
+                    </div>
+                            </div>
+        </div>
+    </div>
+</div>
+
+                    <section 		class="component component--fifty-fifty ">
+	<div class="image">
+									<img
+					src="https://www.w3.org/cms-uploads/payments-shutterstock_605410205-1024.png"
+					srcset="https://www.w3.org/cms-uploads/_360xAUTO_crop_center-center_none/payments-shutterstock_605410205-1024.png 360w, https://www.w3.org/cms-uploads/_580xAUTO_crop_center-center_none/payments-shutterstock_605410205-1024.png 580w, https://www.w3.org/cms-uploads/_920xAUTO_crop_center-center_none/payments-shutterstock_605410205-1024.png 920w, https://www.w3.org/cms-uploads/_1520xAUTO_crop_center-center_none/payments-shutterstock_605410205-1024.png 1520w"
+					sizes="(min-width: 48em) 50vw, 100vw"
+					loading="lazy"
+											alt=""
+									/>
+						</div>
+	<div class="component--fifty-fifty__text">
+									<h2 class="txt-earth">The web is transforming payments</h2>
+						<p>To help ensure that the Web evolves to meet new industry needs, we’re convening e-commerce companies, payment service providers, card networks, banks, browser vendors, and others to shape the way Web Payments and E-commerce are developed.</p>
+						<div class="l-box l-box--no-border l-box--no-padding">
+				<a class="button button--alt" href="https://www.w3.org/contact/">Write to us to join W3C and start contributing to the work</a>
+									<a href="/blog/wpwg/2023/04/03/web-payments-meeting-march-2023-edition/">Learn about recent W3C work in web payments (Apr. 2023)</a>
+							</div>
+						</div>
+</section>
+
+                <div class="component component--text">
+                <h2 id="focus">Our community is focusing on</h2><ul><li>Reducing cart abandonment rates.</li><li>Streamlining authentication and reducing fraud.</li><li>Fostering digital payment method innovation.</li><li>The impact of emerging regulations on Web architecture and capabilities.</li><li>Harmonization with other standards efforts such as FIDO and EMVCo.</li><li>Focusing on deliverable APIs to increase the convenience and security of Web Payments.</li><li>Increasing security across the field of payments on the web.</li><li>Gathering voices to guide the next phase of payments on the web.</li></ul>
+        </div>
+
+                <div class="u-full-width component component--group-list">
+    <div class="l-center">
+                <div class="component--group-list__intro">
+                        <h2 id="groups">Active groups</h2>
+                                    <p>These groups work to create and implement software and APIs to make web payments easier and more secure, or provide a forum for discussion and implementation of new standards, and also allow Members to discover and fix gaps in interoperability of W3C’s standards and APIs.</p>
+                    </div>
+                                <div class="component--collapsibles" data-component="collapsibles" data-anchor="no">
+                    <div>
+                <h3 data-heading="collapsibles">Web Authentication<span>Working group</span></h3>
+                <div>
+                                        The mission of the Web Authentication Working Group is to define a client-side API providing strong authentication functionality to Web Applications.
+                    <a href="https://www.w3.org/groups/wg/webauthn/">Visit the Web Authentication Working Group</a>
+                                </div>
+            </div>
+                    <div>
+                <h3 data-heading="collapsibles">Web Payments<span>Working group</span></h3>
+                <div>
+                                        The mission of the Web Payments Working Group is to make payments easier and more secure on the Web.
+                    <a href="https://www.w3.org/Payments/WG/">Visit the Web Payments Working Group</a>
+                                </div>
+            </div>
+                    <div>
+                <h3 data-heading="collapsibles">Web Payment Security<span>Interest group</span></h3>
+                <div>
+                                        The mission of the Web Payment Security Interest Group is to enhance the security and interoperability of various Web payments technologies. The group pursues its mission by creating a forum for organizations to define areas of collaboration and identify gaps between existing technical specifications in order to increase compatibility among different technologies.
+                    <a href="https://www.w3.org/securepay/">Visit the Web Payment Security Interest Group</a>
+                                </div>
+            </div>
+                    <div>
+                <h3 data-heading="collapsibles">Anti-Fraud<span>Community group</span></h3>
+                <div>
+                                        The mission of the Anti Fraud Community Group is to identify and define scenarios involving fraud and unwanted traffic, as well as to incubate and develop web features and APIs to address those scenarios while improving user security, privacy, and accessibility. Fraud and unwanted traffic can include web activity perpetrated by botnets, attackers impersonating users, and other activity that intends to harm users or compromise web services. 
+
+The group welcomes participation from anti-fraud service providers, common targets of unwanted traffic, browser vendors, web privacy advocates, web application developers, web hosting and cloud service providers, and other interested parties.
+
+The Community Group will discuss issues that server operators and anti-fraud service providers face in this area and ideas for new web features and APIs intended to be implemented in browsers or similar user agents.
+                    <a href="https://www.w3.org/community/antifraud/">Visit the Anti-Fraud Community Group</a>
+                                </div>
+            </div>
+            </div>
+            </div>
+</div>
+
+                <div class="component component--text">
+                <h2 id="join">Why join?</h2><p>Since 1994, we have been leading the World Wide Web to its full potential by developing protocols and guidelines that ensure long-term growth of the web.</p><p>By joining these groups, you have the ability to discuss and drive the standards produced by W3C. The conversations occurring in the groups concern both current and future standards, constantly aiming to make the web a better place. You have the ability to take part in guiding the future of the web.</p><h3>Our values revolve around building the web for all</h3><p>The social value of the web is that it enables human communication, commerce, and opportunities to share knowledge. One of W3C's primary goals is to make these benefits available to all people, whatever their hardware, software, network infrastructure, native language, culture, geographical location, or physical or mental ability.</p>
+        </div>
+
+                            <div class="component component--activity u-full-width">
+    <div class="l-center">
+        <div class="component component--columns component--columns--images">
+                            <h2 class="txt-earth" id="activities">Recent activities in the E-commerce and Web Payments community</h2>
+                                        <p>Find out more via recent stories, news, workshops, talks or events.</p>
+                        <ul class="clean-list" role="presentation">
+                                                                <li>
+    <div class="card" data-component="card">
+        <div class="card__text">
+            <h3 class="card__heading">
+                <a href="/press-releases/2023/spc-cr/" class="card__link">W3C advances technology to streamline payment authentication</a>
+            </h3>
+                            <p>
+                    Secure Payment Confirmation (SPC), published as W3C Candidate Recommendation, is feature-complete and ready for further implementations.
+                </p>
+                                        <p class="txt-pluto">
+                    Press release
+                </p>
+                    </div>
+            </div>
+</li>
+
+                                                <li>
+    <div class="card" data-component="card">
+        <div class="card__text">
+            <h3 class="card__heading">
+                <a href="/news/2023/call-for-implementations-secure-payment-confirmation-published-as-a-w3c-candidate-recommendation/" class="card__link">Call for Implementations: Secure Payment Confirmation published as a W3C Candidate Recommendation</a>
+            </h3>
+                            <p>
+                    
+                </p>
+                                        <p class="txt-pluto">
+                    News
+                </p>
+                    </div>
+            </div>
+</li>
+
+                                                <li>
+    <div class="card" data-component="card">
+        <div class="card__text">
+            <h3 class="card__heading">
+                <a href="/news/2022/emvco-fido-alliance-and-w3c-update-resource-on-how-technologies-relate/" class="card__link">EMVCo, FIDO Alliance, and W3C Update Resource on How Technologies Relate</a>
+            </h3>
+                            <p>
+                    
+                </p>
+                                        <p class="txt-pluto">
+                    News
+                </p>
+                    </div>
+            </div>
+</li>
+
+                                                <li>
+    <div class="card" data-component="card">
+        <div class="card__text">
+            <h3 class="card__heading">
+                <a href="/blog/2020/new-w3c-merchant-business-group/" class="card__link">New W3C Merchant Business Group</a>
+            </h3>
+                            <p>
+                    
+                </p>
+                                        <p class="txt-pluto">
+                    Blog
+                </p>
+                    </div>
+            </div>
+</li>
+
+                                                                </ul>
+        </div>
+    </div>
+</div>
+
+                                    <div class="component component--members u-full-width">
+	<div class="l-center">
+					<h2 class="visuallyhidden">W3C Members</h2>
+			<p>71 member organizations are involved in the e-commerce ecosystem, including:</p>
+		
+					<div class="component--members__grid">
+
+            
+    
+                <figure>
+            <figcaption>Adobe</figcaption>
+        </figure>
+    
+                <figure>
+            <figcaption>WebDINO Japan</figcaption>
+        </figure>
+    
+                <figure>
+            <figcaption>Cisco</figcaption>
+        </figure>
+    
+                <figure>
+            <figcaption>Shopify</figcaption>
+        </figure>
+    
+                <figure>
+            <figcaption>Google LLC</figcaption>
+        </figure>
+    
+                <figure>
+            <figcaption>Spherical Cow Consulting</figcaption>
+        </figure>
+    
+</div>
+		
+												
+			<a href="/membership/list/?ecosystem=e-commerce">View all members participating in the e-commerce ecosystem</a>
+			<div class="l-cluster component--members__cta">
+				<div>
+					<p>Ways to get involved:</p>
+										<a class="button button--alt" href="/membership/join/">Join</a>
+										<a class="button button--alt" href="/donate/">Donate</a>
+									</div>
+			</div>
+			</div>
+</div>
+
+                                <div class="component component--evangelists">
+		<div class="component--evangelists__text">
+				<h2 class="txt-earth" id="contact">Need more information tailored to your organization?</h2>
+						<p id="evangelist">Our Evangelists understand that every organization is different! Evangelists represent W3C in various locations and are an extension of W3C's Business Development Team. They are responsible for identifying and recruiting new W3C Members, running local events, promoting W3C Training and fostering Sponsorship.</p>
+			</div>
+			<div class="component--evangelists__list">
+		<h3 class="txt-saturn">Our E-commerce  evangelist  </h3>
+		<ul class="clean-list" role="list">
+						<li class="l-box l-box--no-border">
+				<div class="l-sidebar">
+					<div>
+						<div class="sidebar">
+							<div class="avatar">
+								<img alt src="https://www.w3.org/avatars/578c9e0b52c3f062ddf805b4130bbdd4/?s=100" loading="lazy">
+							</div>
+						</div>
+						<div class="not-sidebar">
+							<p class="txt-saturn bold">Paul Rodgers</p>
+							<p>W3C Evangelist - Payments,  Europe</p>
+														<p>Tel: <a href="tel:+44.7785.502605">+44.7785.502605</a></p>
+																					<p>Email: <a href="mailto:paul.rodgers@w3.org">paul.rodgers@w3.org</a></p>
+													</div>
+					</div>
+				</div>
+			</li>
+					</ul>
+	</div>
+	</div>
+
+                            <section class="rss">
+	<h2 class="txt-jupiter">Related RSS feed</h2>
+	<div class="with-icon--before with-icon--larger">
+		<img class="icon icon--larger" src="/assets/website-2021/svg/rss.svg" width="30" height="30" alt="" aria-hidden="true">
+		<a href="/ecosystems/e-commerce/feed/">Subscribe to our E-commerce feed</a>
+	</div>
+</section>
+
+        </main>
+                                </div>
+            <footer class="global-footer">
+    <div class="l-center">
+        <div class="global-footer__links">
+            <div class="l-cluster">
+                <ul class="clean-list" role="list">
+                        <li><a href="https://www.w3.org/" hreflang="en"><span lang="en" dir="ltr">Home</span></a></li>
+                        <li><a href="https://www.w3.org/contact/" hreflang="en"><span lang="en" dir="ltr">Contact</span></a></li>
+                        <li><a href="https://www.w3.org/help/" hreflang="en"><span lang="en" dir="ltr">Help</span></a></li>
+                        <li><a href="https://www.w3.org/donate/" hreflang="en"><span lang="en" dir="ltr">Donate</span></a></li>
+                        <li><a href="https://www.w3.org/policies/" hreflang="en"><span lang="en" dir="ltr">Legal &amp; Policies</span></a></li>
+                        <li><a href="https://www.w3.org/about/corporation/" hreflang="en"><span lang="en" dir="ltr">Corporation</span></a></li>
+                        <li><a href="https://status.w3.org/" hreflang="en"><span lang="en" dir="ltr">System Status</span></a></li>
+                </ul>
+            </div>
+            <ul class="clean-list" role="list">
+                <li>
+                    <a class="with-icon--larger" href="https://w3c.social/@w3c" hreflang="en">
+                        <img class="icon icon--larger" src="https://www.w3.org/assets/website-2021/svg/mastodon.svg" width="20" height="20" alt aria-hidden="true" loading="lazy"/>
+                        <span class="visuallyhidden"><span lang="en" dir="ltr">W3C on Mastodon</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a class="with-icon--larger" href="https://github.com/w3c/" hreflang="en">
+                        <img class="icon icon--larger" src="https://www.w3.org/assets/website-2021/svg/github.svg" width="20" height="20" alt aria-hidden="true" loading="lazy"/>
+                        <span class="visuallyhidden"><span lang="en" dir="ltr">W3C on GitHub</span></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <p class="copyright"><span lang="en" dir="ltr">Copyright &copy; 2025 <a href="https://www.w3.org/">World Wide Web Consortium</a>.<br> <abbr title="World Wide Web Consortium">W3C</abbr><sup>&reg;</sup> <a href="https://www.w3.org/policies/#disclaimers">liability</a>, <a href="https://www.w3.org/policies/#trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/copyright/document-license/" title="W3C Document License">permissive license</a> rules apply.</span></p>
+    </div>
+</footer>
+    </div>
+
+                <script>
+                
+                    var membersScript = document.createElement('script');
+                    membersScript.src = "/assets/website-2021/js/members.js";
+                    document.querySelector('body').appendChild(membersScript);
+
+                    </script>
+    </body>
+
+</html>

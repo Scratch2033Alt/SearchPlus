@@ -1,0 +1,464 @@
+<!doctype html>
+<html dir="ltr" lang="zh-hans" class="no-js">
+<head>
+    <title>电子商务 | 行业生态 | W3C</title>
+
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="home" href="https://www.w3.org/"/>
+<link rel="icon" type="image/png" href="https://www.w3.org/assets/logos/w3c/favicon-32.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://www.w3.org/assets/logos/w3c/favicon-180.png"/>
+
+<link rel="stylesheet" href="https://www.w3.org/assets/website-2021/styles/core.css?ver=1.4" media="screen"/>
+
+<!--
+CSS Mustard Cut
+Print (Edge doesn't apply to print otherwise)
+Edge, Chrome 39+, Opera 26+, Safari 9+, iOS 9+, Android ~5+, Android UCBrowser ~11.8+
+FF 47+
+-->
+<link rel="stylesheet" id="advanced-stylesheet"
+      href="https://www.w3.org/assets/website-2021/styles/advanced.css?ver=1.4" media="
+            only print,
+            only all and (pointer: fine), only all and (pointer: coarse), only all and (pointer: none),
+            only all and (min--moz-device-pixel-ratio:0) and (display-mode:browser), (min--moz-device-pixel-ratio:0) and (display-mode:fullscreen)
+        ">
+<link rel="stylesheet" href="https://www.w3.org/assets/website-2021/styles/print.css" media="print"/>
+
+<script src="https://www.w3.org/assets/website-2021/js/libraries/fontfaceobserver.js"></script>
+
+<script>
+    var myFont = new FontFaceObserver('Noto Sans');
+
+    Promise.all([myFont.load()]).then(function () {
+        document.documentElement.className += " fonts-loaded";
+    });
+
+    (function () {
+        var linkEl = document.getElementById('advanced-stylesheet');
+        if (window.matchMedia && window.matchMedia(linkEl.media).matches) {
+            var script = document.createElement('script');
+            script.src = 'https://www.w3.org/assets/website-2021/js/main.js?ver=1.4';
+            script.defer = true;
+            document.querySelector('head').appendChild(script);
+            (function (H) {
+                H.className = H.className.replace(/\bno-js\b/, 'js')
+            })(document.documentElement);
+        }
+    })();
+</script>
+
+
+    <meta name="description" content="本页面介绍基于Web的支付及电子商务的概念，以及万维网联盟在该领域开展的工作。"/>
+    <meta name="thumbnail" content="https://www.w3.org/assets/website-2021/images/w3c-opengraph-image.png"/>
+    <meta property="og:url" content="https://www.w3.org/zh-hans/ecosystems/e-commerce/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="电子商务"/>
+    <meta property="og:image" content="https://www.w3.org/assets/website-2021/images/w3c-opengraph-image.png"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:description" content="本页面介绍基于Web的支付及电子商务的概念，以及万维网联盟在该领域开展的工作。"/>
+    <meta property="og:site_name" content="W3C"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="w3c"/>
+    <meta name="twitter:url" content="https://www.w3.org/zh-hans/ecosystems/e-commerce/"/>
+    <meta name="twitter:title" content="电子商务"/>
+    <meta name="twitter:description" content="本页面介绍基于Web的支付及电子商务的概念，以及万维网联盟在该领域开展的工作。"/>
+    <meta name="twitter:image" content="https://www.w3.org/assets/website-2021/images/w3c-opengraph-image.png"/>
+    
+        
+        <script>
+        var membersData = [{"name":"1Password","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/131682.png?x-version=1"},{"name":"360","logo":null},{"name":"Adobe","logo":null},{"name":"Airbnb Inc","logo":null},{"name":"Akamai Technologies","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/61566.png?x-version=3"},{"name":"Amazon","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/108617.png?x-version=4"},{"name":"American Express Company","logo":null},{"name":"Ant Group Co., Ltd.","logo":null},{"name":"Apeleg Limited","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/140493.png?x-version=6"},{"name":"Apple Inc.","logo":null},{"name":"Bitwarden","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/139249.png?x-version=2"},{"name":"Block, Inc.","logo":null},{"name":"Brave Software Inc.","logo":null},{"name":"British Broadcasting Corporation","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/1120.png?x-version=6"},{"name":"CANTON CONSULTING","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/69906.png?x-version=1"},{"name":"Capital One Financial","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/98428.png?x-version=1"},{"name":"Center for Democracy and Technology","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/9848.png?x-version=3"},{"name":"Cisco","logo":null},{"name":"Conexxus","logo":null},{"name":"CRITAC","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/102975.png?x-version=1"},{"name":"Criteo","logo":null},{"name":"Defense Information Systems Agency","logo":null},{"name":"Discover Financial Services LLC","logo":null},{"name":"Duck Duck Go, Inc.","logo":null},{"name":"Entersekt","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/116845.png?x-version=4"},{"name":"eyeo GmbH","logo":null},{"name":"Fastly","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/71673.png?x-version=1"},{"name":"FIME","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/102258.png?x-version=1"},{"name":"Google LLC","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/35662.png?x-version=1"},{"name":"HM Government","logo":null},{"name":"Huawei","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/49753.png?x-version=2"},{"name":"HUMAN","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/82663.png?x-version=2"},{"name":"IAB Technology Laboratory, Inc.","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/70941.png?x-version=3"},{"name":"IBM Corporation","logo":null},{"name":"Ignite Retail Technology","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/151838.png?x-version=1"},{"name":"Interledger Foundation","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/134143.png?x-version=1"},{"name":"JCB CO., LTD.","logo":null},{"name":"Jiangsu TPBlock Technology Co., Ltd. \uff08\u6c5f\u82cf\u7b2c\u4e09\u6781\u533a\u5757\u94fe\u79d1\u6280\u6709\u9650\u516c\u53f8\uff09","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/131154.png?x-version=3"},{"name":"KDDI CORPORATION","logo":null},{"name":"Keio University","logo":null},{"name":"Knowbility","logo":null},{"name":"LY Corporation","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/54991.png?x-version=1"},{"name":"Mastercard Incorporated","logo":null},{"name":"Mattr Limited","logo":null},{"name":"Merchant Advisory Group","logo":null},{"name":"Meta","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/46877.png?x-version=1"},{"name":"Microsoft Corporation","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/1066.png?x-version=1"},{"name":"MITRE Corporation","logo":null},{"name":"Mozilla Foundation","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/35507.png?x-version=1"},{"name":"National Institute of Standards and Technology (NIST)","logo":null},{"name":"Navy Federal Credit Union","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/125874.png?x-version=3"},{"name":"NCSC","logo":null},{"name":"Netcetera","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/150912.png?x-version=2"},{"name":"Netflix Inc.","logo":null},{"name":"NextRoll","logo":null},{"name":"Nippon Telegraph & Telephone Corp. (NTT)","logo":null},{"name":"Nok Nok Labs","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/84446.png?x-version=3"},{"name":"Okta","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/131353.png?x-version=1"},{"name":"Oracle Corporation","logo":null},{"name":"PayPal","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/83781.png?x-version=1"},{"name":"Ping Identity","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/108522.png?x-version=3"},{"name":"Rakuten Group, Inc.","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/47545.png?x-version=4"},{"name":"Samsung Electronics Co., Ltd.","logo":null},{"name":"Shopify","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/79706.png?x-version=1"},{"name":"Spherical Cow Consulting","logo":null},{"name":"Spruce Systems, Inc.","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/126165.png?x-version=2"},{"name":"The Washington Post","logo":null},{"name":"Visa","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/76927.png?x-version=1"},{"name":"WebDINO Japan","logo":null},{"name":"Yahoo Holdings Inc.","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/133378.png?x-version=3"},{"name":"Yubico","logo":"https:\/\/www.w3.org\/thumbnails\/250\/logos\/organizations\/86485.png?x-version=3"}];
+    </script>
+    
+                        <link href="/zh-hans/ecosystems/e-commerce/feed/" title="W3C - 电子商务 Ecosystem" rel="alternate" type="application/rss+xml" />
+            
+    </head>
+
+<body class="ecosystem">
+<a class="skip-link" href="#main">转到内容</a>
+<div class="grid-wrap">
+    <div class="wrap">
+        <header class="global-header">
+            <span role="status" aria-live="polite"></span>
+                                        
+                                            <nav id="lang-nav" aria-label="语言">
+        <div class="l-center">
+            <div class="l-cluster">
+                <ul class="clean-list" role="list">
+                        <li><a href="https://www.w3.org/" hreflang="en" lang="en">English homepage<span class="visuallyhidden" lang="zh-hans">英文</span></a></li>
+                        <li><a href="https://www.w3.org/ja/" hreflang="ja" lang="ja">日本語ホームページ<span class="visuallyhidden" lang="zh-hans">日语</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                                        <nav id="global-nav" aria-label="Main">
+    <div class="global-nav__inner l-center">
+        <a class="logo-link" href="https://www.w3.org/zh-hans/" hreflang="zh-hans">
+            <span class="logo">
+                <img src="https://www.w3.org/assets/logos/w3c/w3c-no-bars.svg" alt="W3C" role="img"/>
+            </span>
+            <span class="visuallyhidden">访问 W3C 主页</span>
+        </a>
+        <button type="button" class="button button--ghost with-icon--after with-icon--larger" data-trigger="mobile-nav"
+                style="display: none;"></button>
+        <ul data-component="nav-double-intro">
+            <li class="top-nav-item">
+                                                                                    <a hreflang="en" href="https://www.w3.org/zh-hans/help/search/" class="nav-link icon-link">
+                    <img class="icon" src="https://www.w3.org/assets/website-2021/svg/search.svg" width="24" height="24" alt aria-hidden="true"><span class="hide-at-max-width">搜索</span>
+                </a>
+            </li>
+            <li class="top-nav-item">
+                <a hreflang="en" href="https://www.w3.org/users/myprofile/" id="account-login-link" class="account-login icon-link with-icon--after">
+                    我的账号
+                    <span class="avatar avatar--small icon"><img src="https://www.w3.org/assets/website-2021/svg/avatar.svg" width="24" height="24" alt aria-hidden="true"/></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+                    </header>
+                        
+<nav id="breadcrumb" aria-label="Breadcrumb">
+    <div class="l-center">
+        <div class="l-cluster">
+            <ol class="breadcrumbs clean-list" role="list">
+                                                                    <li><a href="/zh-hans/">主页</a></li>
+
+        <li><a href="/zh-hans/ecosystems/">行业生态</a></li>
+
+        <li><a href="/zh-hans/ecosystems/e-commerce/" aria-current="page">电子商务</a></li>
+
+                            </ol>
+        </div>
+    </div>
+</nav>
+                <main id="main" >
+                                            
+
+                                
+
+                                
+
+                                
+
+                            <div class="u-full-width hero">
+    <div class="l-center">
+        <div class="l-sidebar">
+            <div>
+                <div class="not-sidebar">
+                    <h1>电子商务</h1>
+                                                                        <nav aria-label="翻译" class="translations">
+    <div class="l-sidebar">
+        <div>
+            <div class="sidebar">
+                <span lang="zh-hans">切换语言：</span>
+            </div>
+            <div class="not-sidebar">
+    <div class="l-cluster">
+        <ul class="clean-list translation-list">
+                            <li>
+                    <a href="/ecosystems/e-commerce/"
+                       hreflang="en"
+                       lang="en"
+                       dir="auto"
+                    >
+                        English
+                    </a>
+                </li>
+                    </ul>
+    </div>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+                                                <p class="lead">在Web上实现更简单、更安全的支付和电子商务。</p>
+                                    </div>
+                                    <div class="sidebar">
+                        <img src="https://www.w3.org/cms-uploads/Hero-illustrations/webpayments.svg" alt/>
+                    </div>
+                            </div>
+        </div>
+    </div>
+</div>
+
+                    <section 		class="component component--fifty-fifty ">
+	<div class="image">
+									<img
+					src="https://www.w3.org/cms-uploads/payments-shutterstock_605410205-1024.png"
+					srcset="https://www.w3.org/cms-uploads/_360xAUTO_crop_center-center_none/payments-shutterstock_605410205-1024.png 360w, https://www.w3.org/cms-uploads/_580xAUTO_crop_center-center_none/payments-shutterstock_605410205-1024.png 580w, https://www.w3.org/cms-uploads/_920xAUTO_crop_center-center_none/payments-shutterstock_605410205-1024.png 920w, https://www.w3.org/cms-uploads/_1520xAUTO_crop_center-center_none/payments-shutterstock_605410205-1024.png 1520w"
+					sizes="(min-width: 48em) 50vw, 100vw"
+					loading="lazy"
+											alt=""
+									/>
+						</div>
+	<div class="component--fifty-fifty__text">
+									<h2 class="txt-earth">Web正变革支付方式</h2>
+						<p>为确保Web不断发展以满足新的行业需求，我们正在召集电子商务公司、支付服务提供商、银行卡网络、银行、浏览器供应商及其他相关方，共同塑造Web支付和电子商务的发展方式。</p>
+						<div class="l-box l-box--no-border l-box--no-padding">
+				<a class="button button--alt" href="https://www.w3.org/contact/">联系我们以加入W3C，开始贡献您的力量</a>
+									<a href="/blog/wpwg/2023/04/03/web-payments-meeting-march-2023-edition/">了解W3C在Web支付领域的最新工作（2023年4月）</a>
+							</div>
+						</div>
+</section>
+
+                <div class="component component--text">
+                <h2 id="focus">我们的社区专注于</h2><ul><li>降低购物车弃置率；</li><li>简化身份验证并减少欺诈；</li><li>促进数字支付方法的创新；</li><li>探讨新兴法规对Web架构和功能的影响；</li><li>与FIDO和EMVCo等其他标准化工作的协调一致；</li><li>专注于交付API以提高Web支付的便利性和安全性；</li><li>提高Web支付领域的整体安全性；</li><li>汇集各方意见以指导下一阶段的Web支付发展。</li></ul>
+        </div>
+
+                <div class="u-full-width component component--group-list">
+    <div class="l-center">
+                <div class="component--group-list__intro">
+                        <h2 id="groups">活跃组</h2>
+                                    <p>这些小组致力于创建和实现软件及API，以使Web支付更加简便和安全，或者提供一个讨论和实施新标准的平台，同时也允许成员发现并解决W3C标准和API在互操作性方面的差距。</p>
+                    </div>
+                                <div class="component--collapsibles" data-component="collapsibles" data-anchor="no">
+                    <div>
+                <h3 data-heading="collapsibles">Web Authentication<span>Working group</span></h3>
+                <div>
+                                        The mission of the Web Authentication Working Group is to define a client-side API providing strong authentication functionality to Web Applications.
+                    <a href="https://www.w3.org/groups/wg/webauthn/">访问Web Authentication Working Group</a>
+                                </div>
+            </div>
+                    <div>
+                <h3 data-heading="collapsibles">Web Payments<span>Working group</span></h3>
+                <div>
+                                        The mission of the Web Payments Working Group is to make payments easier and more secure on the Web.
+                    <a href="https://www.w3.org/Payments/WG/">访问Web Payments Working Group</a>
+                                </div>
+            </div>
+                    <div>
+                <h3 data-heading="collapsibles">Web Payment Security<span>Interest group</span></h3>
+                <div>
+                                        The mission of the Web Payment Security Interest Group is to enhance the security and interoperability of various Web payments technologies. The group pursues its mission by creating a forum for organizations to define areas of collaboration and identify gaps between existing technical specifications in order to increase compatibility among different technologies.
+                    <a href="https://www.w3.org/securepay/">访问Web Payment Security Interest Group</a>
+                                </div>
+            </div>
+                    <div>
+                <h3 data-heading="collapsibles">Anti-Fraud<span>Community group</span></h3>
+                <div>
+                                        The mission of the Anti Fraud Community Group is to identify and define scenarios involving fraud and unwanted traffic, as well as to incubate and develop web features and APIs to address those scenarios while improving user security, privacy, and accessibility. Fraud and unwanted traffic can include web activity perpetrated by botnets, attackers impersonating users, and other activity that intends to harm users or compromise web services. 
+
+The group welcomes participation from anti-fraud service providers, common targets of unwanted traffic, browser vendors, web privacy advocates, web application developers, web hosting and cloud service providers, and other interested parties.
+
+The Community Group will discuss issues that server operators and anti-fraud service providers face in this area and ideas for new web features and APIs intended to be implemented in browsers or similar user agents.
+                    <a href="https://www.w3.org/community/antifraud/">访问Anti-Fraud Community Group</a>
+                                </div>
+            </div>
+            </div>
+            </div>
+</div>
+
+                <div class="component component--text">
+                <h2 id="join">为什么加入？</h2><p>自1994年以来，我们通过开发确保Web长期发展的协议和指南，引领万维网尽展其全部潜力。</p><p>加入这些小组，您可以讨论和推动W3C制定的标准。这些小组的讨论涉及当前和未来的标准，并不断致力于改善Web环境。您将有机会参与引领Web的未来发展。</p><h3>我们的价值观植根于为所有人构建Web</h3><p>Web的社会价值在于提供人类沟通、商业活动以及知识共享的机会。W3C的主要目标之一是让所有人都能享受这些益处，不论其硬件、软件、网络基础设施、母语、文化、地理位置或身体和心理能力如何。</p>
+        </div>
+
+                            <div class="component component--activity u-full-width">
+    <div class="l-center">
+        <div class="component component--columns component--columns--images">
+                            <h2 class="txt-earth" id="activities">电子商务与Web支付社区最近的活动</h2>
+                                        <p>通过最近的故事、新闻、研讨会、讲座或活动了解更多信息。</p>
+                        <ul class="clean-list" role="presentation">
+                                                                <li>
+    <div class="card" data-component="card">
+        <div class="card__text">
+            <h3 class="card__heading">
+                <a href="/zh-hans/press-releases/2023/spc-cr/" class="card__link">W3C 推动简化支付验证流程的技术规范</a>
+            </h3>
+                            <p>
+                    安全支付确认（SPC）成为 W3C 候选推荐标准
+                </p>
+                                        <p class="txt-pluto">
+                    媒体新闻稿
+                </p>
+                    </div>
+            </div>
+</li>
+
+                                                <li>
+    <div class="card" data-component="card">
+        <div class="card__text">
+            <h3 class="card__heading">
+                <a href="/zh-hans/news/2023/call-for-implementations-secure-payment-confirmation-published-as-a-w3c-candidate-recommendation/" class="card__link">安全支付确认（SPC）成为 W3C 候选推荐标准</a>
+            </h3>
+                            <p>
+                    
+                </p>
+                                        <p class="txt-pluto">
+                    新闻
+                </p>
+                    </div>
+            </div>
+</li>
+
+                                                <li>
+    <div class="card" data-component="card">
+        <div class="card__text">
+            <h3 class="card__heading">
+                <a href="/zh-hans/news/2022/emvco-fido-alliance-and-w3c-update-resource-on-how-technologies-relate/" class="card__link">更新资源：EMVCo、FIDO 联盟、W3C 相关技术的联系与作用</a>
+            </h3>
+                            <p>
+                    
+                </p>
+                                        <p class="txt-pluto">
+                    新闻
+                </p>
+                    </div>
+            </div>
+</li>
+
+                                                <li>
+    <div class="card" data-component="card">
+        <div class="card__text">
+            <h3 class="card__heading">
+                <a href="/zh-hans/blog/2016/building-blocks-to-blockchains/" class="card__link">W3C Blog: W3C发布区块链技术研讨会总结报告</a>
+            </h3>
+                            <p>
+                    
+                </p>
+                                        <p class="txt-pluto">
+                    博客
+                </p>
+                    </div>
+            </div>
+</li>
+
+                                                                </ul>
+        </div>
+    </div>
+</div>
+
+                                    <div class="component component--members u-full-width">
+	<div class="l-center">
+					<h2 class="visuallyhidden">W3C 会员</h2>
+			<p>71成员组织参与电子商务生态系统, 包括:</p>
+		
+					<div class="component--members__grid">
+
+            
+    
+                <figure>
+            <figcaption>NCSC</figcaption>
+        </figure>
+    
+                <figure>
+            <figcaption>Spherical Cow Consulting</figcaption>
+        </figure>
+    
+                <figure>
+            <figcaption>Fastly</figcaption>
+        </figure>
+    
+                <figure>
+            <figcaption>Block, Inc.</figcaption>
+        </figure>
+    
+                <figure>
+            <figcaption>Netcetera</figcaption>
+        </figure>
+    
+                <figure>
+            <figcaption>FIME</figcaption>
+        </figure>
+    
+</div>
+		
+												
+			<a href="/membership/list/?ecosystem=e-commerce">查看所有参与电子商务生态的成员</a>
+			<div class="l-cluster component--members__cta">
+				<div>
+					<p>参与方式:</p>
+										<a class="button button--alt" href="/membership/join">加入我们</a>
+										<a class="button button--alt" href="/donate/">捐赠</a>
+									</div>
+			</div>
+			</div>
+</div>
+
+                                <div class="component component--evangelists">
+		<div class="component--evangelists__text">
+				<h2 class="txt-earth" id="contact">需要更多与您的组织特别相关的信息吗？</h2>
+						<p id="evangelist">我们的技术布道者明白每个组织都是不同的！技术布道者代表W3C，活跃于不同地区，是W3C业务发展团队的延伸。他们负责识别和招募新的W3C会员，举办本地活动，推广W3C培训并促进赞助。</p>
+			</div>
+			<div class="component--evangelists__list">
+		<h3 class="txt-saturn">我们的电子商务布道者</h3>
+		<ul class="clean-list" role="list">
+						<li class="l-box l-box--no-border">
+				<div class="l-sidebar">
+					<div>
+						<div class="sidebar">
+							<div class="avatar">
+								<img alt src="https://www.w3.org/avatars/578c9e0b52c3f062ddf805b4130bbdd4/?s=100" loading="lazy">
+							</div>
+						</div>
+						<div class="not-sidebar">
+							<p class="txt-saturn bold">Paul Rodgers</p>
+							<p>W3C Evangelist - Payments,  Europe</p>
+														<p>电话: <a href="tel:+44.7785.502605">+44.7785.502605</a></p>
+																					<p>邮箱: <a href="mailto:paul.rodgers@w3.org">paul.rodgers@w3.org</a></p>
+													</div>
+					</div>
+				</div>
+			</li>
+					</ul>
+	</div>
+	</div>
+
+                            <section class="rss">
+	<h2 class="txt-jupiter">相关的 RSS</h2>
+	<div class="with-icon--before with-icon--larger">
+		<img class="icon icon--larger" src="/assets/website-2021/svg/rss.svg" width="30" height="30" alt="" aria-hidden="true">
+		<a href="/zh-hans/ecosystems/e-commerce/feed/">订阅我们的电子商务信息源</a>
+	</div>
+</section>
+
+        </main>
+                                </div>
+            <footer class="global-footer">
+    <div class="l-center">
+        <div class="global-footer__links">
+            <div class="l-cluster">
+                <ul class="clean-list" role="list">
+                        <li><a href="https://www.w3.org/zh-hans/" hreflang="zh-hans">主页</a></li>
+                        <li><a href="https://www.w3.org/zh-hans/contact/" hreflang="zh-hans">联系方式</a></li>
+                        <li><a href="https://www.w3.org/zh-hans/help/" hreflang="zh-hans">帮助</a></li>
+                        <li><a href="https://www.w3.org/zh-hans/donate/" hreflang="zh-hans">捐赠</a></li>
+                        <li><a href="https://www.w3.org/zh-hans/policies/" hreflang="zh-hans">法务与政策</a></li>
+                        <li><a href="https://www.w3.org/zh-hans/about/corporation/" hreflang="zh-hans">法人实体</a></li>
+                        <li><a href="https://status.w3.org/" hreflang="zh-hans">系统状态</a></li>
+                </ul>
+            </div>
+            <ul class="clean-list" role="list">
+                <li>
+                    <a class="with-icon--larger" href="https://w3c.social/@w3c" hreflang="en">
+                        <img class="icon icon--larger" src="https://www.w3.org/assets/website-2021/svg/mastodon.svg" width="20" height="20" alt aria-hidden="true" loading="lazy"/>
+                        <span class="visuallyhidden">W3C 在 Mastodon</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="with-icon--larger" href="https://github.com/w3c/" hreflang="en">
+                        <img class="icon icon--larger" src="https://www.w3.org/assets/website-2021/svg/github.svg" width="20" height="20" alt aria-hidden="true" loading="lazy"/>
+                        <span class="visuallyhidden">W3C 在 GitHub</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <p class="copyright">版权所有 &copy; 2025年<a hreflang="zh-hans" href="https://www.w3.org/zh-hans/">万维网联盟</a>。<br>遵循 <abbr title="万维网联盟">W3C</abbr><sup>&reg;</sup> <a href="https://www.w3.org/policies/#disclaimers" hreflang="en">责任声明</a>、<a href="https://www.w3.org/policies/#trademarks" hreflang="en">标志使用</a>以及<a rel="license" href="https://www.w3.org/copyright/document-license/"  hreflang="en" title="W3C 文档许可">许可授权</a>。</p>
+    </div>
+</footer>
+    </div>
+
+                <script>
+                
+                    var membersScript = document.createElement('script');
+                    membersScript.src = "/assets/website-2021/js/members.js";
+                    document.querySelector('body').appendChild(membersScript);
+
+                    </script>
+    </body>
+
+</html>

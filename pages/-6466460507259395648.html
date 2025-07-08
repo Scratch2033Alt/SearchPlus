@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE spec PUBLIC "-//W3C//DTD Specification V2.6//EN"
+               "http://www.w3.org/2002/xmlspec/dtd/2.6/xmlspec.dtd" [
+  <!-- ================================================================ -->
+  <!ENTITY draft.day "9">
+  <!ENTITY draft.DD "09">
+  <!ENTITY draft.month "01">
+  <!ENTITY draft.monthname "January">
+  <!ENTITY draft.year "2006">
+  <!ENTITY iso6.doc.date "&draft.year;-&draft.month;-&draft.DD;">
+  <!ENTITY http-ident "http://www.w3.org/2001/tag/doc/namespaceState">
+]>
+<spec w3c-doctype='other'>
+<?CVS $Id: namespaceState.xml,v 1.5 2006/01/03 18:35:35 NormanWalsh Exp $?>
+<header>
+<title>The Disposition of Names in an XML Namespace</title>
+<w3c-designation>&http-ident;-&iso6.doc.date;</w3c-designation>
+<w3c-doctype>TAG Finding</w3c-doctype>
+<pubdate><day>&draft.day;</day>
+<month>&draft.monthname;</month>
+<year>&draft.year;</year>
+</pubdate>
+<publoc>
+<loc href="&http-ident;-&iso6.doc.date;.html">&http-ident;-&iso6.doc.date;</loc>
+</publoc>
+<altlocs>
+<loc href="&http-ident;-&iso6.doc.date;.xml">XML</loc>
+</altlocs>
+<latestloc>
+<loc href="&http-ident;.html">&http-ident;</loc>
+</latestloc>
+<prevlocs>
+<loc href="&http-ident;-2005-12-16.html">&http-ident;-2005-12-16</loc>
+</prevlocs>
+<authlist>
+<author><name>Norman Walsh</name>
+<affiliation>Sun Microsystems, Inc.</affiliation>
+<email href="mailto:Norman.Walsh@Sun.COM">Norman.Walsh@Sun.COM</email></author>
+</authlist>
+
+<abstract>
+<p>This Finding addresses the question of whether or not adding new
+names to a (published) namespace is a sound practice.</p>
+</abstract>
+
+<status>
+
+<p>This document has been produced by the
+<loc href="http://www.w3.org/2001/tag/">W3C Technical Architecture Group (TAG)</loc>.
+This finding addresses TAG issue
+<loc href="http://www.w3.org/2001/tag/ilist#nameSpaceState-48">nameSpaceState-48</loc>.
+The TAG approved this finding at its
+<loc href="http://www.w3.org/2001/tag/2006/01/03-minutes.html#action01">3&#160;January&#160;2006 teleconference</loc>.
+<loc href="http://www.w3.org/2001/tag/findings">Additional TAG findings</loc>,
+both approved and in draft state, may also
+be available.</p>
+
+<p>Please send comments on this finding to the publicly archived TAG
+mailing list www-tag@w3.org
+(<loc href="http://lists.w3.org/Archives/Public/www-tag/">archive</loc>).
+</p>
+
+<p>The terms <rfc2119>MUST</rfc2119>, <rfc2119>SHOULD</rfc2119>, and
+<rfc2119>SHOULD NOT</rfc2119> are used in this document
+in accordance with <bibref ref="rfc2119"/>.</p>
+
+<p>Please send comments on this finding to the publicly archived TAG
+mailing list <loc
+href="mailto:www-tag@w3.org">www-tag@w3.org</loc>
+(<loc
+href="http://lists.w3.org/Archives/Public/www-tag/">archive</loc>).</p>
+
+</status>
+<pubstmt>
+<p>Chicago, Vancouver, Mountain View, et al.: World-Wide Web Consortium,
+Draft TAG Finding, 2005.</p>
+</pubstmt>
+<sourcedesc>
+<p>Created in electronic form.</p>
+</sourcedesc>
+<langusage>
+<language id="EN">English</language>
+</langusage>
+<revisiondesc>
+<slist>
+<sitem>2005-09-13: Published draft</sitem>
+</slist>
+</revisiondesc>
+</header>
+<body>
+
+<div1 id="preface">
+<head>Preface</head>
+
+<p>Namespaces are a mechanism for managing names in a distributed way that
+greatly reduces the likelihood that two independent parties will create
+the same name for different purposes.</p>
+
+<p>An XML namespace has a namespace name (a URI) and a set of local names
+(<loc href="http://www.w3.org/TR/REC-xml-names/#NT-NCName">NCName</loc>s as
+defined in <bibref ref="xml-names"/>). Using a URI leverages the
+well-understood <loc href="http://www.w3.org/TR/webarch/#uri-assignment">URI
+allocation</loc> mechanisms of <bibref ref="webarch"/>.
+<bibref ref="xml-names"/> defines a syntactic shorthand for the combination
+of a namespace name and a local name: the qualified name, or “QName”.
+(Note that languages which use QNames as identifiers 
+<loc href="http://www.w3.org/TR/webarch/#qname-mapping">are required</loc>
+to provide a mapping from QNames to URIs.)</p>
+
+<p>The proposal to define a new local name, “<code>id</code>”, in
+the namespace “<code>http://www.w3.org/XML/1998/namespace</code>” (the
+<code>xml:</code> namespace) raised a question about the identity
+of a namespace. Concretely, it exposed two perspectives:</p>
+
+<olist>
+<item><p>One perspective was that the
+<code>xml:</code> namespace consisted of <code>xml:space</code>,
+<code>xml:lang</code>, and <code>xml:base</code> (and no other names)
+because there was a point in time in which those where the only three
+names from that namespace that had a defined meaning.</p>
+</item>
+<item><p>The other
+perspective was that the <code>xml:</code> namespace consisted of all
+possible local names and that only a finite (but flexible) number of
+them are defined at any given point in time.</p>
+</item>
+</olist>
+
+<p>Colloquially, we often speak of “adding a name” to a namespace.
+Here we prefer to speak of “defining a name” or otherwise licensing
+the interpretation of a name. For example, the <bibref ref="xml-id"/>
+specification defines the meaning of the local name “id” in the
+<code>xml:</code> namespace. Similarly, a namespace created to hold
+the names of all the reserved words in a programming language would
+license the interpretation of those QNames without explicitly defining
+each of them.</p>
+</div1>
+
+<div1 id="namespacedef">
+<head>Namespace Definitions</head>
+
+<p>The publication of <bibref ref="xml-id"/> as a
+<loc href="http://www.w3.org/2004/02/Process-20040205/tr.html#RecsW3C">Recommendation</loc>,
+provided a partial answer to the question of which perspective is
+correct. Adding a definition for the local name “<code>id</code>” in the
+<code>xml:</code> namespace demonstrated that the number of local names
+defined in the <code>xml:</code> namespace could be extended.</p>
+
+<p>The question remains, however, as to whether the other position is
+ever sound. This Finding takes the position that it is.</p>
+
+<p>Namespaces, originally designed to provide names for XML elements
+and attributes, have been adopted much more broadly by the web
+community. They are now used not simply for elements and attributes
+but for function names, tokens, and identifiers for ever more
+purposes.</p>
+
+<p>The <code>xml:</code> namespace demonstrates that some namespaces
+benefit from a policy that allows additional names to be defined in them
+over time. This does not preclude the possibility that some
+namespaces would benefit from a policy that forbids such extension.
+From these observations, we conclude that the following good practice
+applies:</p>
+
+<p role="practice">Specifications that define namespaces
+<rfc2119>SHOULD</rfc2119> explicitly state their policy with respect
+to changes in the names defined in that namespace.
+</p>
+</div1>
+
+<p>For namespaces that are not immutable, the specification
+<rfc2119>SHOULD</rfc2119> describe how names may be given definitions
+(or have them removed) and by whom.</p>
+
+<p>If a namespace document is provided, as
+<bibref ref="webarch"/> recommends, the namespace change policy
+<rfc2119>SHOULD</rfc2119> be stated in the namespace document.
+</p>
+
+<p>As a general rule, resources on the web can and do change. In the
+absence of an explicit statement, one cannot infer that a namespace
+is immutable.</p>
+
+<div1 id="references">
+<head>References</head>
+
+<blist>
+<bibl id="rfc2119" href="http://www.ietf.org/rfc/rfc2119.txt" key="RFC 2119">S.
+Bradner. <titleref>Key words for use in RFCs to Indicate Requirement Levels</titleref>.
+IETF. March, 1997.</bibl>
+
+<bibl id="xml-names" href="http://www.w3.org/TR/REC-xml-names/"
+key="XML Namespaces">Tim Bray, Dave Hollander, Andrew Layman, editors.
+<titleref>Namespaces in XML</titleref>.
+World Wide Web Consortium, 1999.</bibl>
+
+<bibl id="webarch" href="http://www.w3.org/TR/webarch/" key="WebArch Vol 1">Ian Jacobs and Norman Walsh, editors.
+<titleref>Architecture of the World Wide Web, Volume 1</titleref>.
+World Wide Web Consortium, 2004.
+</bibl>
+
+<bibl id="xml-id" href="http://www.w3.org/TR/xml-id/" key="xml:id">Jonathan Marsh, Daniel Veillard, and Norman Walsh, editors.
+<titleref>xml:id Version 1.0</titleref>.
+World Wide Web Consortium, 2005.
+</bibl>
+</blist>
+</div1>
+</body>
+</spec>

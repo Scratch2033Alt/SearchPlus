@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<title>Web Payments Working Group</title>
+<meta name="viewport" content="width=device-width" />
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="https://www.w3.org/blog/wpwg/wp-content/themes/w3c/style.css" />
+<link rel="pingback" href="https://www.w3.org/blog/wpwg/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="https://www.w3.org/blog/wpwg/wp-content/themes/w3c/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+<meta name='robots' content='max-image-preview:large' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<link rel="alternate" type="application/rss+xml" title="Web Payments Working Group &raquo; Feed" href="https://www.w3.org/blog/wpwg/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Web Payments Working Group &raquo; Comments Feed" href="https://www.w3.org/blog/wpwg/comments/feed/" />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.w3.org\/blog\/wpwg\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.w3.org/blog/wpwg/wp-includes/css/dist/block-library/style.min.css?ver=6.7.2' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<style id='akismet-widget-style-inline-css' type='text/css'>
+
+			.a-stats {
+				--akismet-color-mid-green: #357b49;
+				--akismet-color-white: #fff;
+				--akismet-color-light-grey: #f6f7f7;
+
+				max-width: 350px;
+				width: auto;
+			}
+
+			.a-stats * {
+				all: unset;
+				box-sizing: border-box;
+			}
+
+			.a-stats strong {
+				font-weight: 600;
+			}
+
+			.a-stats a.a-stats__link,
+			.a-stats a.a-stats__link:visited,
+			.a-stats a.a-stats__link:active {
+				background: var(--akismet-color-mid-green);
+				border: none;
+				box-shadow: none;
+				border-radius: 8px;
+				color: var(--akismet-color-white);
+				cursor: pointer;
+				display: block;
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+				font-weight: 500;
+				padding: 12px;
+				text-align: center;
+				text-decoration: none;
+				transition: all 0.2s ease;
+			}
+
+			/* Extra specificity to deal with TwentyTwentyOne focus style */
+			.widget .a-stats a.a-stats__link:focus {
+				background: var(--akismet-color-mid-green);
+				color: var(--akismet-color-white);
+				text-decoration: none;
+			}
+
+			.a-stats a.a-stats__link:hover {
+				filter: brightness(110%);
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06), 0 0 2px rgba(0, 0, 0, 0.16);
+			}
+
+			.a-stats .count {
+				color: var(--akismet-color-white);
+				display: block;
+				font-size: 1.5em;
+				line-height: 1.4;
+				padding: 0 13px;
+				white-space: nowrap;
+			}
+		
+</style>
+<link rel="https://api.w.org/" href="https://www.w3.org/blog/wpwg/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.w3.org/blog/wpwg/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.7.2" />
+</head>
+
+<body class="home blog">
+	<header id="branding" role="banner">
+
+					<a href="https://www.w3.org/blog/wpwg/" title="Web Payments Working Group" rel="home"><img src="https://www.w3.org/assets/logos/w3c/w3c-white-no-background.svg" style="height: 100px; padding: 5px" alt="" /></a>
+				</header><!-- #branding -->
+
+<div id="wrapper" class="hfeed">
+	<div id="header">
+		<div id="masthead">
+					<h1 id="site-title">
+			<a href="https://www.w3.org/blog/wpwg/" title="Web Payments Working Group" rel="home">Web Payments Working Group</a>
+		</h1>
+			<div id="site-description">
+						
+			</div>
+			<nav id="access" role="navigation">
+			  				<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+								<div class="menu"><ul>
+<li class="current_page_item"><a href="https://www.w3.org/blog/wpwg/">Home</a></li></ul></div>
+			</nav><!-- #access -->
+			<div class="triangle-l"></div>
+			<div class="triangle-r"></div>
+		</div><!-- #masthead -->
+	</div><!-- #header -->
+
+	<div id="main">
+
+		<section id="container">
+			<div id="content" role="main">
+
+			
+<!--	<div id="nav-above" class="navigation">
+		<div class="nav-previous"><a href="https://www.w3.org/blog/wpwg/page/2/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+		<div class="nav-next"></div>
+	</div>
+-->
+
+
+
+
+			<article id="post-657" class="post-657 post type-post status-publish format-standard hentry category-events">
+			<header><h2 class="entry-title"><a href="https://www.w3.org/blog/wpwg/2024/10/21/tpac-recap-2024-edition-authentication-credentials-and-payments/" title="Permalink to TPAC Recap (2024 Edition) &#8211; Authentication, Credentials and Payments" rel="bookmark">TPAC Recap (2024 Edition) &#8211; Authentication, Credentials and Payments</a></h2></header>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="https://www.w3.org/blog/wpwg/2024/10/21/tpac-recap-2024-edition-authentication-credentials-and-payments/" title="5:43 pm" rel="bookmark"><span class="entry-date">October 21, 2024</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="https://www.w3.org/blog/wpwg/author/ijacobs/" title="View all posts by Ian Jacobs">Ian Jacobs</a></span>			</div><!-- .entry-meta -->
+
+				<div class="entry-content">
+				<p>More than 500 people from the W3C community came to Anaheim, California (23-27 September) for the <a href="https://www.w3.org/2024/09/TPAC/">2024 Edition of TPAC</a>, W3C’s big annual meeting. This is my personal summary of key topics and discussions that took place in different group meetings and <a href="https://www.w3.org/2024/09/TPAC/breakouts.html#grid">breakouts</a>; see in particular the <a href="https://github.com/w3c/webpayments/wiki/Agenda-TPAC2024">Web Payments WG TPAC agenda</a>, which includes links to minutes.</p>
+<h3>Secure Payment Confirmation (SPC)</h3>
+<p><a href="https://w3c.github.io/secure-payment-confirmation/">Secure Payment Confirmation (SPC)</a> is designed to make strong authentication during checkout flows easier and more secure. During the week:</p>
+<ul>
+<li>We heard encouraging feedback on the usefulness of the technology from pilots, including a <a href="https://www.w3.org/2024/09/23-wpwg-minutes.html#t04">report from Visa</a> and a <a href="https://www.w3.org/2024/09/23-wpwg-minutes.html#t05">report from Mastercard</a>.</li>
+<li>MercadoLibre also presented the <a href="https://www.w3.org/2024/09/24-wpwg-minutes.html#t01">use case for SPC in PIX</a>, Brazil’s fastest growing payment system. This is the second year in a row that we’ve heard strong demand for support for PIX.</li>
+<li>Through a <a href="https://www.w3.org/2024/09/23-wpwg-minutes.html#t03">presentation on regulatory trends</a>, Fime made clear some of the strong authentication requirements common to several regions of the world. This presentation underlined the importance of “possession factors” to strong authentication solutions, including SPC.</li>
+<li>Passkeys have gained significant traction as the future of Web login, but synced passkeys “sacrifice” a strong possession factor in the name of usability because they can be shared between devices. That makes good sense for login use cases, but makes it harder to use passkeys on their own for payments use cases.</li>
+<li>For that reason we spent a good amount of time discussing a <a href="https://github.com/w3c/secure-payment-confirmation/issues/271">proposal</a> to enhance SPC with what we started calling a “browser-based key.” At a high level, when a user authenticates through SPC, the API would return both a Web Authentication assertion with a signature over the transaction detail and a second signature using an additional private key local and specific to the device and secured by the browser. During Thursday’s meeting we walked through a draft list of requirements for this new feature and I anticipate that we will add those requirements to the discussion about the feature over the next week or so. The requirements should help use ensure the feature fulfills regulatory expectations in Europe and beyond.</li>
+<li>On Tuesday, the Web Payments Working Group met jointly with the Web Authentication Working Group to discuss the proposal. The Web Authentication Working Group had developed two proposals that would have added a possession factor back to passkeys: the <a href="https://github.com/w3c/webauthn/issues/1658">devicePublicKey extension</a> and subsequent <a href="https://github.com/w3c/webauthn/pull/1957">supplementalPubKeys extension</a>. However, the Web Authentication Working Group has dropped those proposals for the general passkeys-for-login use cases. For that reason, the Web Payments Working Group pitched the idea of adding a similar feature to SPC. We made the case that since SPC has a built-in “transaction confirmation” user experience, the browser has confidence the user is choosing to authenticate to make a payment. Therefore, the browser can more comfortably provide more information about the device after a successful authentication. We heard some support for adding such a possession factor to SPC and no objections.</li>
+<li>Finally, the Chrome Team also showed some UX mock-ups of the new user experience features of their implementation of SPC. The UX has been evolving based on pilot feedback and we heard at the meeting appreciation for these improvements.</li>
+</ul>
+<p>My hope is that between now and the end of the year, the Working Group will (1) publish a set of requirements for a new “browser-based key” feature of SPC and (2) the Chrome team will implement the feature (and update the <a href="https://w3c.github.io/secure-payment-confirmation/">specification</a>) to enable experimentation.</p>
+<h3>Digital Credentials</h3>
+<p>The <a href="https://github.com/WICG/digital-credentials/blob/main/explainer.md">Digital Credentials API explainer</a> usefully frames the current hot topic of digital credentials and wallets on the Web:</p>
+<blockquote><p>
+“Government-recognized documents play a big and constructive role in society (e.g., drivers licenses, passports, etc.). Increasingly, with the movement of government and financial services online, and regulation (e.g. eIDAS and various age verification regulations), these paper-based documents are gaining digital counterparts.”
+</p></blockquote>
+<p>What W3C technologies might play a role in a digital credentials ecosystem where digital credentials are issued, stored in wallets, presented during interactions on the Web and subsequently verified? The following list is just a starting point:</p>
+<ul>
+<li>Digital Credentials</li>
+<li>Credential Management</li>
+<li>Verifiable Credentials</li>
+<li>WebAuthn / Passkeys</li>
+<li>Payment Request / Payment Handlers</li>
+<li>Secure Payment Confirmation (SPC)</li>
+<li>FedCM</li>
+<li>Device Bound Session Credentials</li>
+</ul>
+<p>During the Web Payments Working Group meeting we held a session on <a href="https://www.w3.org/2024/09/23-wpwg-minutes#t09">digital credentials and payments</a> to socialize ideas for an architecture for digital credentials for e-commerce transactions. My main take-away (other than this is a hot topic) is that the payments community at W3C needs to become more involved in the broader digital credentials work. It also struck me during the conversation that some of the current momentum for non-payments use cases may lead to new approaches for credential exchange that look like the Payment Request and Payment Handler APIs. We will want to share our experience with those APIs in ongoing discussions and also track whether a broader digital credential exchange approach might gain more traction than the Payment Handler API has had to date.</p>
+<p>There were many other sessions about digital credentials at TPAC in various group meetings. In addition, Tim Cappalli led a breakout discussion titled “<a href="https://github.com/w3c/tpac2024-breakouts/issues/10">Real World Identity and the Web&#8230; Continued</a>”; I found the <a href="https://www.w3.org/2024/Talks/TPAC/breakouts/real-world-identity.pdf">slides</a> from that presentation quite interesting.</p>
+<h3>All the other topics!</h3>
+<p>Our discussions covered many other topics during week, which I greatly appreciated and know we will continue to work on:</p>
+<ul>
+<li>Fraud trends (led by Entersekt)</li>
+<li>Regulatory trends (led by Fime and Worldline)</li>
+<li>Merchant perspectives (led by MAG)</li>
+<li>Improving address autofill (led by Shopify)</li>
+<li>Ideas for using Device Bound Session Credentials and CHIPS with EMV® 3-D Secure (led by Fime)</li>
+<li>Ideas for using Web Authentication and GNAP with EMV® Secure Remote Commerce (led by Fime)</li>
+<li>Web technology and experiences with PCI v4 (led by Shopfiy)</li>
+<li>Updates from the FIDO Alliance (trust signals, credential exchange)</li>
+<li>Joint discussions with the Anti-Fraud Community Group about the use of IP Addresses in fraud mitigation for payments</li>
+</ul>
+<h3>W3C @ 30</h3>
+<p>I’ll close by mentioning the <a href="https://www.w3.org/2024/09/TPAC/w3c-30.html">W3C @ 30 Gala</a> where the community celebrated 30 years of W3C’s activities to build a Web for everyone. I encourage you to check out the <a href="https://www.youtube.com/watch?v=-LNUg5vDWDY">W3C @ 30 video</a> (which even mentions Web payments!). Speakers at the Gala shared moving stories about how the Web transformed their lives. Their stories (and TPAC generally) reminded me how important it is to pause our technical discussions from time to time and acknowledge our positive impact on so many people’s lives, at the scale of the planet. TPAC remains my favorite work week of the year. </p>
+<h3>Photo of the Web Payments Working Group Meeting</h3>
+<p><img decoding="async" style="width: 80%;border: thin black solid" src="https://www.w3.org/2024/09/wpwg-tpac2024.jpg" alt="Web Payments WG group photo at TPAC 2024" /></p>
+							</div><!-- .entry-content -->
+	
+			<footer class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://www.w3.org/blog/wpwg/category/events/" rel="category tag">Events</a>					</span>
+					<span class="meta-sep">|</span>
+												<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on TPAC Recap (2024 Edition) &#8211; Authentication, Credentials and Payments</span></span></span>
+							</footer><!-- .entry-utility -->
+		</article><!-- #post-## -->
+
+		
+	
+
+
+			<article id="post-643" class="post-643 post type-post status-publish format-standard hentry category-events">
+			<header><h2 class="entry-title"><a href="https://www.w3.org/blog/wpwg/2023/04/03/web-payments-meeting-march-2023-edition/" title="Permalink to Web Payments Meeting (March 2023 Edition)" rel="bookmark">Web Payments Meeting (March 2023 Edition)</a></h2></header>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="https://www.w3.org/blog/wpwg/2023/04/03/web-payments-meeting-march-2023-edition/" title="3:01 pm" rel="bookmark"><span class="entry-date">April 3, 2023</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="https://www.w3.org/blog/wpwg/author/ijacobs/" title="View all posts by Ian Jacobs">Ian Jacobs</a></span>			</div><!-- .entry-meta -->
+
+				<div class="entry-content">
+				<p>The Working Group met remotely 27-29 March (<a href='https://github.com/w3c/webpayments/wiki/Remote-Agenda-202303'>agenda and minutes</a>). After a successful in-person <a href="https://www.w3.org/blog/wpwg/2022/10/06/tpac-recap-2022-edition/">meeting at TPAC 2022</a> we had wanted to meet in-person again, but fell back to remote due to scheduling challenges.</p>
+<p>Co-Chair Nick Telford-Reed opened the meeting with an <a href="https://drive.google.com/file/d/1-bV6lAq3EsECqgpJkp-sEzZeEJ3tTd98/view?usp=share_link">overview of the group</a>:</p>
+<dl>
+<dt>Working Group</dt>
+<dd>
+<ul>
+<li><a href="https://www.w3.org/Payments/WG/charter-2022.html">Charter</a> renewed in November 2022 for 2 years</a></li>
+</ul>
+</dd>
+<dt>Secure Payment Confirmation (SPC)</dt>
+<dd>
+<ul>
+<li>Specification status: we are nearly ready to go to Candidate Rec</li>
+<li>Implementation status: shipping in Chrome and Edge; still working on other browsers</li>
+<li>Integration status: referenced from both EMV&reg; 3-D Secure and EMV&reg; Secure Remote Commerce; looking at other payment systems</li>
+<li>Pilot status: Adyen/Airbnb pilot ongoing; Stripe (second) pilot imminent; expect data at TPAC 2023</li>
+<li>Next use cases and features: see the <a href="https://github.com/w3c/secure-payment-confirmation/issues">issues list</a></li>
+</ul>
+</dd>
+<dt>Payment Request and Payment Handlers</dt>
+<dd>
+<ul>
+<li>Payment Request advanced to Recommendation in September 2022 and is shipping in Chrome, Edge, and Safari. Feature requests are several years old; we did not spend time on these at this meeting but may do so soon.</li>
+<li>Payment Handler is a Working Draft, shipping in Chrome and Edge; not actively working on it but the Chrome team makes changes periodically to align with other privacy-related changes.</li>
+</ul>
+</dd>
+<p>With that framing in mind, here&#8217;s how our agenda played out.</p>
+<h3>Working Group: Request to Restore some Text</h3>
+<p>Colleagues from Apple requested (<a href="https://github.com/w3c/webpayments/issues/262">262</a>) the restoration of some text to the Working Group charter. While the Working Group of course wants to increase participation, we also discussed the disadvantages of rechartering, such as the time and effort required, and the risk of W3C Member objections to other parts of the charter (however unlikely). More discussion with Apple is needed to better understand the request and how to proceed.</p>
+<h3>SPC UX when no matching credentials</h3>
+<p>We revisited <a href="https://github.com/w3c/secure-payment-confirmation/issues/98">issue 98</a> regarding the SPC user experience when there are no matching credentials. As a reminder, there is a &#8220;fallback UX&#8221; today in order to avoid leaking information about whether the user has any Web Authentication credentials on the current device. We looked at some <a href="https://www.w3.org/2023/03/spc-fallback.pdf">proposed UX improvements</a>. I took away that there is support for a user experience that offers a clearer distinction between &#8220;the user wishes to authenticate another way&#8221; and &#8220;the user wishes to cancel&#8221;, provided that the UX does not leak the fact that the user does not have matching credentials. We are now seeking entities who would like to experiment with an SPC deployment, and would be interested in testing different fallback experiences.</p>
+<h3>SPC Integration: EMV&reg; 3-D Secure</h3>
+<p>SPC is referenced from EMV&reg; 3-D Secure 2.3, and there are ways to use SPC with earlier versions as well. With members of the EMVCo 3-D Secure Working Group we reviewed both (1) basic UX enhancements for the &#8220;single transaction&#8221; use case (the current implementation of SPC), and (2) enhancements to support other use cases.</p>
+<p>In particular, we looked closely at a range of recurring payments and installments use cases to get a better understanding of what data it could be interesting to display in the transaction dialog (and have signed upon authentication). We acknowledged the complexities of recurring payments use cases, but also the value of both cryptographic evidence of consent, and consistent UX across payment systems. Furthermore, there is a sense that some regulators (e.g., in Europe) may be looking for stronger consumer protection in the area of recurring payments, and, if so, it would be great for SPC to be well-positioned as a relevant technology.</p>
+<p>In general, the Web Payments Working Group is interested in both streamlining strong authentication (with SPC) and frictionless payments, where no user interaction is required. The following topics thus arose during our discussion of recurring payments:</p>
+<ul>
+<li>We don&#8217;t want to prevent frictionless recurring payments (e.g., very low-value, recognized payment)</li>
+<li>It would be great to reduce the need for strong customer authentication for subsequent payments. For example, could SPC be used to gather consent for an initial payment of $100 and also future payments of $10 monthly, and could the evidence of this consent lead to frictionless flows for the future payments? Another example: could the consent to pay $10 monthly for an initial subscription to a service, and agree at the same time to pay up to $15 for extra services so that they do not need to re-authenticate later?</li>
+</ul>
+<p>As with the fallback UX, I think experimentation will play a key role in encouraging browser support for recurring payment and other use cases.</p>
+<h3>SPC Integration: Grant Negotiation and Authorization Protocol (GNAP)</h3>
+<p>Although we frequently discuss SPC with card payment flows, SPC is not just for cards. On Tuesday we discussed other integrations, both GNAP and PIX.</p>
+<p>We first learned about GNAP and SPC at our <a href="https://www.w3.org/2023/02/02-wpwg-minutes.html#t01">2 February meeting</a> when Adrian Hope-Bailie (Fynbos) presented a demo showing GNAP as the protocol used to carry out a payment from a digital wallet, with SPC as the authentication UX. We continued the discussion at this week&#8217;s meeting, with an <a href="https://www.w3.org/2023/Talks/richer-gnap-20230328.pdf">introduction to GNAP</a> by one of the authors (Justin Richer) and <a href="https://www.w3.org/2023/Talks/ahb-gnap-spc-20230328.pdf">more detail</a> from Adrian Hope-Bailie about a related IETF draft: &#8220;<a href="https://www.ietf.org/archive/id/draft-ozdemir-gnap-spc-extension-00.html">GNAP Secure Payment Confirmation Extension</a>.&#8221; Given our previous discussion about recurring payments, we had discussion about whether and how to use access tokens to represent consent for future payments. And since we had been discussing frictionless payments, we discussed how, with GNAP, an Access Server (AS) could return a token based on context and other information, without requiring additional user interaction. It was pointed out out that there are overlaps in functionality between GNAP, EMV&reg; 3-D Secure, and EMV&reg; Secure Remote Commerce, and so I anticipate we&#8217;ll continue to have discussions about protocol interoperability.</p>
+<h3>SPC Integration: PIX</h3>
+<p>Although the WPWG had discussed the Brazilian Boleto system previously, I think this is the first time we discussed PIX, the Brazilian instant payments system. Through a very <a href="https://www.w3.org/2023/Talks/pix-overview-20230328.pdf">informative (and witty) presentation</a>, we learned about rapid rise of PIX (driven in part by concerns about inflation) and the evolution of fraud mitigation approaches grounded in the relationships managed through the Central Bank of Brazil: trusted actors and a surrounding ring of indirect partners. Our colleagues from Netflix and Itaú pointed out that the user experience and security mechanisms currently available on the Web are lacking, and thus they are interested in how SPC might help. We learned about the current PIX UX where users copy codes from a merchant page and paste into a bank app and discussed whether we could improve on that (e.g., via specific URL schemes). I anticipate we will continue to discuss PIX and SPC and I hope see some experimentation as well.</p>
+<h3>SPC Integration: EMV&reg; Secure Remote Commerce</h3>
+<p>EMV&reg; Secure Remote Commerce (SRC) version 1.3 integrates SPC as one of the authentication method types known to the protocol. During the meeting this week we considered two related concepts from the SRC protocol: user recognition and cardholder authentication. For the first, we discussed how <a href="https://github.com/fedidcg/FedCM">FedCM</a> (designed primarily for federated login use cases in a world without 3p cookies) might prove useful in SRC flows (see the <a href="https://www.w3.org/2023/Talks/emvco-src-spc-20230329.pdf">presentation from the EMVCo SRC Working Group</a>). We also discussed different ways that FedCM and SPC might be used together, including with and without a &#8220;common entity&#8221; that could help coordinate data exchange across different SRC systems.</p>
+<h3>Low Friction Authentication</h3>
+<p>We wrapped up the meeting with more discussion about &#8220;frictionless&#8221; and &#8220;low-friction&#8221; payment experiences. Industry stakeholders have made clear that friction can lead to cart abandonment, and the Web should support flows with minimal friction, for example, in regulatory contexts where multi-factor authentication is not required. It is not clear to me what role, if any, SPC will play in &#8220;frictionless&#8221; flows because it involves a user experience, but even if it does not, I expect the Working Group will continue to brainstorm about how to use emerging technology to minimize checkout friction.</p>
+							</div><!-- .entry-content -->
+	
+			<footer class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://www.w3.org/blog/wpwg/category/events/" rel="category tag">Events</a>					</span>
+					<span class="meta-sep">|</span>
+												<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on Web Payments Meeting (March 2023 Edition)</span></span></span>
+							</footer><!-- .entry-utility -->
+		</article><!-- #post-## -->
+
+		
+	
+
+
+			<article id="post-624" class="post-624 post type-post status-publish format-standard hentry category-events group-wg-payments">
+			<header><h2 class="entry-title"><a href="https://www.w3.org/blog/wpwg/2022/10/06/tpac-recap-2022-edition/" title="Permalink to TPAC Recap (2022 Edition)" rel="bookmark">TPAC Recap (2022 Edition)</a></h2></header>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="https://www.w3.org/blog/wpwg/2022/10/06/tpac-recap-2022-edition/" title="1:45 pm" rel="bookmark"><span class="entry-date">October 6, 2022</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="https://www.w3.org/blog/wpwg/author/ijacobs/" title="View all posts by Ian Jacobs">Ian Jacobs</a></span>			</div><!-- .entry-meta -->
+
+				<div class="entry-content">
+				<p>After a three-year hiatus, W3C held TPAC 2022 in person in Vancouver. It was really great to be back in person, and I heard that sentiment from just about everyone. More than 360 people registered to attend TPAC in person and another 250 joined remotely.</p>
+<p>Below I summarize discussions of the meetings I attended: the Web Payments Working Group, the Web Payment Security Interest Group, and joint meetings with the Web Authentication Working Group and the Antifraud Community Group.</p>
+<h3>Web Payments Working Group</h3>
+<p>The Web Payments Working Group agenda opened with a focus on Secure Payment Confirmation (<a href="https://www.w3.org/2022/09/12-wpwg-minutes.html">12 September minutes</a>):</p>
+<ul>
+<li>Adyen and Airbnb shared some information about their SPC pilot. The discussion led us to topics such as the importance of user education (for the new user experience), some ideas for the timing of user registration (post-transaction), and the potential value of sharing a FIDO attestation when using SPC in a delegated authentication flow.</li>
+<li>Google presented their current work to bring SPC to Chrome on Android. That led to discussion about (and strong interest in) SPC availability beyond browsers in native Android apps.</li>
+<li>FIS shared thoughts on three topics of interest: shops making the transition from brick and mortar to digital-first, online stores looking to create a seamless shopping experience, and merchants that prefer strong control over the user experience. Across these topics there were three main themes:
+<ul>
+<li>Merchants want to know who their customers are prior to authorization. On this point we discussed the impact of tokenization and potential benefits of ensuring that the Payment Account Reference (PAR) can be communicated during an EMV&reg; 3-D Secure transaction that involves SPC.</li>
+<li>Data is not always available based on payment types or implementations.</li>
+<li>Cart abandonment is a problem due to extra friction and payment problems.</li>
+</ul>
+</li>
+<li>Microsoft shared some perspectives as a merchant that adopted strong customer authentication in Europe. They emphasized the important of frictionless authentication and indicated (as FIS also indicated) that stronger authentication can lead to cart abandonment; see the <a href="https://www.w3.org/2022/Talks/dean-jordaan-20220912.pdf">Microsoft slides</a> for details. Key takeaways were thus that a great SCA user experience is very important (hence our emphasis on SPC) but that frictionless risk assessment is still very important. Microsoft reiterated during the talk that merchants do not like to hand over the authentication experience to banks, which, to me, reinforced the value proposition of SPC where merchant controls the authentication ceremony, and the bank can still validate the results.</li>
+<li>We then revisited some EMVCo observations about SPC and some changes that the EMVCo 3-D Secure Working Group has requested, including support for non-payments use cases, recurring payments, and more alignment with user experience requirements defined in the EMV&reg; 3-D Secure specification.</li>
+</ul>
+<p>We opened the second day of the WPWG meeting (<a href="https://www.w3.org/2022/09/13-wpwg-minutes">13 September minutes</a>) with discussion about the Payment Request API, which advanced to Recommendation just before the start of TPAC. Both Apple and Google expressed interest in restoring some capabilities related to address collection that are implemented in their respective browsers, but that were removed from version 1 of the specification for privacy-related reasons. I expect the features will be re-introduced so that interoperable implementations are documented, even if not recommended in their current form. The Working Group is likely to try to evolve the feature to address the previously registered privacy concerns.</p>
+<p>After that:</p>
+<ul>
+<li>Apple then described some changes to ApplePay.js over the past couple of years that could be integrated into Payment Request. This was useful for helping the group develop a potential roadmap for new work on the API.</li>
+<li>We then discussed some upcoming changes to browsers related to &#8220;<a href="https://github.com/wanderview/bounce-tracking-mitigations/blob/main/explainer.md">Bounce Tracking Mitigations</a>.&#8221; Bounce tracking refers to very quick redirects from one site to another and back, usually without the user knowing that the redirect has happened. As with previous discussions about privacy-related changes to browsers (e.g., IP address masking, user agent string masking, removal of third party cookies) we discussed the likely impact on user recognition and fraud prevention.</li>
+<li>In the same vein, we then heard about changes that the Chrome team plans to make to their Payment Handler implementation based on other changes on the Web related to privacy. The theme of data collection and risk mitigation continued into the Thursday joint meeting (below).</li>
+</ul>
+<h3>Tuesday Joint Meeting</h3>
+<p>On Tuesday afternoon, four groups met: the Web Payments WG, the Web Payment Security IG, the Web Authentication WG, and the Antifraud CG (<a href="https://docs.google.com/document/d/1W6uCLSI5ZEJf35_mnUrc-PgLViLHv7ajetyiU_zXFlM/edit">13 September joint meeting minutes</a>):</p>
+<ul>
+<li>The <a href="https://www.w3.org/community/antifraud/">Antifraud CG, launched in early 2022</a>, has developed as set of <a href="https://github.com/antifraudcg/use-cases/blob/main/USE-CASES.md">use cases</a>; these include both payments and advertising use cases. <a href="https://github.com/antifraudcg/proposals/issues">Proposals</a> to address these use cases are emerging, and we heard about several of them during the joint meeting, in particular about <a href="https://github.com/antifraudcg/proposals/issues/8">device integrity attestations</a>. We also discussed <a href="https://github.com/antifraudcg/proposals/issues/7">trust tokens</a>, currently in development in the Web Incubator CG.</li>
+<li>The Web Authentication Working Group summarized the state of specification and deployment of passkeys (cross-device FIDO credentials) and device public keys. I have the impression that device public keys &mdash;not yet implemented&mdash; could play an important role in payments use cases so that a Relying Party make make risk decisions based on previously seen devices. Those decisions may also rely on attestation availability, and it was pointed out that attestations are optional with Device Public Keys and may not always be available. We then discussed technology developments around a user experience question that we&#8217;ve heard before: if, for privacy reasons, a party cannot query the browser to determine whether the user has already enrolled credentials, how does that party know when to offer the user a registration experience?</li>
+<li>In the final session of the joint meeting, we discussed the status of SPC and broached several topics of ongoing coordination with the Web Authentication WG. We heard that our proposed &#8220;cross-origin bit&#8221; is now part of FIDO CTAP (and will be made public soon). The Web Payments Working Group next needs to register the extension with IANA. The WPWG re-raised the topic of <a href="https://github.com/w3c/webauthn/issues/1656#issuecomment-1219682589">cross-origin credential creation</a>, which is permitted in SPC but not in Web Authentication. While there is some support within the Web Authentication WG to reconsider this capability in Web Authentication Level 3, there is not yet consensus.</li>
+</ul>
+<p>Antifraud discussion, in particular about Device Public Keys used for fraud prevention, continued during a <a href="https://docs.google.com/document/d/1W6uCLSI5ZEJf35_mnUrc-PgLViLHv7ajetyiU_zXFlM/edit">Wednesday breakout on Antifraud</a>.</p>
+<h3>Thursday Joint Meeting</h3>
+<p>On Thursday, both the Web Payment Security Interest Group and the Antifraud Community Group held individual meetings as well as a 90-minute joint session on patterns of payment fraud (<a href="https://www.w3.org/2022/09/15-wpsig-public-minutes.html">15 September WPSIG/Antifraud minutes</a>):</p>
+<ul>
+<li>Entersekt presented some payment fraud patterns (e.g., account takeover through phishing, SIM swap, or social engineering; chargeback fraud, and card skimming attacks). We discussed current mitigation techniques (e.g., IP address monitoring) with attention to how those might be affected by privacy-related changes to browsers. As it was put in the meeting, &#8220;Browser fingerprinting is not good enough anymore.&#8221; Our colleagues from Entersekt evaluated some of the <a href="https://github.com/antifraudcg/proposals/issues">Antifraud CG Proposals</a> in development to see which might help with payments fraud use cases. I anticipate we will soon discuss a proposed new risk signal based on the joint discussion.</li>
+<li>Our colleague from the University of Illinois Chicago presented findings from research <a href="https://www.usenix.org/conference/usenixsecurity22/presentation/lin-xu">Phish in Sheep&#8217;s Clothing: Exploring the Authentication Pitfalls of Browser Fingerprinting</a>. One interpretation of the research is that it illustrates the limits of current approaches data collection used for payment fraud mitigation.</li>
+</ul>
+<p>We made good progress at TPAC in understanding use cases, formulating the value proposition of SPC, and emphasizing the need for more fraud prevention tools (with some useful whiteboarding in the mix). I anticipate the groups will want to meet again in person well before TPAC 2023.</p>
+							</div><!-- .entry-content -->
+	
+			<footer class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://www.w3.org/blog/wpwg/category/events/" rel="category tag">Events</a>					</span>
+					<span class="meta-sep">|</span>
+												<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on TPAC Recap (2022 Edition)</span></span></span>
+							</footer><!-- .entry-utility -->
+		</article><!-- #post-## -->
+
+		
+	
+
+
+			<article id="post-620" class="post-620 post type-post status-publish format-standard hentry category-events group-wg-payments">
+			<header><h2 class="entry-title"><a href="https://www.w3.org/blog/wpwg/2022/09/09/preparing-for-tpac-2022/" title="Permalink to Preparing for TPAC 2022" rel="bookmark">Preparing for TPAC 2022</a></h2></header>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="https://www.w3.org/blog/wpwg/2022/09/09/preparing-for-tpac-2022/" title="8:38 pm" rel="bookmark"><span class="entry-date">September 9, 2022</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="https://www.w3.org/blog/wpwg/author/ijacobs/" title="View all posts by Ian Jacobs">Ian Jacobs</a></span>			</div><!-- .entry-meta -->
+
+				<div class="entry-content">
+				<p><a href="https://www.w3.org/2022/09/TPAC/">TPAC 2022</a> will be a hybrid event: in-person in Vancouver, with remote participation. I believe more than 600 people have registered, and it looks like more than 350 people will attend in person. This will be my first in-person meeting in about 3 years.</p>
+<p>I have been working with multiple groups on a coordinated agenda about payments, authentication, and fraud prevention:</p>
+<ul>
+<li>Monday and Tuesday morning: <a href="https://github.com/w3c/webpayments/wiki/Agenda-TPAC2022">Web Payments Working Group</a></li>
+<li>Tuesday afternoon: <a href="https://docs.google.com/document/d/1Bxm7_gc-Wi7ZjWlgOMPbq3Kdv0L3lgvkkcVaQIFgPx8/edit#heading=h.dvz4zyoilau4">joint meeting</a> of WPWG, Web Payment Security Interest Group, Web Authentication WG, and Antifraud CG</li>
+<li>Wednesday afternoon: <a href="https://www.w3.org/2022/09/TPAC/breakouts.html">Breakout sessions</a></li>
+<li>Thursday: <a href="https://www.w3.org/securepay/wiki/Meeting/Sep2022">Web Payment Security IG</a>, with joint discussion about payment fraud patterns with the Antifraud CG. That agenda link requires W3C Member access.</li>
+</ul>
+<p>I&#8217;m looking forward to discussion about Secure Payment Confirmation (SPC). We expect to hear about a pilot from Airbnb/Adyen, emerging support for SPC on Android, and other industry perspectives about the current version as well as next use cases.</p>
+<p>I&#8217;ll summarize the meetings in a few weeks!</p>
+							</div><!-- .entry-content -->
+	
+			<footer class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://www.w3.org/blog/wpwg/category/events/" rel="category tag">Events</a>					</span>
+					<span class="meta-sep">|</span>
+												<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on Preparing for TPAC 2022</span></span></span>
+							</footer><!-- .entry-utility -->
+		</article><!-- #post-## -->
+
+		
+	
+
+
+			<article id="post-611" class="post-611 post type-post status-publish format-standard hentry category-events group-wg-payments">
+			<header><h2 class="entry-title"><a href="https://www.w3.org/blog/wpwg/2022/05/16/web-payments-meeting-may-2022-edition/" title="Permalink to Web Payments Meeting (May 2022 Edition)" rel="bookmark">Web Payments Meeting (May 2022 Edition)</a></h2></header>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="https://www.w3.org/blog/wpwg/2022/05/16/web-payments-meeting-may-2022-edition/" title="3:49 pm" rel="bookmark"><span class="entry-date">May 16, 2022</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="https://www.w3.org/blog/wpwg/author/ijacobs/" title="View all posts by Ian Jacobs">Ian Jacobs</a></span>			</div><!-- .entry-meta -->
+
+				<div class="entry-content">
+				<p>In early May the Web Payments Working Group held an energetic remote meeting; see the <a href="https://github.com/w3c/webpayments/wiki/Remote-Agenda-202205">agenda and minutes</a>.</p>
+<p>While we were meeting, the FIDO Alliance released a press release with headline <a href="https://fidoalliance.org/apple-google-and-microsoft-commit-to-expanded-support-for-fido-standard-to-accelerate-availability-of-passwordless-sign-ins/">Apple, Google and Microsoft Commit to Expanded Support for FIDO Standard to Accelerate Availability of Passwordless Sign-Ins</a>. This type of strong industry support for Web Authentication/FIDO is very exciting because Secure Payment Confirmation (SPC) builds on those technologies and benefits from the momentum.</p>
+<p>In preparation for advancing SPC to Candidate Recommendation we have been working through our <a href="https://github.com/w3c/secure-payment-confirmation/issues">issues list</a> and stabilizing the version 1 feature set. We closed 7 issues in the past month including through joint discussion with the Privacy Interest Group and the Web Authentication Working Group. We have also labeled some issues as &#8220;after version 1.&#8221;  See below for details about how we plan to manage the remaining 10 issues.</p>
+<p>At the meeting we heard a bit about recent changes to the Chrome implementation of SPC and upcoming plans. Modirum colleagues provided a demonstration of their EMV&reg; 3-D Secure implementation (version 2.3) that integrates SPC. Airbnb and Adyen shared a brief update on their SPC pilot. We will continue to look for support in more browser engines and refine the specification based on feedback from pilots.</p>
+<p>We also discussed Web Authentication more broadly. Best Buy has deployed Web Authentication for login and shared some of their experiences with the group. We also heard about some PSD2 use cases from (French bank) BPCE. In addition to SCA and dynamic linking for payments &mdash;the use case for SPC&mdash; they have similar requirements for authentication and signatures over transactions involving sensitive data. General browser support for signing transaction data with authenticators has been discussed previously in the Web Authentication Working Group; our recent joint discussion with them may re-energize the topic.</p>
+<h2>Remaining Issues</h2>
+<p>Here is a quick summary of our remaining 10 issues and how we plan to address them on the road to Candidate Recommendation.</p>
+<h4>Web Authentication Topics</h4>
+<p>The bulk of our remaining issues relate to the SPC dependency on FIDO.  In some cases, we think the proper long-term solution will involve enhancements to WebAuthn and/or CTAP:</p>
+<ul>
+<li><a href="https://github.com/w3c/secure-payment-confirmation/issues/12">Issue 12</a>: support for roaming authenticators. This issue involves both UX challenges and the need for support in CTAP for silently querying roaming authenticators for available credentials.</li>
+<li><a href="https://github.com/w3c/secure-payment-confirmation/issues/124">Issue 124</a>: determining when to enroll the user (in a way that protects user privacy)</li>
+<li><a href="https://github.com/w3c/secure-payment-confirmation/issues/157">Issue 157</a>: support for a &#8220;cross-origin&#8221; bit and CTAP; <a href="https://github.com/w3c/secure-payment-confirmation/issues/154">issue 154</a> relates to this and is about user consent to allow cross-origin reuse of a credential&gt;.</li>
+<li><a href="https://github.com/w3c/secure-payment-confirmation/issues/174">Issue 175</a>: impact of multi-device credentials on SPC. </li>
+<li><a href="https://github.com/w3c/secure-payment-confirmation/issues/187">Issue 187</a>: improving understanding of who is authenticating for whom</li>
+</ul>
+<p>I expect the Working Group will try to (1) balance the desire to advance SPC to Candidate Recommendation in a timely fashion with (2) remaining in sync with FIDO advances. It may be that SPC implementations support short-term solutions to some of these issues (e.g., involving caching information) and then evolve as underlying specifications support new capabilities.</p>
+<h4>Privacy Topics</h4>
+<p>Stripe asked in <a href="https://github.com/w3c/secure-payment-confirmation/issues/172">issue 172</a> how to enable a user to opt-out of stored payment credentials for compliance with regulation such as GDPR. In scenarios where the user authenticates in a first-party context, it is straightforward to offer an opt-out feature. With SPC, authentication may happen in a third-party context where it is less obvious how best to offer an opt-out solution. We have been discussing when it would be most appropriate to provide the user with information about how to opt-out:</p>
+<ul>
+<li>At registration time.</li>
+<li>At transaction time, before authentication starts</li>
+<li>At transaction time, during authentication. Overall I&#8217;ve not heard much support for opt-out during authentication. </li>
+<li>At other times.</li>
+</ul>
+<p>These discussions are ongoing; Stripe plans to conduct a deeper analysis of their requirements.</p>
+<p>I raised <a href="https://github.com/w3c/secure-payment-confirmation/issues/77">issue 77</a> with the hope that we would find a technology solution to preserve privacy as SPC credentials are shared across origins.  We have not found a practical technology solution. Our current plan (see <a href="https://github.com/w3c/secure-payment-confirmation/pull/189">pull request</a>) is to provide guidance to relying parties and others on how to manage identifiers.</p>
+<h4>Internationalization</h4>
+<p>Our <a href="https://github.com/w3c/secure-payment-confirmation/issues/93">issue 93</a> on the localization of displayed strings is shared with other groups (including Web Authentication) whose specifications involve data outside of markup. I believe the Internationalization Working Group will seek support at the JavaScript level in the long run. In the short run, I would like to see W3C publish a standalone specification that describes how to support localizable strings, and that can be &#8220;imported&#8221; into SPC and other specifications.</p>
+<h4>UX Topics</h4>
+<p>In order to better align with EMV&reg; 3-D Secure requirements we&#8217;ve received a request that the Chrome implementation of SPC display larger icons (<a href="https://github.com/w3c/secure-payment-confirmation/issues/184">issue 184</a>). EMVCo colleagues have also suggested additional UX enhancements such as the display of additional icons.</p>
+<p>I look forward to our next extended meeting &mdash;TPAC 2022 in Vancouver&mdash; by which time I hope that we will have reached Candidate Recommendation (or come very close).</p>
+							</div><!-- .entry-content -->
+	
+			<footer class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://www.w3.org/blog/wpwg/category/events/" rel="category tag">Events</a>					</span>
+					<span class="meta-sep">|</span>
+												<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on Web Payments Meeting (May 2022 Edition)</span></span></span>
+							</footer><!-- .entry-utility -->
+		</article><!-- #post-## -->
+
+		
+	
+
+
+			<article id="post-597" class="post-597 post type-post status-publish format-standard hentry category-events group-wg-payments">
+			<header><h2 class="entry-title"><a href="https://www.w3.org/blog/wpwg/2021/11/08/tpac-recap-2021-edition/" title="Permalink to TPAC Recap (2021 Edition)" rel="bookmark">TPAC Recap (2021 Edition)</a></h2></header>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="https://www.w3.org/blog/wpwg/2021/11/08/tpac-recap-2021-edition/" title="5:53 pm" rel="bookmark"><span class="entry-date">November 8, 2021</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="https://www.w3.org/blog/wpwg/author/ijacobs/" title="View all posts by Ian Jacobs">Ian Jacobs</a></span>			</div><!-- .entry-meta -->
+
+				<div class="entry-content">
+				<p>The Web Payments Working Group held a remote meeting 25-28 October (<a href="https://github.com/w3c/webpayments/wiki/Agenda-TPAC2021">agenda</a>, <a href="https://github.com/w3c/webpayments/wiki/Agenda-TPAC2021#minutes">minutes</a>) as part of <a href="https://www.w3.org/2021/10/TPAC/">TPAC 2021</a>.</p>
+<p>The meeting took place one week after <a href="https://www.w3.org/2021/10/TPAC/breakouts.html">TPAC breakouts</a>, which included sessions I think were of particular interest to the payments industry, including: <a href="https://github.com/WICG/trust-token-api/blob/main/meetings/tpac2021-antifraud-breakout.md">Anti-Fraud for the Web</a>, <a href="https://www.w3.org/2021/10/19-webmonetization-minutes.html">The State of Web Monetization</a>, <a href="https://www.w3.org/2021/10/20-crossdevicesec-minutes.html">Cross-Device Security (caBLE)</a>, <a href="https://docs.google.com/document/d/13oqM9AUnItnDw02zsvpT3DdYYOpIpl0_eTcnbS8rjUY/edit">The state of browser storage partitioning</a>, and <a href="https://www.w3.org/2021/10/21-creative-economy-minutes.html">The intersection of Web Monetization, the Creative Economy and Diversity</a>. Some of these topics infused the Working Group agenda.</p>
+<p>The main themes of our agenda were: strong authentication, user recognition and privacy, and Payment Request reviews. In addition, we heard updates on two incubation topics: Google on <a href="https://github.com/WICG/digital-goods/blob/main/explainer.md">Digital Goods API</a> and Coil on <a href="https://webmonetization.org/">Web Monetization</a>.</p>
+<h3>Strong Authentication</h3>
+<p>On Monday we jumped into discussion about <a href="https://w3c.github.io/secure-payment-confirmation/">Secure Payment Confirmation (SPC)</a>, our primary deliverable related to strong customer authentication (SCA). The Chrome team reported on implementation status, including the fact that SPC support now ships in Chrome 95 stable. We also made progress on some <a href="https://www.w3.org/2021/10/25-wpwg-minutes.html#t04">key SPC issues</a>.</p>
+<p>On the second day Adyen described the SPC pilot they are currently running with Airbnb. I recommend checking out the user experience featured in Adyen&#8217;s <a href="/2021/10/adyen-spc-reg.mov">registration video</a> and <a href="/2021/10/adyen-spc-auth">Authentication video</a>; <a href="https://www.w3.org/2021/10/26-wpwg-minutes-longdesc.html">descriptions</a> are available.</p>
+<p>We met with the Web Authentication Working Group on the third day to discuss care and feeding of the relationship between SPC and Web Authentication. For example, in the current draft specification SPC credentials are FIDO credentials with subtype &#8220;payment.&#8221; SPC credentials can be used for login use cases, but (at least in the current implementation) vanilla Web Authentication credentials cannot be used with SPC.  In the current model, it is not possible to alter the nature of existing credentials (from vanilla-to-SPC or vice versa). This led to conversations about whether the ecosystem might find itself creating SPC credentials &#8220;by default&#8221; to make them useful for both login and payments.  We also discussed ways to help FIDO server operators avoid accidentally allowing an SPC credential to be used for login use cases.</p>
+<p>The Web Authentication Working Group also shared their vision for new features in WebAuthn Level 3, including:</p>
+<ul>
+<li>Delegation (of authentication rights to others).</li>
+<li>User experience improvements. Relying parties may at time hesitate to use Web Authentication because they don&#8217;t know whether there is a credential on the current device. The label &#8220;non-modal UI&#8221; was used to refer to mechanisms that would help create an acceptable user experience without revealing device information to the relying party.</li>
+<li>Support for relying parties signaling a desire for re-authentication.</li>
+<li>Backups and recovery, including potentially synchronizing keys across boundaries (that is, not requiring all keys be hardware-bound).</li>
+</ul>
+<p>In the current implementation of SPC, any SPC credential may be used by any origin to initiate an authentication ceremony. During the meeting it was suggested that some relying parties might want to benefit from the transaction confirmation dialog, but might not want other origins to be able to initiate the authentication ceremony. (Following the meeting we logged this as <a href="https://github.com/w3c/secure-payment-confirmation/issues/157">Issue 157: Consider separating the SPC powers of Third Party invocation and Payment display</a>.)</p>
+<p>That topic in turn suggested that the current implementation of the SPC credential as a &#8220;payment&#8221; subtype may not suffice. And the current implementation prevents credential behavior from changing over time: a credential cannot start life as a login credential, be changed with user consent into a login+payment credential, have the login power revoked, etc. I anticipate ongoing productive discussions with the Web Authentication Working Group about which functionalities migrate from SPC to Web Authentication and keeping everything in sync.</p>
+<h3>User Recognition and Privacy</h3>
+<p>SPC is gaining traction as our mechanism for strong customer authentication for Web payments. However other user recognition use cases also remain of high interest. At least for now there seem to be two important user recognition use cases:</p>
+<ul>
+<li>Risk calculations. For example, the EMV® 3-D Secure Protocol &#8220;frictionless flow&#8221; relies on data collection for risk assessment, and some aspects of that data collection may become more difficult as browser behaviors change around cookies. (We had already begun to document some <a href="https://github.com/w3c/wpsig/blob/gh-pages/3ds-reqs.md">requirements related to EMV&reg; 3-D Secure</a>.)
+</li>
+<li>Stored user profile information available cross-origin. Some applications want to know who the user is in order, for example, to display that user&#8217;s available payment instruments.</li>
+</ul>
+<p>For the risk calculation use case, our colleague from Entersekt described the pertinent question this way: Have I seen this user on this device with this instrument, and has the user consented to be identified with this device to make this payment experience better? We heard that billions of transactions fail due to inadequate risk assessment, and so this is a serious problem that requires attention. </p>
+<p>Can we devise a browser capability to help minimize friction in the user payment experience (e.g., no additional challenge to the user after pushing the &#8220;pay&#8221; button, no redirects to a first party context) while protecting the user&#8217;s privacy (e.g., by not sharing strongly identifying information silently across origins)? We acknowledged that there are other <a href="https://github.com/WICG/trust-token-api/blob/main/meetings/tpac2021-antifraud-breakout.md">anti-fraud use cases</a> that might (or might not) overlap in scope so we should join those discussions. We also recognized the need to be attentive to the potential for abuse of any strongly identifying capability.</p>
+<p>We lightly discussed several ideas during the meeting (please refer to the minutes) and it is clear that there is strong interest in more discussion of these use cases.</p>
+<p>For conversations about both SPC and user recognition, we were fortunate to meet with representatives from both the W3C Privacy Interest Group and the Privacy Community Group.</p>
+<h3>Payment Request Reviews</h3>
+<p>The W3C Membership recently reviewed Proposed Recommendations for Payment Request API and Payment Method Identifiers; I hope that we will soon wrap up our work on those specifications.</p>
+<p>We met with the Internationalization Working Group during our meeting to discuss approaches to support the internationalization of human-readable strings in specifications (both Payment Request (<a href="https://github.com/w3c/payment-request/pull/971">pull request 971</a>) and SPC (<a href="https://github.com/w3c/secure-payment-confirmation/issues/93">issue 93</a>)). The Internationalization Working Group seeks to define a <a href="https://github.com/w3c/string-meta/issues/54">Web-wide approach</a> for specifications to define human-readable strings and so the Web Payments Working Group will likely adopt it as the proposal advances.</p>
+<h3>Next Steps</h3>
+<p>I think these are the main next steps for the Working Group:</p>
+<ul>
+<li>Publish version 1 Recommendations of Payment Request and Payment Method Identifiers.</li>
+<li>For SPC:
+<ul>
+<li>Address <a href="https://github.com/w3c/secure-payment-confirmation/issues">SPC issues</a></li>
+<li>Make improvements based on pilots from Adyen/Airbnb and Stripe</li>
+<li>Seek implementation in other browsers, and flesh out the <a href="https://github.com/web-platform-tests/wpt/tree/master/secure-payment-confirmation">test suite</a> to encourage interoperability.</li>
+<li>Continue to coordinate with the Web Authentication Working Group, Web Payment Security Interest Group, and horizontal review groups.</li>
+</ul>
+</li>
+<li>Refine use cases and requirements around user recognition use cases. (Following the meeting an <a href="https://www.w3.org/community/antifraud/">Anti-Fraud Community Group</a> was launched.)</li>
+<li>Recharter. I hope to send our <a href="https://www.w3.org/Payments/WG/charter-2021.html">draft charter</a> for W3C Member review within the next month.</li>
+</ul>
+<h3>A Moment of Gratitude</h3>
+<p>At the meeting, Adrian Hope-Bailie announced to the Working Group that he plans to step down as co-Chair (but remain involved). The Working Group shared their appreciation of Adrian&#8217;s commitment. I would like here to emphasize how important Adrian has been to this project and to the Web. And we&#8217;ve had great fun. Thank you, Adrian!</p>
+							</div><!-- .entry-content -->
+	
+			<footer class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://www.w3.org/blog/wpwg/category/events/" rel="category tag">Events</a>					</span>
+					<span class="meta-sep">|</span>
+												<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on TPAC Recap (2021 Edition)</span></span></span>
+							</footer><!-- .entry-utility -->
+		</article><!-- #post-## -->
+
+		
+	
+
+
+			<article id="post-587" class="post-587 post type-post status-publish format-standard hentry category-uncategorized group-wg-payments">
+			<header><h2 class="entry-title"><a href="https://www.w3.org/blog/wpwg/2021/10/06/spc-design-choices-for-flexibility-and-scale/" title="Permalink to SPC Design Choices for Flexibility and Scale" rel="bookmark">SPC Design Choices for Flexibility and Scale</a></h2></header>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="https://www.w3.org/blog/wpwg/2021/10/06/spc-design-choices-for-flexibility-and-scale/" title="3:29 pm" rel="bookmark"><span class="entry-date">October 6, 2021</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="https://www.w3.org/blog/wpwg/author/ijacobs/" title="View all posts by Ian Jacobs">Ian Jacobs</a></span>			</div><!-- .entry-meta -->
+
+				<div class="entry-content">
+				<p style="float: right;margin-left: 1em"><img decoding="async" src="https://www.w3.org/2021/10/spc-20211006.png" alt="SPC authentication dialog allowing user to consent to payment through Web Authentication." /></p>
+<p>An important goal of <a href="https://w3c.github.io/secure-payment-confirmation/">Secure Payment Confirmation (SPC)</a> is to streamline strong customer authentication (SCA). One way to reduce friction is to allow many authentications for a given registration.  In other words, ideally the user registers once and can then authenticate &#8220;everywhere&#8221; (consistent with the policies of the relying party; they have to opt-in).</p>
+<p>Several recent API design and implementation choices have expanded our vision of &#8220;everywhere.&#8221;</p>
+<p>During an SPC authentication the browser displays a prompt to the user: do you wish to pay this amount to this merchant using this instrument? In the original SPC implementation the relying party (for example the bank or card issuer) provided the instrument information (a label describing the instrument and a icon) at registration time. This turned out to overconstrain the API, so now the instrument information is provided at authentication time.  How does this expand &#8220;everywhere&#8221;? The user may have multiple instruments with a relying party (e.g., multiple cards or accounts with a bank). The new SPC approach allows the user to register once with the relying party and use that registration with multiple instruments.  The relying party decides, at authentication time, which instrument information the browser should display.</p>
+<p>In the original SPC implementation credentials were stored in the browser, which meant that as soon as the user moved to a new browser, a new registration would be required to use SPC. A second recent change has been making SPC work with (FIDO) <a href="https://w3c.github.io/webauthn/#discoverable-credential">discoverable credentials</a>.  This allows the browser to determine at authentication time if there is an authenticator that matches the credentials provided as input to SPC. Although discoverable credentials are not yet interoperable on all platforms, we are headed in that direction. How will this expand &#8220;everywhere&#8221;? First, the user can use SPC in a new browser on their device without a new registration; the existing registration is discovered on the fly at authentication time. Second, we hope to see wider adoption of technologies that let people use their mobile devices as authenticators during desktop authentication (e.g., <a href="https://groups.google.com/a/fidoalliance.org/g/fido-dev/c/go6GoFW27Dw/m/9flCLR5pBQAJ?pli=1">caBLE</a>). This should increase the range of authenticators with discoverable credentials.</p>
+<p>The choice of relying party also has a direct impact on the scope of &#8220;everywhere.&#8221; If the relying party is, for example, an issuing bank, as long as other parties in the ecosystem (notably payment service providers) can query the bank for SPC credentials, the user should be able to authenticate on any merchant using any PSP for the same registration. That is the most expansive vision of &#8220;everywhere.&#8221;  However, different stakeholders will move at different speeds for a variety of security and practical reasons. In the meantime, other parties may choose to play the relying party role. For example a payment service provider might act as the relying party. In this case (a form of delegated authentication), the user could reuse a registration across all merchants served by that payment service provider. The user would likely have to register anew with each new payment service provider. As a Working Group, our goal is to design the API to support a variety of flavors of relying parties: banks, companies that provide services to banks, companies that provide payment services to merchants, and so on.</p>
+<p>Another axis of flexibility involves the integration of SPC into an underlying protocol. Payment service providers need to be able to ask relying parties (e.g., banks) for SPC credentials, and to return assertions to relying parties for validation. I am excited that the first SPC integration will be in <a href="https://www.emvco.com/emvco_document/emvco-publishes-emv-3-d-secure-2-3-to-support-more-secure-and-convenient-e-commerce-authentication/">EMV&reg; 3-D Secure version 2.3</a>. Likewise, as FIDO authentication becomes more commonplace for bank login experiences, I expect users will want the same type of experience for payments directly from their bank accounts. I hope that these integrations drive interest in the API and get us closer to &#8220;everywhere.&#8221;</p>
+<p>We&#8217;ll talk about all of this in more detail soon at the <a href="https://github.com/w3c/webpayments/wiki/Agenda-TPAC2021">Working Group&#8217;s October meeting</a>.</p>
+							</div><!-- .entry-content -->
+	
+			<footer class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://www.w3.org/blog/wpwg/category/uncategorized/" rel="category tag">Uncategorized</a>					</span>
+					<span class="meta-sep">|</span>
+												<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on SPC Design Choices for Flexibility and Scale</span></span></span>
+							</footer><!-- .entry-utility -->
+		</article><!-- #post-## -->
+
+		
+	
+
+
+			<article id="post-584" class="post-584 post type-post status-publish format-standard hentry category-uncategorized group-wg-payments">
+			<header><h2 class="entry-title"><a href="https://www.w3.org/blog/wpwg/2021/09/30/payment-request-and-payment-method-identifiers-are-proposed-recommendations/" title="Permalink to Payment Request and Payment Method Identifiers are Proposed Recommendations" rel="bookmark">Payment Request and Payment Method Identifiers are Proposed Recommendations</a></h2></header>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="https://www.w3.org/blog/wpwg/2021/09/30/payment-request-and-payment-method-identifiers-are-proposed-recommendations/" title="1:15 pm" rel="bookmark"><span class="entry-date">September 30, 2021</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="https://www.w3.org/blog/wpwg/author/ijacobs/" title="View all posts by Ian Jacobs">Ian Jacobs</a></span>			</div><!-- .entry-meta -->
+
+				<div class="entry-content">
+				<p>Today W3C <a href="https://www.w3.org/blog/news/archives/9269">published</a> Proposed Recommendations for <a href="https://www.w3.org/TR/2021/PR-payment-request-20210930/">Payment Request API</a> and <a href="https://www.w3.org/TR/2021/PR-payment-method-id-20210930/">Payment Method Identifiers</a>. Congratulations to the Working Group! I want to extend heartfelt thanks to all the editors over the years whose contributions have brought us to this point. </p>
+							</div><!-- .entry-content -->
+	
+			<footer class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://www.w3.org/blog/wpwg/category/uncategorized/" rel="category tag">Uncategorized</a>					</span>
+					<span class="meta-sep">|</span>
+												<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on Payment Request and Payment Method Identifiers are Proposed Recommendations</span></span></span>
+							</footer><!-- .entry-utility -->
+		</article><!-- #post-## -->
+
+		
+	
+
+
+			<article id="post-582" class="post-582 post type-post status-publish format-standard hentry category-events group-wg-payments">
+			<header><h2 class="entry-title"><a href="https://www.w3.org/blog/wpwg/2021/09/23/remote-meeting-agenda-in-development/" title="Permalink to Remote Meeting Agenda in Development" rel="bookmark">Remote Meeting Agenda in Development</a></h2></header>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="https://www.w3.org/blog/wpwg/2021/09/23/remote-meeting-agenda-in-development/" title="3:06 pm" rel="bookmark"><span class="entry-date">September 23, 2021</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="https://www.w3.org/blog/wpwg/author/ijacobs/" title="View all posts by Ian Jacobs">Ian Jacobs</a></span>			</div><!-- .entry-meta -->
+
+				<div class="entry-content">
+				<p>We are building the <a href="https://github.com/w3c/webpayments/wiki/Agenda-TPAC2021">agenda</a> of the Web Payments Working Group&#8217;s next virtual meeting, 25-28 October. The meeting is part of <a href="https://www.w3.org/2021/10/TPAC/">TPAC 2021</a>, and so are planning several joint discussions with other W3C groups, notably on topics of Web Authentication, Internationalization, and Privacy. In addition to those conversations, our main focus will be <a href="https://w3c.github.io/secure-payment-confirmation/">Secure Payment Confirmation (SPC)</a>. I anticipate we will discuss SPC experiments (Adyen/Airbnb and Stripe), the integration of SPC into EMV&reg; 3-D Secure version 2.3, other potential integrations, and deployment status in Chrome.</p>
+<p>We typically organize some future looking sessions. This time around Coil is leading a discussion on &#8220;Unlocking the Potential of the Internet of Value&#8221;. A session like this is particularly timely because we are in the process of rechartering the group and want to be sure that we can accommodate emerging participant interests.</p>
+<p>I expect our agenda to solidify over the next couple of weeks, so check back soon.</p>
+							</div><!-- .entry-content -->
+	
+			<footer class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://www.w3.org/blog/wpwg/category/events/" rel="category tag">Events</a>					</span>
+					<span class="meta-sep">|</span>
+												<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on Remote Meeting Agenda in Development</span></span></span>
+							</footer><!-- .entry-utility -->
+		</article><!-- #post-## -->
+
+		
+	
+
+
+			<article id="post-578" class="post-578 post type-post status-publish format-standard hentry category-uncategorized group-wg-payments">
+			<header><h2 class="entry-title"><a href="https://www.w3.org/blog/wpwg/2021/08/31/spc-is-a-first-public-wd/" title="Permalink to SPC is a First Public WD" rel="bookmark">SPC is a First Public WD</a></h2></header>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="https://www.w3.org/blog/wpwg/2021/08/31/spc-is-a-first-public-wd/" title="1:51 pm" rel="bookmark"><span class="entry-date">August 31, 2021</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="https://www.w3.org/blog/wpwg/author/ijacobs/" title="View all posts by Ian Jacobs">Ian Jacobs</a></span>			</div><!-- .entry-meta -->
+
+				<div class="entry-content">
+				<p>My congratulations to the Web Payments Working Group for the publication today of <a href="https://www.w3.org/TR/secure-payment-confirmation/">Secure Payment Confirmation (SPC)</a> as a First Public Working Draft. The specification is taking shape in part thanks to experimentation by Adyen and Airbnb, the results of which I anticipate we will hear about at our <a href="https://github.com/w3c/webpayments/wiki/Agenda-TPAC2021">October TPAC meeting</a> if not sooner. We also look forward to a second experiment from Stripe, whose first experiment led to a number of changes in the Chrome implementation. Our colleagues at EMVCo have shared publicly that they anticipate integration of SPC into EMV® 3-D Secure version 2.3, and I look forward to seeing that specification soon. We also continue to pursue our conversations about integration into other underlying protocols, such as EMV® Secure Remote Commerce and Open Banking. </p>
+<p>In other Working Group news:</p>
+<p>* We have stopped work on the Basic Card specification. Some participants have expressed interest in exploring a replacement, so we will begin use case discussions this week.<br />
+* We have started group <a href="https://lists.w3.org/Archives/Public/public-payments-wg/2021Aug/0044.html">review</a> of a draft charter; our current charter expires at the end of 2021.<br />
+* We are building our agenda for the <a href="https://github.com/w3c/webpayments/wiki/Agenda-TPAC2021">October TPAC meeting</a>.</p>
+<p>I look forward to a busy next few months. </p>
+							</div><!-- .entry-content -->
+	
+			<footer class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="https://www.w3.org/blog/wpwg/category/uncategorized/" rel="category tag">Uncategorized</a>					</span>
+					<span class="meta-sep">|</span>
+												<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on SPC is a First Public WD</span></span></span>
+							</footer><!-- .entry-utility -->
+		</article><!-- #post-## -->
+
+		
+	
+
+				<nav id="nav-below" class="navigation">
+					<div class="nav-previous"><a href="https://www.w3.org/blog/wpwg/page/2/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+					<div class="nav-next"></div>
+				</nav><!-- #nav-below -->
+			</div><!-- #content -->
+		</section><!-- #container -->
+
+
+		<div id="primary" class="widget-area" role="complementary">
+			
+
+	
+			<aside id="search" class="widget-container widget_search">
+				<form role="search" method="get" id="searchform" class="searchform" action="https://www.w3.org/blog/wpwg/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>			</aside>
+
+			<aside id="archives" class="widget-container">
+				<header><h3 class="widget-title">Archives</h3></header>
+				<ul>
+						<li><a href='https://www.w3.org/blog/wpwg/2024/10/'>October 2024</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2023/04/'>April 2023</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2022/10/'>October 2022</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2022/09/'>September 2022</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2022/05/'>May 2022</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2021/11/'>November 2021</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2021/10/'>October 2021</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2021/09/'>September 2021</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2021/08/'>August 2021</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2021/05/'>May 2021</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2021/03/'>March 2021</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2021/02/'>February 2021</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2020/10/'>October 2020</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2020/06/'>June 2020</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2020/05/'>May 2020</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2020/04/'>April 2020</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2020/01/'>January 2020</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2019/10/'>October 2019</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2019/09/'>September 2019</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2019/05/'>May 2019</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2019/04/'>April 2019</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2018/12/'>December 2018</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2018/11/'>November 2018</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2018/09/'>September 2018</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2018/08/'>August 2018</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2018/07/'>July 2018</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2018/05/'>May 2018</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2018/01/'>January 2018</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2017/12/'>December 2017</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2017/11/'>November 2017</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2017/10/'>October 2017</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2017/09/'>September 2017</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2017/05/'>May 2017</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2017/03/'>March 2017</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2016/12/'>December 2016</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2016/10/'>October 2016</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2016/09/'>September 2016</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2016/07/'>July 2016</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2016/05/'>May 2016</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2016/04/'>April 2016</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2016/03/'>March 2016</a></li>
+	<li><a href='https://www.w3.org/blog/wpwg/2015/10/'>October 2015</a></li>
+				</ul>
+			</aside>
+
+			<aside id="meta" class="widget-container">
+				<header><h3 class="widget-title">Meta</h3></header>
+				<ul>
+										<li><a href="https://www.w3.org/blog/wpwg/wp-login.php">Log in</a></li>
+									</ul>
+			</aside>
+
+					
+		</div><!-- #primary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="footer" role="contentinfo">
+		<div id="colophon">
+
+
+
+			<div id="site-info">
+				&nbsp; &nbsp;<a href="https://www.w3.org/blog/wpwg/" title="Web Payments Working Group" rel="home">
+					Web Payments Working Group				</a>
+			</div><!-- #site-info -->
+
+			<div id="site-generator">
+								<a href="http://wordpress.org/"
+						title="Semantic Personal Publishing Platform" rel="generator">
+					Powered by WordPress.				</a>
+			</div><!-- #site-generator -->
+		</div><!-- #colophon -->
+	</footer><!-- #footer -->
+
+</div><!-- #wrapper -->
+
+
+</body>
+</html>

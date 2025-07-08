@@ -1,0 +1,356 @@
+<!doctype html>
+<html dir="ltr" lang="ja" class="no-js">
+<head>
+    <title>バリデータとツール | 開発者 | W3C</title>
+
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="home" href="https://www.w3.org/"/>
+<link rel="icon" type="image/png" href="https://www.w3.org/assets/logos/w3c/favicon-32.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://www.w3.org/assets/logos/w3c/favicon-180.png"/>
+
+<link rel="stylesheet" href="https://www.w3.org/assets/website-2021/styles/core.css?ver=1.4" media="screen"/>
+
+<!--
+CSS Mustard Cut
+Print (Edge doesn't apply to print otherwise)
+Edge, Chrome 39+, Opera 26+, Safari 9+, iOS 9+, Android ~5+, Android UCBrowser ~11.8+
+FF 47+
+-->
+<link rel="stylesheet" id="advanced-stylesheet"
+      href="https://www.w3.org/assets/website-2021/styles/advanced.css?ver=1.4" media="
+            only print,
+            only all and (pointer: fine), only all and (pointer: coarse), only all and (pointer: none),
+            only all and (min--moz-device-pixel-ratio:0) and (display-mode:browser), (min--moz-device-pixel-ratio:0) and (display-mode:fullscreen)
+        ">
+<link rel="stylesheet" href="https://www.w3.org/assets/website-2021/styles/print.css" media="print"/>
+
+<script src="https://www.w3.org/assets/website-2021/js/libraries/fontfaceobserver.js"></script>
+
+<script>
+    var myFont = new FontFaceObserver('Noto Sans');
+
+    Promise.all([myFont.load()]).then(function () {
+        document.documentElement.className += " fonts-loaded";
+    });
+
+    (function () {
+        var linkEl = document.getElementById('advanced-stylesheet');
+        if (window.matchMedia && window.matchMedia(linkEl.media).matches) {
+            var script = document.createElement('script');
+            script.src = 'https://www.w3.org/assets/website-2021/js/main.js?ver=1.4';
+            script.defer = true;
+            document.querySelector('head').appendChild(script);
+            (function (H) {
+                H.className = H.className.replace(/\bno-js\b/, 'js')
+            })(document.documentElement);
+        }
+    })();
+</script>
+
+
+    <meta name="description" content="このページでは、バリデータと開発者向けツールの一覧を示します。"/>
+    <meta name="thumbnail" content="https://www.w3.org/assets/website-2021/images/w3c-opengraph-image.png"/>
+    <meta property="og:url" content="https://www.w3.org/ja/developers/tools/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="バリデータとツール"/>
+    <meta property="og:image" content="https://www.w3.org/assets/website-2021/images/w3c-opengraph-image.png"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:description" content="このページでは、バリデータと開発者向けツールの一覧を示します。"/>
+    <meta property="og:site_name" content="W3C"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="w3c"/>
+    <meta name="twitter:url" content="https://www.w3.org/ja/developers/tools/"/>
+    <meta name="twitter:title" content="バリデータとツール"/>
+    <meta name="twitter:description" content="このページでは、バリデータと開発者向けツールの一覧を示します。"/>
+    <meta name="twitter:image" content="https://www.w3.org/assets/website-2021/images/w3c-opengraph-image.png"/>
+    
+    
+    
+    </head>
+
+<body class="landing">
+<a class="skip-link" href="#main">コンテンツへスキップ</a>
+<div class="grid-wrap">
+    <div class="wrap">
+        <header class="global-header">
+            <span role="status" aria-live="polite"></span>
+                                        
+                                            <nav id="lang-nav" aria-label="言語オプション">
+        <div class="l-center">
+            <div class="l-cluster">
+                <ul class="clean-list" role="list">
+                        <li><a href="https://www.w3.org/" hreflang="en" lang="en">English homepage<span class="visuallyhidden" lang="ja">英語</span></a></li>
+                        <li><a href="https://www.w3.org/zh-hans/" hreflang="zh-hans" lang="zh-hans">简体中文首页<span class="visuallyhidden" lang="ja">中国語</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                                        <nav id="global-nav" aria-label="Main">
+    <div class="global-nav__inner l-center">
+        <a class="logo-link" href="https://www.w3.org/ja/" hreflang="ja">
+            <span class="logo">
+                <img src="https://www.w3.org/assets/logos/w3c/w3c-no-bars.svg" alt="W3C" role="img"/>
+            </span>
+            <span class="visuallyhidden">W3Cのホームページを訪れる</span>
+        </a>
+        <button type="button" class="button button--ghost with-icon--after with-icon--larger" data-trigger="mobile-nav"
+                style="display: none;"></button>
+        <ul data-component="nav-double-intro">
+            <li class="top-nav-item">
+                                                                                    <a hreflang="en" href="https://www.w3.org/ja/help/search/" class="nav-link icon-link">
+                    <img class="icon" src="https://www.w3.org/assets/website-2021/svg/search.svg" width="24" height="24" alt aria-hidden="true"><span class="hide-at-max-width">検索</span>
+                </a>
+            </li>
+            <li class="top-nav-item">
+                <a hreflang="en" href="https://www.w3.org/users/myprofile/" id="account-login-link" class="account-login icon-link with-icon--after">
+                    マイアカウント
+                    <span class="avatar avatar--small icon"><img src="https://www.w3.org/assets/website-2021/svg/avatar.svg" width="24" height="24" alt aria-hidden="true"/></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+                    </header>
+                        
+<nav id="breadcrumb" aria-label="Breadcrumb">
+    <div class="l-center">
+        <div class="l-cluster">
+            <ol class="breadcrumbs clean-list" role="list">
+                                                                    <li><a href="/ja/">Homepage</a></li>
+
+        <li><a href="/ja/developers/">開発者</a></li>
+
+        <li><a href="/ja/developers/tools/" aria-current="page">バリデータとツール</a></li>
+
+                            </ol>
+        </div>
+    </div>
+</nav>
+                <main id="main" >
+                                            
+
+                                
+
+                                
+
+                                
+
+                                    <div class="u-full-width hero">
+    <div class="l-center">
+        <div class="l-sidebar">
+            <div>
+                <div class="not-sidebar">
+                    <h1>バリデータとツール</h1>
+                                                                        <nav aria-label="翻訳" class="translations">
+    <div class="l-sidebar">
+        <div>
+            <div class="sidebar">
+                <span lang="ja">言語切り替え：</span>
+            </div>
+            <div class="not-sidebar">
+    <div class="l-cluster">
+        <ul class="clean-list translation-list">
+                            <li>
+                    <a href="/zh-hans/developers/tools/"
+                       hreflang="zh-Hans"
+                       lang="zh-Hans"
+                       dir="auto"
+                    >
+                        中文（简体）
+                    </a>
+                </li>
+                            <li>
+                    <a href="/developers/tools/"
+                       hreflang="en"
+                       lang="en"
+                       dir="auto"
+                    >
+                        English
+                    </a>
+                </li>
+                    </ul>
+    </div>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+                                                <p class="lead">優れたオープンソースツールを使って、あなたのコードの可能性を最大限に引き出しましょう。</p>
+                                    </div>
+                            </div>
+        </div>
+    </div>
+</div>
+
+                        <div class="component component--columns component--columns--icons">
+        		<ul class="clean-list" role="presentation">
+					<li>
+				<div class="card">
+										<div class="card__text">
+													<h2 class="card__heading">Nu HTMLチェッカー</h2>
+												<p>HTML文書をチェックします。</p><p><a href="https://github.com/validator/validator">GitHub</a> | <a href="https://github.com/validator/validator/issues">問題</a>点</p><p><a class="button button--alt" href="https://validator.w3.org/nu/">Nu HTML チェッカー</a></p>
+											</div>
+																<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true" class="icon icon--larger" focusable="false" height="1em" width="1em"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg>
+									</div>
+			</li>
+					<li>
+				<div class="card">
+										<div class="card__text">
+													<h2 class="card__heading">リンクチェッカー</h2>
+												<p>ウェブページのリンク切れをチェックします。</p><p><a href="https://github.com/w3c/link-checker">GitHub</a> | <a href="https://github.com/w3c/link-checker/issues">問題</a>点</p><p><a class="button button--alt" href="https://validator.w3.org/checklink">リンクチェッカー</a></p>
+											</div>
+																<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true" class="icon icon--larger" focusable="false" height="1em" width="1em"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg>
+									</div>
+			</li>
+					<li>
+				<div class="card">
+										<div class="card__text">
+													<h2 class="card__heading">国際化に関するチェッカー</h2>
+												<p>国際化のレベル、親しみやすさをチェックします。</p><p><a href="https://github.com/w3c/i18n-checker">GitHub</a> | <a href="https://github.com/w3c/i18n-checker/issues">問題点</a></p><p><a class="button button--alt" href="https://validator.w3.org/i18n-checker/">国際化に関するチェッカー</a></p>
+											</div>
+																<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true" class="icon icon--larger" focusable="false" height="1em" width="1em"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg>
+									</div>
+			</li>
+					<li>
+				<div class="card">
+										<div class="card__text">
+													<h2 class="card__heading">EPUBチェック</h2>
+												<p>EPUB出版物の準拠性チェッカーです。</p><p><a href="https://github.com/w3c/epubcheck">GitHub</a> | <a href="https://github.com/w3c/epubcheck/issues">問題点</a></p><p><a class="button button--alt" href="/publishing/epubcheck/">EPUBチェック</a></p>
+											</div>
+																<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true" class="icon icon--larger" focusable="false" height="1em" width="1em"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg>
+									</div>
+			</li>
+			</ul>
+	</div>
+
+                <div class="component component--columns component--columns--icons">
+        		<ul class="clean-list" role="presentation">
+					<li>
+				<div class="card">
+										<div class="card__text">
+													<h2 class="card__heading">CSS バリデーター</h2>
+												<p>CSS（Cascading Style Sheets）をチェックします。</p><p><a href="https://github.com/w3c/css-validator">GitHub</a> | <a href="https://github.com/w3c/css-validator/issues">問題点</a></p><p><a class="button button--alt" href="https://jigsaw.w3.org/css-validator/">CSSをチェック</a></p>
+											</div>
+																<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true" class="icon icon--larger" focusable="false" height="1em" width="1em"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg>
+									</div>
+			</li>
+					<li>
+				<div class="card">
+										<div class="card__text">
+													<h2 class="card__heading">RDF バリデーター</h2>
+												<p>RDF文書のチェックと可視化</p><p><a href="https://github.com/w3c/rdfvalidator-ng">GitHub</a> | <a href="https://github.com/w3c/rdfvalidator-ng/issues">問題点</a></p><p><a class="button button--alt" href="https://www.w3.org/RDF/Validator/">RDF バリデーター</a></p>
+											</div>
+																<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true" class="icon icon--larger" focusable="false" height="1em" width="1em"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg>
+									</div>
+			</li>
+					<li>
+				<div class="card">
+										<div class="card__text">
+													<h2 class="card__heading">RSSフィードバリデータ</h2>
+												<p>シンジケートフィード (RSS および Atom フィード) 用のバリデータです。</p><p><a class="button button--alt" href="https://validator.w3.org/feed/">RSS フィードバリデータ</a></p>
+											</div>
+																<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true" class="icon icon--larger" focusable="false" height="1em" width="1em"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg>
+									</div>
+			</li>
+					<li>
+				<div class="card">
+										<div class="card__text">
+													<h2 class="card__heading">ウェブプラットフォームテスト</h2>
+												<p>ウェブの相互運用性をテストし、支援します。</p><p><a href="https://github.com/web-platform-tests/wpt">GitHub</a> | <a href="https://github.com/web-platform-tests/wpt/issues">問題点</a></p><p><a class="button button--alt" href="https://web-platform-tests.org/">ウェブプラットフォームテスト</a></p>
+											</div>
+																<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true" class="icon icon--larger" focusable="false" height="1em" width="1em"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M501.1 395.7L384 278.6c-23.1-23.1-57.6-27.6-85.4-13.9L192 158.1V96L64 0 0 64l96 128h62.1l106.6 106.6c-13.6 27.8-9.2 62.3 13.9 85.4l117.1 117.1c14.6 14.6 38.2 14.6 52.7 0l52.7-52.7c14.5-14.6 14.5-38.2 0-52.7zM331.7 225c28.3 0 54.9 11 74.9 31l19.4 19.4c15.8-6.9 30.8-16.5 43.8-29.5 37.1-37.1 49.7-89.3 37.9-136.7-2.2-9-13.5-12.1-20.1-5.5l-74.4 74.4-67.9-11.3L334 98.9l74.4-74.4c6.6-6.6 3.4-17.9-5.7-20.2-47.4-11.7-99.6.9-136.6 37.9-28.5 28.5-41.9 66.1-41.2 103.6l82.1 82.1c8.1-1.9 16.5-2.9 24.7-2.9zm-103.9 82l-56.7-56.7L18.7 402.8c-25 25-25 65.5 0 90.5s65.5 25 90.5 0l123.6-123.6c-7.6-19.9-9.9-41.6-5-62.7zM64 472c-13.2 0-24-10.8-24-24 0-13.3 10.7-24 24-24s24 10.7 24 24c0 13.2-10.7 24-24 24z"/></svg>
+									</div>
+			</li>
+			</ul>
+	</div>
+
+                <section 		class="component component--fifty-fifty ">
+	<div class="illustration">
+									<img src="https://www.w3.org/cms-uploads/w3capi-img.svg"
+					 loading="lazy"
+											alt=""
+									/>
+						</div>
+	<div class="component--fifty-fifty__text">
+									<h2 class="txt-earth">W3C API</h2>
+						<p>現在、仕様、グループ、組織、およびユーザーに関するデータを公開しています。当初はJSON形式で提供していますが、別の形式も準備中であり、時間をかけて公開する情報を拡大していく予定です。</p><p><a class="button button--alt" href="https://github.com/w3c/w3c-api/">Githubでより詳しく</a></p>
+						</div>
+</section>
+
+                <div class="component component--columns component--columns--icons">
+        		<ul class="clean-list" role="presentation">
+					<li>
+				<div class="card">
+										<div class="card__text">
+													<h2 class="card__heading">ヘルプを見る</h2>
+												<p><a href="https://stackoverflow.com/">スタックオーバーフロー</a> &nbsp;にはW3C 標準と W3C 開発者ツールに焦点を当てた、活発で素晴らしいコミュニティがあります。<br>W3C コミュニティに質問するには、w3c タグを使用してください。</p><p><a class="button button--alt" href="https://stackoverflow.com/questions/tagged/w3c">質問する</a></p>
+											</div>
+																<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" aria-hidden="true" class="icon icon--larger" focusable="false" height="1em" width="1em"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M202.021 0C122.202 0 70.503 32.703 29.914 91.026c-7.363 10.58-5.093 25.086 5.178 32.874l43.138 32.709c10.373 7.865 25.132 6.026 33.253-4.148 25.049-31.381 43.63-49.449 82.757-49.449 30.764 0 68.816 19.799 68.816 49.631 0 22.552-18.617 34.134-48.993 51.164-35.423 19.86-82.299 44.576-82.299 106.405V320c0 13.255 10.745 24 24 24h72.471c13.255 0 24-10.745 24-24v-5.773c0-42.86 125.268-44.645 125.268-160.627C377.504 66.256 286.902 0 202.021 0zM192 373.459c-38.196 0-69.271 31.075-69.271 69.271 0 38.195 31.075 69.27 69.271 69.27s69.271-31.075 69.271-69.271-31.075-69.27-69.271-69.27z"/></svg>
+									</div>
+			</li>
+					<li>
+				<div class="card">
+										<div class="card__text">
+													<h2 class="card__heading">貢献</h2>
+												<p>開発者は、既存のツールや提案された将来のプロジェクトにコードを貢献することで参加することができます。</p><p>テスト、バグ報告、提案、あるいは良いドキュメントを作る手助けも重要です！</p><p>各プロジェクトを始めるための詳しい情報は、それぞれのウェブページにあります。</p><p><a class="button button--alt" href="https://github.com/w3c/">Githubでプロジェクトを探す</a></p>
+											</div>
+																<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" aria-hidden="true" class="icon icon--larger" focusable="false" height="1em" width="1em"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M128 96c26.5 0 48-21.5 48-48S154.5 0 128 0 80 21.5 80 48s21.5 48 48 48zm384 0c26.5 0 48-21.5 48-48S538.5 0 512 0s-48 21.5-48 48 21.5 48 48 48zm125.7 372.1l-44-110-41.1 46.4-2 18.2 27.7 69.2c5 12.5 17 20.1 29.7 20.1 4 0 8-.7 11.9-2.3 16.4-6.6 24.4-25.2 17.8-41.6zm-34.2-209.8L585 178.1c-4.6-20-18.6-36.8-37.5-44.9-18.5-8-39-6.7-56.1 3.3-22.7 13.4-39.7 34.5-48.1 59.4L432 229.8 416 240v-96c0-8.8-7.2-16-16-16H240c-8.8 0-16 7.2-16 16v96l-16.1-10.2-11.3-33.9c-8.3-25-25.4-46-48.1-59.4-17.2-10-37.6-11.3-56.1-3.3-18.9 8.1-32.9 24.9-37.5 44.9l-18.4 80.2c-4.6 20 .7 41.2 14.4 56.7l67.2 75.9 10.1 92.6C130 499.8 143.8 512 160 512c1.2 0 2.3-.1 3.5-.2 17.6-1.9 30.2-17.7 28.3-35.3l-10.1-92.8c-1.5-13-6.9-25.1-15.6-35l-43.3-49 17.6-70.3 6.8 20.4c4.1 12.5 11.9 23.4 24.5 32.6l51.1 32.5c4.6 2.9 12.1 4.6 17.2 5h160c5.1-.4 12.6-2.1 17.2-5l51.1-32.5c12.6-9.2 20.4-20 24.5-32.6l6.8-20.4 17.6 70.3-43.3 49c-8.7 9.9-14.1 22-15.6 35l-10.1 92.8c-1.9 17.6 10.8 33.4 28.3 35.3 1.2.1 2.3.2 3.5.2 16.1 0 30-12.1 31.8-28.5l10.1-92.6 67.2-75.9c13.6-15.5 19-36.7 14.4-56.7zM46.3 358.1l-44 110c-6.6 16.4 1.4 35 17.8 41.6 16.8 6.6 35.1-1.7 41.6-17.8l27.7-69.2-2-18.2-41.1-46.4z"/></svg>
+									</div>
+			</li>
+					<li>
+				<div class="card">
+										<div class="card__text">
+													<h2 class="card__heading">寄付</h2>
+												<p>優れたツールを開発し、サポートし、ホストし、維持するには多くのコストがかかります。</p><p>あなたの協力があれば、私たちはツールやバリデーターをより良く、より速く、より親しみやすくし、ウェブ全体のための素晴らしい無料サービスを維持することができます。</p><p><a class="button button--alt" href="/donate/">今すぐ寄付を</a></p>
+											</div>
+																<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true" class="icon icon--larger" focusable="false" height="1em" width="1em"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 416c114.9 0 208-93.1 208-208S370.9 0 256 0 48 93.1 48 208s93.1 208 208 208zM233.8 97.4V80.6c0-9.2 7.4-16.6 16.6-16.6h11.1c9.2 0 16.6 7.4 16.6 16.6v17c15.5.8 30.5 6.1 43 15.4 5.6 4.1 6.2 12.3 1.2 17.1L306 145.6c-3.8 3.7-9.5 3.8-14 1-5.4-3.4-11.4-5.1-17.8-5.1h-38.9c-9 0-16.3 8.2-16.3 18.3 0 8.2 5 15.5 12.1 17.6l62.3 18.7c25.7 7.7 43.7 32.4 43.7 60.1 0 34-26.4 61.5-59.1 62.4v16.8c0 9.2-7.4 16.6-16.6 16.6h-11.1c-9.2 0-16.6-7.4-16.6-16.6v-17c-15.5-.8-30.5-6.1-43-15.4-5.6-4.1-6.2-12.3-1.2-17.1l16.3-15.5c3.8-3.7 9.5-3.8 14-1 5.4 3.4 11.4 5.1 17.8 5.1h38.9c9 0 16.3-8.2 16.3-18.3 0-8.2-5-15.5-12.1-17.6l-62.3-18.7c-25.7-7.7-43.7-32.4-43.7-60.1.1-34 26.4-61.5 59.1-62.4zM480 352h-32.5c-19.6 26-44.6 47.7-73 64h63.8c5.3 0 9.6 3.6 9.6 8v16c0 4.4-4.3 8-9.6 8H73.6c-5.3 0-9.6-3.6-9.6-8v-16c0-4.4 4.3-8 9.6-8h63.8c-28.4-16.3-53.3-38-73-64H32c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32h448c17.7 0 32-14.3 32-32v-96c0-17.7-14.3-32-32-32z"/></svg>
+									</div>
+			</li>
+			</ul>
+	</div>
+
+                        </main>
+                                </div>
+            <footer class="global-footer">
+    <div class="l-center">
+        <div class="global-footer__links">
+            <div class="l-cluster">
+                <ul class="clean-list" role="list">
+                        <li><a href="https://www.w3.org/ja/" hreflang="ja"><span lang="ja" dir="ltr">ホーム</span></a></li>
+                        <li><a href="https://www.w3.org/ja/contact/" hreflang="ja">お問い合わせ</a></li>
+                        <li><a href="https://www.w3.org/ja/help/" hreflang="ja"><span lang="ja" dir="ltr">ヘルプ</span></a></li>
+                        <li><a href="https://www.w3.org/ja/donate/" hreflang="ja">寄付</a></li>
+                        <li><a href="https://www.w3.org/ja/policies/" hreflang="ja">法的事項と方針</a></li>
+                        <li><a href="https://www.w3.org/ja/about/corporation/" hreflang="ja">会社概要</a></li>
+                        <li><a href="https://status.w3.org/" hreflang="ja">システムステータス</a></li>
+                </ul>
+            </div>
+            <ul class="clean-list" role="list">
+                <li>
+                    <a class="with-icon--larger" href="https://w3c.social/@w3c" hreflang="en">
+                        <img class="icon icon--larger" src="https://www.w3.org/assets/website-2021/svg/mastodon.svg" width="20" height="20" alt aria-hidden="true" loading="lazy"/>
+                        <span class="visuallyhidden">Mastodon</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="with-icon--larger" href="https://github.com/w3c/" hreflang="en">
+                        <img class="icon icon--larger" src="https://www.w3.org/assets/website-2021/svg/github.svg" width="20" height="20" alt aria-hidden="true" loading="lazy"/>
+                        <span class="visuallyhidden">GitHub</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <p class="copyright"><span lang="en">著作権 © 2025年 <a href="https://www.w3.org/ja/" hreflang="ja">ワールド・ワイド・ウェブ・コンソーシアム</a>。<br> <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup> <a href="https://www.w3.org/policies/#disclaimers">免責事項</a>、 <a href="https://www.w3.org/policies/#trademarks">商標</a>、および <a rel="license" href="https://www.w3.org/copyright/document-license/" title="W3C 文書ライセンス">寛容なライセンス</a> の規則が適用されます。</span></p>
+    </div>
+</footer>
+    </div>
+
+    <script src="/assets/website-2021/js/translations-sorting.js"></script>
+</body>
+
+</html>

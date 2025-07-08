@@ -1,0 +1,838 @@
+<!DOCTYPE html><html lang="en" dir="ltr"><head>
+<meta charset="utf-8">
+<meta name="generator" content="ReSpec 25.16.5">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+span.example-title{text-transform:none}
+aside.example,div.example,div.illegal-example{padding:.5em;margin:1em 0;position:relative;clear:both}
+div.illegal-example{color:red}
+div.illegal-example p{color:#000}
+aside.example,div.example{padding:.5em;border-left-width:.5em;border-left-style:solid;border-color:#e0cb52;background:#fcfaee}
+aside.example div.example{border-left-width:.1em;border-color:#999;background:#fff}
+aside.example div.example span.example-title{color:#999}
+</style>
+<style>
+.issue-label{text-transform:initial}
+.warning>p:first-child{margin-top:0}
+.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
+span.warning{padding:.1em .5em .15em}
+.issue.closed span.issue-number{text-decoration:line-through}
+.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}
+.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
+li.task-list-item{list-style:none}
+input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
+.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
+</style>
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font:small Helvetica Neue,sans-serif,Droid Sans Fallback;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;margin-top:.25em}
+.dfn-panel ul a[href]{color:#333}
+.dfn-panel a.self-link{font-weight:700}
+.dfn-panel .dfn-exported{float:right;padding:.1em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;background:#d1edfd;color:#040b1c;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
+  
+<title>Resource Hints</title>
+  
+  
+  
+
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+.hljs{background:0 0!important}
+a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}
+dfn{font-weight:700}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:normal}
+code{color:#c63501}
+th code{color:inherit}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+.toc a,.tof a{text-decoration:none}
+a .figno,a .secno{color:#000}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
+.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+.simple th a{color:#fff;padding:3px 5px;text-align:left}
+.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+.simple td{padding:3px 10px;border-top:1px solid #ddd}
+.simple tr:nth-child(even){background:#f0f6ff}
+.section dd>p:first-child{margin-top:0}
+.section dd>p:last-child{margin-bottom:0}
+.section dd{margin-bottom:1em}
+.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
+#issue-summary>ul,.respec-dfn-list{column-count:2}
+#issue-summary li,.respec-dfn-list li{list-style:none}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+h2,h3,h4,h5,h6{position:relative}
+aside.example .marker>a.self-link{color:inherit}
+h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
+h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}
+@media (max-width:767px){
+dd{margin-left:0}
+h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
+<meta name="description" content="This specification defines the dns-prefetch, preconnect, prefetch, and prerender relationships of the HTML Link Element (<link>). These primitives enable the developer, and the server generating or delivering the resources, to assist the user agent in the decision process of which origins it should connect to, and which resources it should fetch and preprocess to improve page performance.">
+<link rel="canonical" href="https://www.w3.org/TR/resource-hints/">
+<style>
+.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}
+.hljs-comment,.hljs-quote{color:#717277;font-style:italic}
+.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4}
+.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;font-weight:700}
+.hljs-literal{color:#0b76c5}
+.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c}
+.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01}
+.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801}
+.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3}
+.hljs-emphasis{font-style:italic}
+.hljs-strong{font-weight:700}
+.hljs-link{text-decoration:underline}
+</style>
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
+<script id="initialUserConfig" type="application/json">{
+  "shortName": "resource-hints",
+  "specStatus": "WD",
+  "editors": [
+    {
+      "name": "Ilya Grigorik",
+      "url": "https://www.igvita.com/",
+      "mailto": "igrigorik@gmail.com",
+      "company": "Google",
+      "companyURL": "https://google.com/",
+      "w3cid": "56102"
+    }
+  ],
+  "github": "w3c/resource-hints",
+  "group": "webperf",
+  "publishDate": "2020-10-05",
+  "previousMaturity": "WD",
+  "previousPublishDate": "2019-07-02",
+  "publishISODate": "2020-10-05T00:00:00.000Z",
+  "generatedSubtitle": "Working Draft 05 October 2020"
+}</script>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-WD"></head>
+
+<body class="h-entry"><div class="head">
+    <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Resource Hints</h1>
+    
+    <h2>
+      W3C Working Draft
+      <time class="dt-published" datetime="2020-10-05">05 October 2020</time>
+    </h2>
+    
+    <dl>
+      <dt>This version:</dt><dd>
+              <a class="u-url" href="https://www.w3.org/TR/2020/WD-resource-hints-20201005/">https://www.w3.org/TR/2020/WD-resource-hints-20201005/</a>
+            </dd><dt>Latest published version:</dt><dd>
+              <a href="https://www.w3.org/TR/resource-hints/">https://www.w3.org/TR/resource-hints/</a>
+            </dd>
+      <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/resource-hints/">https://w3c.github.io/resource-hints/</a></dd>
+      
+      
+      
+      <dt>Previous version:</dt><dd><a href="https://www.w3.org/TR/2019/WD-resource-hints-20190702/">https://www.w3.org/TR/2019/WD-resource-hints-20190702/</a></dd>
+      
+      <dt>Editor:</dt>
+      <dd class="p-author h-card vcard" data-editor-id="56102"><a class="ed_mailto u-email email p-name" href="mailto:igrigorik@gmail.com">Ilya Grigorik</a>
+            (<a class="p-org org h-org h-card" href="https://google.com/">Google</a>)
+          </dd>
+      
+      
+      <dt>Participate:</dt><dd>
+    <a href="https://github.com/w3c/resource-hints/">GitHub w3c/resource-hints</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/resource-hints/issues/">File a bug</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/resource-hints/commits/gh-pages">Commit history</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/resource-hints/pulls/">Pull requests</a>
+  </dd>
+    </dl>
+    
+    
+    
+    <p class="copyright">
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+    ©
+    2020
+    
+    <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+    <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+    <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
+    W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules
+    apply.
+  </p>
+    <hr title="Separator for header">
+  </div>
+  <section id="abstract" class="introductory"><h2>Abstract</h2>
+    <p>This specification defines the <a href="#dfn-dns-prefetch" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-dns-prefetch-1"><code>dns-prefetch</code></a>, <a href="#dfn-preconnect" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-preconnect-1"><code>preconnect</code></a>, <a href="#dfn-prefetch" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-prefetch-1"><code>prefetch</code></a>, and <a href="#dfn-prerender" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-prerender-1"><code>prerender</code></a> relationships of the HTML Link Element (<code>&lt;link&gt;</code>). These primitives enable the developer, and the server generating or delivering the resources, to assist the user agent in the decision process of which origins it should connect to, and which resources it should fetch and preprocess to improve page performance.</p>
+  </section>
+
+  <section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
+      document at the time of its publication. Other documents may supersede
+      this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision
+      of this technical report can be found in the
+      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+      https://www.w3.org/TR/.</em></p>
+    <p></p>
+  <p>
+    This document was published by the <a href="https://www.w3.org/webperf/">Web Performance Working Group</a> as a
+    Working Draft. 
+    This document is intended to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
+  </p><p>
+    <a href="https://github.com/w3c/resource-hints/issues/">GitHub Issues</a> are preferred for
+          discussion of this specification.
+        
+    
+  </p><p>
+      Publication as a Working Draft does not imply endorsement
+      by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership. 
+    </p><p>This is a draft document and may be updated, replaced
+  or obsoleted by other documents at any time. It is inappropriate to cite this
+  document as other than work in progress.
+  </p><p></p><p>
+    
+        This document was produced by a group
+        operating under the
+        <a href="https://www.w3.org/Consortium/Patent-Policy-20170801/">1 August 2017 <abbr title="World Wide Web Consortium">W3C</abbr> Patent
+          Policy</a>.
+       
+    
+                <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+                <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/45211/status">public list of any patent disclosures</a>
+          made in connection with the deliverables of
+          the group; that page also includes
+          instructions for disclosing a patent. An individual who has actual
+          knowledge of a patent which the individual believes contains
+          <a href="https://www.w3.org/Consortium/Patent-Policy-20170801/#def-essential">Essential Claim(s)</a>
+          must disclose the information in accordance with
+          <a href="https://www.w3.org/Consortium/Patent-Policy-20170801/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+        
+    
+  </p><p>
+                  This document is governed by the
+                  <a id="w3c_process_revision" href="https://www.w3.org/2020/Process-20200915/">15 September 2020 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#resource-hints"><bdi class="secno">2. </bdi>Resource Hints</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#dns-prefetch"><bdi class="secno">2.1 </bdi>DNS Prefetch</a></li><li class="tocline"><a class="tocxref" href="#preconnect"><bdi class="secno">2.2 </bdi>Preconnect</a></li><li class="tocline"><a class="tocxref" href="#prefetch"><bdi class="secno">2.3 </bdi>Prefetch</a></li><li class="tocline"><a class="tocxref" href="#prerender"><bdi class="secno">2.4 </bdi>Prerender</a></li></ol></li><li class="tocline"><a class="tocxref" href="#process"><bdi class="secno">3. </bdi>Process</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#fetching-the-resource-hint-link"><bdi class="secno">3.1 </bdi>Fetching the resource hint link</a></li><li class="tocline"><a class="tocxref" href="#load-and-error-events"><bdi class="secno">3.2 </bdi>Load and error events</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-cases"><bdi class="secno">4. </bdi>Use cases</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#dynamic-request-url-preconnect"><bdi class="secno">4.1 </bdi>Dynamic request URL (preconnect)</a></li><li class="tocline"><a class="tocxref" href="#anonymizing-redirect-preconnect"><bdi class="secno">4.2 </bdi>Anonymizing redirect (preconnect)</a></li><li class="tocline"><a class="tocxref" href="#speculative-resource-prefetching-prefetch"><bdi class="secno">4.3 </bdi>Speculative resource prefetching (prefetch)</a></li><li class="tocline"><a class="tocxref" href="#reactive-resource-prefetching-prefetch"><bdi class="secno">4.4 </bdi>Reactive resource prefetching (prefetch)</a></li><li class="tocline"><a class="tocxref" href="#prerendering-prerender"><bdi class="secno">4.5 </bdi>Prerendering (prerender)</a></li></ol></li><li class="tocline"><a class="tocxref" href="#security-and-privacy"><bdi class="secno">5. </bdi>Security and Privacy</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">6. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#iana-considerations"><bdi class="secno">7. </bdi>IANA Considerations</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#dns-prefetch-link-relation-type"><bdi class="secno">7.1 </bdi>dns-prefetch Link Relation Type</a></li><li class="tocline"><a class="tocxref" href="#preconnect-link-relation-type"><bdi class="secno">7.2 </bdi>preconnect Link Relation Type</a></li><li class="tocline"><a class="tocxref" href="#prefetch-link-relation-type"><bdi class="secno">7.3 </bdi>prefetch Link Relation Type</a></li><li class="tocline"><a class="tocxref" href="#prerender-link-relation-type"><bdi class="secno">7.4 </bdi>prerender Link Relation Type</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><bdi class="secno">A. </bdi>Acknowledgments</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">B.1 </bdi>Normative references</a></li></ol></li></ol></nav>
+
+  <section id="introduction">
+    <h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
+
+    <p>Modern browsers leverage a wide variety of speculative optimization techniques to anticipate user input and intent, which allows them to hide some of the networking, processing, and rendering latencies: preconnects, prefetching of resources, and prerendering of resources for subsequent navigation.</p>
+
+    <p>The decision to initiate one or more of the above optimizations is typically based on heuristic rules based on document markup and structure, navigation history, and context of the user - e.g., type of device, available compute and memory resources, network connectivity, user preferences, and so on. These techniques have proven to be successful, but can be further improved by leveraging the knowledge a developer has about the front-end and back-end generation and delivery of the resources of a web application.</p>
+
+    <p>For example, the application may provide the following resource hints to the user agent:</p>
+
+    <ul>
+      <li>The list of origins from which resources will be fetched.</li>
+      <li>The next likely user action or navigation target, and the resources that will be required, based on current page or application state, individual user history, or aggregated session data.</li>
+    </ul>
+
+    <p>Many web applications already leverage a variety of prefetching techniques. This includes, but is not limited to, using <code>XMLHttpRequest</code> to fetch and cache assets before they are needed. However, these implementations are application specific, are not interoperable, and do not provide the same level of performance as the browser-provided primitives. Worse, these implementations sometimes conflict with the browser logic and result in delayed or unnecessary resource fetches that degrade overall page performance.</p>
+
+    <p>This specification defines the <a href="#dfn-dns-prefetch" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-dns-prefetch-2"><code>dns-prefetch</code></a>, <a href="#dfn-preconnect" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-preconnect-2"><code>preconnect</code></a>, <a href="#dfn-prefetch" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-prefetch-2"><code>prefetch</code></a>, and <a href="#dfn-prerender" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-prerender-2"><code>prerender</code></a> relationships of the HTML Link Element (<code>&lt;link&gt;</code>). These primitives enable the developer, and the server generating or delivering the resources, to assist the user agent in the decision process of which origins it should connect to, and which resources it should fetch and preprocess to improve page performance.</p>
+  </section>
+
+  <section id="resource-hints">
+    <h2 id="x2-resource-hints"><bdi class="secno">2. </bdi>Resource Hints<a class="self-link" aria-label="§" href="#resource-hints"></a></h2>
+
+    <ul>
+      <li>A <dfn id="dfn-resource-hint-link">resource hint link</dfn> is a <a href="#dfn-dns-prefetch" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-dns-prefetch-3"><code>dns-prefetch</code></a>, <a href="#dfn-preconnect" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-preconnect-3"><code>preconnect</code></a>, <a href="#dfn-prefetch" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-prefetch-3"><code>prefetch</code></a>, or <a href="#dfn-prerender" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-prerender-3"><code>prerender</code></a> relationship that is used to indicate an origin or resource that should be connected to, or fetched, by the user agent.</li>
+      <li>A <dfn id="dfn-speculative-fetch">speculative fetch</dfn> is a fetch initiated via a <a href="#dfn-prefetch" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-prefetch-4"><code>prefetch</code></a> or <a href="#dfn-prerender" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-prerender-4"><code>prerender</code></a> relationship.</li>
+    </ul>
+
+    <section id="dns-prefetch">
+      <h3 id="x2-1-dns-prefetch"><bdi class="secno">2.1 </bdi>DNS Prefetch<a class="self-link" aria-label="§" href="#dns-prefetch"></a></h3>
+
+      <p>The <code><dfn id="dfn-dns-prefetch">dns-prefetch</dfn></code> link relation type is used to indicate an origin that will be used to fetch required resources, and that the user agent <em class="rfc2119">SHOULD</em> resolve as early as possible.</p>
+
+      <div class="example" id="example-1">
+        <div class="marker">
+    <a class="self-link" href="#example-1">Example<bdi> 1</bdi></a>
+  </div> <pre aria-busy="false"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"dns-prefetch"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"//example.com"</span>&gt;</span></code></pre>
+      </div>
+    </section>
+
+    <section id="preconnect">
+      <h3 id="x2-2-preconnect"><bdi class="secno">2.2 </bdi>Preconnect<a class="self-link" aria-label="§" href="#preconnect"></a></h3>
+
+      <p>The <code><dfn id="dfn-preconnect">preconnect</dfn></code> link relation type is used to indicate an origin that will be used to fetch required resources. Initiating an early connection, which includes the DNS lookup, TCP handshake, and optional TLS negotiation, allows the user agent to mask the high latency costs of establishing a connection.</p>
+
+      <div class="example" id="example-2">
+        <div class="marker">
+    <a class="self-link" href="#example-2">Example<bdi> 2</bdi></a>
+  </div> <pre aria-busy="false"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"preconnect"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"//example.com"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"preconnect"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"//cdn.example.com"</span> <span class="hljs-attr">crossorigin</span>&gt;</span></code></pre>
+      </div>
+
+      <p>To <dfn id="dfn-initiate-a-preconnect">initiate a preconnect</dfn>, the user agent <em class="rfc2119">MUST</em> run these steps:</p>
+      <ol>
+        <li><a href="https://html.spec.whatwg.org/#resolve-a-url">Resolve</a> the <a href="https://html.spec.whatwg.org/#url">URL</a> given by the <code>href</code> attribute.
+        <ol>
+        <li>If that is successful, let <var>preconnect URL</var> be the <a href="https://html.spec.whatwg.org/#resulting-absolute-url">resulting absolute URL</a>, and otherwise abort these steps.</li>
+        <li>If <var>preconnect URL</var>'s <a href="https://url.spec.whatwg.org/#concept-url-scheme">scheme</a> is not one of "http" or "https" then abort these steps.</li>
+        </ol>
+        </li>
+        <li>Let <var>origin</var> be <var>preconnect URL</var>'s <a href="https://url.spec.whatwg.org/#concept-url-origin">origin</a>.</li>
+        <li>Let <var>corsAttributeState</var> be the current state of the element's <a href="https://html.spec.whatwg.org/multipage/infrastructure.html#cors-settings-attributes"><code>crossorigin</code></a> content attribute.</li>
+        <li>Let <var>credentials</var> be a boolean value set to <code>true</code>.
+        </li><li>If <var>corsAttributeState</var> is <code>Anonymous</code> and <var>origin</var> is not equal to <a href="https://html.spec.whatwg.org/multipage/browsers.html#origin-2">current Document's origin</a>, set <var>credentials</var> to <code>false</code>.</li>
+        <li>Attempt to <a href="https://fetch.spec.whatwg.org/#concept-connection-obtain">obtain connection</a> with <var>origin</var> and <var>credentials</var>.</li>
+      </ol>
+
+      <p>The user agent <em class="rfc2119">SHOULD</em> attempt to <a href="#dfn-initiate-a-preconnect" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-initiate-a-preconnect-1">initiate a preconnect</a> and perform the full connection handshake (DNS+TCP for HTTP, and DNS+TCP+TLS for HTTPS origins) whenever possible, but is allowed to elect to perform a partial handshake (DNS only for HTTP, and DNS or DNS+TCP for HTTPS origins), or skip it entirely, due to resource constraints or other reasons.</p>
+
+      <p>The optimal number of connections per origin is dependent on the negotiated protocol, users current connectivity profile, available device resources, global connection limits, and other context specific variables. As a result, the decision for how many connections should be opened is deferred to the user agent.</p>
+    </section>
+
+    <section id="prefetch">
+      <h3 id="x2-3-prefetch"><bdi class="secno">2.3 </bdi>Prefetch<a class="self-link" aria-label="§" href="#prefetch"></a></h3>
+
+      <p>The <code><dfn id="dfn-prefetch">prefetch</dfn></code> link relation type is used to identify a resource that might be required by the next navigation, and that the user agent <em class="rfc2119">SHOULD</em> fetch, such that the user agent can deliver a faster response once the resource is requested in the future.</p>
+
+      <div class="example" id="example-3">
+        <div class="marker">
+    <a class="self-link" href="#example-3">Example<bdi> 3</bdi></a>
+  </div> <pre aria-busy="false"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"prefetch"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"//example.com/next-page.html"</span> <span class="hljs-attr">as</span>=<span class="hljs-string">"document"</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">"use-credentials"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"prefetch"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/library.js"</span> <span class="hljs-attr">as</span>=<span class="hljs-string">"script"</span>&gt;</span></code></pre>
+      </div>
+
+      <ul>
+        <li>The user agent <em class="rfc2119">SHOULD NOT</em> apply preprocessing on the response and <em class="rfc2119">MUST NOT</em> automatically execute or apply it against the current page context.</li>
+        <li>The <code>as</code> attribute is an <em class="rfc2119">OPTIONAL</em> attribute that must conform to requirements defined in [<cite><a class="bibref" data-link-type="biblio" href="#bib-preload" title="Preload">PRELOAD</a></cite>].</li>
+        <li>The <code>crossorigin</code> <a href="https://html.spec.whatwg.org/multipage/infrastructure.html#cors-settings-attributes">CORS setting attribute</a> is an <em class="rfc2119">OPTIONAL</em> attribute that indicates the CORS policy of the specified resource.</li>
+      </ul>
+
+      <div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="4"><span>Note</span></div><div class="">
+        The <code>as</code> attribute can be used by the application to communicate the resource destination context, such that the user agent can optimize the fetching process - e.g. set appropriate request headers, transport priority, and so on.
+      </div></div>
+    </section>
+
+    <section id="prerender">
+      <h3 id="x2-4-prerender"><bdi class="secno">2.4 </bdi>Prerender<a class="self-link" aria-label="§" href="#prerender"></a></h3>
+
+      <p>The <code><dfn id="dfn-prerender">prerender</dfn></code> link relation type is used to identify a resource that might be required by the next navigation, and that the user agent <em class="rfc2119">SHOULD</em> fetch and execute, such that the user agent can deliver a faster response once the resource is requested in the future.</p>
+
+      <div class="example" id="example-4">
+        <div class="marker">
+    <a class="self-link" href="#example-4">Example<bdi> 4</bdi></a>
+  </div> <pre aria-busy="false"><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"prerender"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"//example.com/next-page.html"</span>&gt;</span></code></pre>
+      </div>
+
+      <p>The user agent <em class="rfc2119">MAY</em> preprocess the HTML response by also fetching the necessary subresources and executing them (i.e. prerender the page). The decision for which prerendering steps are performed is deferred to the user agent. The user agent <em class="rfc2119">MAY</em>:</p>
+
+      <ul>
+        <li>Allocate fewer CPU, GPU, or memory resources to prerendered content.</li>
+        <li>Delay some requests until the requested HTML resource is made visible - e.g. media downloads, plugin content, and so on.</li>
+        <li>Prevent prerendering from being initiated when there are limited resources available.</li>
+        <li>Abandon prerendering due to high cost or resource requirements - e.g. high CPU or memory usage, expensive data access, and so on.</li>
+        <li>Abandon prerendering due to the type or properties of the fetched content:
+        <ul>
+          <li>If the target exhibits non-idempotent behavior: mutations to shared local storage, <code>XMLHttpRequest</code> with a verb other than GET, HEAD, or OPTION, and so on.</li>
+          <li>If the target triggers a condition that requires user input: confirmation dialogs, authentication prompts, alerts, and so on.</li>
+        </ul>
+        </li>
+        <li>The above processing strategies are not an exhaustive list. The user agent may implement other strategies.</li>
+      </ul>
+
+      <p>When prerendering a <a href="https://www.w3.org/TR/html5/dom.html#document">document</a> the user agent <em class="rfc2119">MUST</em> set the <a href="https://www.w3.org/TR/html5/dom.html#document">document</a>'s <a href="http://w3c.github.io/page-visibility/#visibilitystate-attribute">visibilityState</a> ([<cite><a class="bibref" data-link-type="biblio" href="#bib-page-visibility" title="Page Visibility (Second Edition)">PAGE-VISIBILITY</a></cite>]) value to <code>prerender</code>.</p>
+
+      <div class="note" role="note" id="issue-container-generatedID-0"><div role="heading" class="note-title marker" id="h-note-0" aria-level="4"><span>Note</span></div><div class="">
+        The <a href="#dfn-prerender" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-prerender-5"><code>prerender</code></a> hint can be used by the application to indicate the next likely HTML navigation target: the user agent will fetch and process the specified resource as an HTML response. To fetch other content-types with appropriate request headers, or if HTML preprocessing is not desired, the application can use the <a href="#dfn-prefetch" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-prefetch-5"><code>prefetch</code></a> hint.
+      </div></div>
+
+      <div class="note" role="note" id="issue-container-generatedID-1"><div role="heading" class="note-title marker" id="h-note-1" aria-level="4"><span>Note</span></div><div class="">
+        To ensure compatibility and improve the success rate of prerendering requests the target page can use the Page Visibility API to determine the visibility state of the page as it is being rendered and implement appropriate logic to avoid actions that may cause the prerender to be abandoned (e.g. non-idempotent requests), or unwanted side-effects from being triggered (e.g. analytics beacons firing prior to the page being displayed).
+      </div></div>
+    </section>
+  </section>
+
+  <section id="process">
+    <h2 id="x3-process"><bdi class="secno">3. </bdi>Process<a class="self-link" aria-label="§" href="#process"></a></h2>
+    <section id="fetching-the-resource-hint-link">
+      <h3 id="x3-1-fetching-the-resource-hint-link"><bdi class="secno">3.1 </bdi>Fetching the resource hint link<a class="self-link" aria-label="§" href="#fetching-the-resource-hint-link"></a></h3>
+      <p>The <a href="#dfn-resource-hint-link" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-resource-hint-link-1">resource hint link</a>'s may be specified in the document markup, <em class="rfc2119">MAY</em> be provided via the HTTP <code>Link</code> header, and <em class="rfc2119">MAY</em> be dynamically added to and removed from the document.</p>
+
+      <div class="example" id="example-5">
+        <div class="marker">
+    <a class="self-link" href="#example-5">Example<bdi> 5</bdi></a>
+  </div> <pre class="nohighlight nolinks">Link: &lt;https://widget.com&gt;; rel=dns-prefetch
+Link: &lt;https://example.com&gt;; rel=preconnect
+Link: &lt;https://example.com/next-page.html&gt;; rel=prerender;
+Link: &lt;https://example.com/logo-hires.jpg&gt;; rel=prefetch; as=image;</pre>
+      </div>
+
+      <div class="example" id="example-6">
+        <div class="marker">
+    <a class="self-link" href="#example-6">Example<bdi> 6</bdi></a>
+  </div> <pre aria-busy="false"><code class="hljs js">&lt;link rel=<span class="hljs-string">"dns-prefetch"</span> href=<span class="hljs-string">"//widget.com"</span>&gt;
+&lt;link rel="preconnect" href="//cdn.example.com"&gt;
+&lt;link rel="prerender" href="//example.com/next-page.html"&gt;
+&lt;link rel="prefetch" href="//example.com/logo-hires.jpg" as="image"&gt;</code></pre>
+      </div>
+
+      <div class="example" id="example-7">
+        <div class="marker">
+    <a class="self-link" href="#example-7">Example<bdi> 7</bdi></a>
+  </div> <pre aria-busy="false"><code class="hljs js"><span class="hljs-keyword">var</span> hint = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"link"</span>);
+hint.rel = <span class="hljs-string">"prefetch"</span>;
+hint.as = <span class="hljs-string">"document"</span>;
+hint.href = <span class="hljs-string">"/article/part3.html"</span>;
+<span class="hljs-built_in">document</span>.head.appendChild(hint);</code></pre>
+      </div>
+
+      <p>The appropriate times to connect to a host, or <a href="https://www.w3.org/TR/html5/document-metadata.html#concept-link-obtain">obtain</a> the specified resource are:</p>
+
+      <ul>
+        <li>When the user agent that supports [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc5988" title="Web Linking">RFC5988</a></cite>] processes <a href="#dfn-resource-hint-link" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-resource-hint-link-2">resource hint link</a> specified via the <a href="http://tools.ietf.org/html/rfc5988">Link HTTP header</a>.</li>
+        <li>When the <a href="#dfn-resource-hint-link" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-resource-hint-link-3">resource hint link</a>'s <code>link</code> element is <a href="https://www.w3.org/TR/html5/infrastructure.html#insert-an-element-into-a-document">inserted into a document</a>.</li>
+        <li>When the <a href="#dfn-resource-hint-link" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-resource-hint-link-4">resource hint link</a> is created on a <code>link</code> element that is already <a href="https://www.w3.org/TR/html5/infrastructure.html#in-a-document">in a Document</a>.</li>
+        <li>When the <code>href</code> attribute of the <code>link</code> element of an <a href="#dfn-resource-hint-link" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-resource-hint-link-5">resource hint link</a> that is already <a href="https://www.w3.org/TR/html5/infrastructure.html#in-a-document">in a Document</a> is changed.
+        </li>
+      </ul>
+
+      <p>The user agent <em class="rfc2119">MAY</em> delay the fetch of <a href="#dfn-speculative-fetch" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-speculative-fetch-1">speculative fetch</a> to minimize resource contention for the current navigation context.</p>
+
+      <p>The decision to cancel a <code><a href="#dfn-preconnect" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-preconnect-4"><code>preconnect</code></a></code> or <code><a href="#dfn-speculative-fetch" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-speculative-fetch-2">speculative fetch</a></code> is deferred to the user agent, which <em class="rfc2119">MAY</em> use local context and other signals to determine if and when the optimization should be aborted:</p><p>
+
+      </p><ul>
+        <li>The user agent <em class="rfc2119">SHOULD</em> abort the request if the <code>href</code> attribute on the <code>link</code> element of an <a href="#dfn-resource-hint-link" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-resource-hint-link-6">resource hint link</a> is removed, or its value is set to an empty string.</li>
+        <li>The user agent <em class="rfc2119">SHOULD</em> allow the requests initiated via the <a href="#dfn-resource-hint-link" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-resource-hint-link-7">resource hint link</a> to continue across navigations. However, the user agent <em class="rfc2119">MAY</em> cancel these requests once it determines that they are not required by the new destination - see <a href="#reactive-resource-prefetching-prefetch" class="sec-ref">§&nbsp;<bdi class="secno">4.4 </bdi>Reactive resource prefetching (prefetch)</a>.<p></p></li>
+      </ul>
+
+      <p>Resource fetches that may be required for the next navigation can negatively impact the performance of the current navigation context due to additional contention for the CPU, GPU, memory, and network resources. To address this, the user agent <em class="rfc2119">SHOULD</em> implement logic to reduce and eliminate such contention:</p>
+
+      <ul>
+        <li>Resource fetches required for the next navigation <em class="rfc2119">SHOULD</em> have lower relative priority and <em class="rfc2119">SHOULD NOT</em> block or interfere with resource fetches required by the current navigation context.</li>
+
+        <li>The optimal time to initiate a resource fetch required for the next navigation is dependent on the negotiated transport protocol, users current connectivity profile, available device resources, and other context specific variables. The user agent is left to determine the optimal time at which to initiate the fetch - e.g. the user agent <em class="rfc2119">MAY</em> decide to wait until all other downloads are finished, or <em class="rfc2119">MAY</em> choose to pipeline requests with low priority if the negotiated protocol supports the necessary primitives. Alternatively, the user agent <em class="rfc2119">MAY</em> opt-out from initiating the fetch due to resource constraints, user preferences, or other factors.</li>
+      </ul>
+    </section>
+
+    <section id="load-and-error-events">
+      <h3 id="x3-2-load-and-error-events"><bdi class="secno">3.2 </bdi>Load and error events<a class="self-link" aria-label="§" href="#load-and-error-events"></a></h3>
+
+      <p>The user agent <em class="rfc2119">MUST NOT</em> <a href="https://html.spec.whatwg.org/#delay-the-load-event">delay the <code>load</code> event</a> of the document due to outstanding <code><a href="#dfn-preconnect" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-preconnect-5"><code>preconnect</code></a></code> or <code><a href="#dfn-speculative-fetch" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-speculative-fetch-3">speculative fetch</a></code> initiated requests.</p>
+
+      <p>The decision on whether a resource hint is executed, and if so, whether full or partial processing is applied is deferred to the user agent. As a result, element-level <code>load</code> and <code>error</code> JavaScripts events are not guaranteed to fire, and if they do, do not guarantee that full processing was applied. However, the user agent <em class="rfc2119">SHOULD</em> fire the appropriate <code>load</code> and <code>error</code> events when possible, to allow the application to track which hints were executed and when.</p>
+    </section>
+  </section>
+
+  <section id="use-cases">
+    <h2 id="x4-use-cases"><bdi class="secno">4. </bdi>Use cases<a class="self-link" aria-label="§" href="#use-cases"></a></h2>
+
+    <section id="dynamic-request-url-preconnect">
+      <h3 id="x4-1-dynamic-request-url-preconnect"><bdi class="secno">4.1 </bdi>Dynamic request URL (preconnect)<a class="self-link" aria-label="§" href="#dynamic-request-url-preconnect"></a></h3>
+      <p>The full resource URL may not be known until the page is being constructed by the user agent - e.g. conditional loading logic, UA adaptation, etc. However, the origin from which one or more of these resources will be fetched is often known ahead of time by the developer or the server generating the response. In such cases, a <a data-lt="preconnect" href="#dfn-preconnect" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-preconnect-6"><code>preconnect hint</code></a> can be used to initiate an early connection handshake such that when the resource URL is determined, the user agent can dispatch the request without first blocking on connection negotiation.</p>
+    </section>
+
+    <section id="anonymizing-redirect-preconnect">
+      <h3 id="x4-2-anonymizing-redirect-preconnect"><bdi class="secno">4.2 </bdi>Anonymizing redirect (preconnect)<a class="self-link" aria-label="§" href="#anonymizing-redirect-preconnect"></a></h3>
+      <p>Many sites rely on redirect services for analytics, malware protection, and to <a href="https://www.facebook.com/notes/facebook-engineering/protecting-privacy-with-referrers/392382738919">anonymize the referrer</a> before sending the user to the final destination. Because the destination is known ahead of time, a <a data-lt="preconnect" href="#dfn-preconnect" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-preconnect-7"><code>preconnect hint</code></a> can be used to initiate the connection handshake with the destination origin (without revealing any private information) in parallel with the processing of the redirect - this masks the redirect latency and reduces navigation time to final destination.</p>
+    </section>
+
+    <section id="speculative-resource-prefetching-prefetch">
+      <h3 id="x4-3-speculative-resource-prefetching-prefetch"><bdi class="secno">4.3 </bdi>Speculative resource prefetching (prefetch)<a class="self-link" aria-label="§" href="#speculative-resource-prefetching-prefetch"></a></h3>
+      <p>The <a href="#dfn-prefetch" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-prefetch-6"><code>prefetch</code></a> hint can be used to implement a prefetch strategy that leverages app-specific knowledge about the next navigation based on content, structure, analytics, or other signals - e.g. high-likelihood search results, paginated content or step-driven flows, aggregated analytics or per-user behavior, and so on.</p>
+
+      <p>For example, an image gallery may have knowledge about the likelihood of the next photo or page that may be requested by the user. To provide an improved experience the application can ask the user agent to begin fetching required resources (individual photos, critical resources, or the full page) before the next navigation is triggered.</p>
+
+      <p>To achieve the above behavior the application can specify one or more <a href="#dfn-prefetch" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-prefetch-7"><code>prefetch</code></a> relations of each resource being used.</p>
+    </section>
+
+    <section id="reactive-resource-prefetching-prefetch">
+      <h3 id="x4-4-reactive-resource-prefetching-prefetch"><bdi class="secno">4.4 </bdi>Reactive resource prefetching (prefetch)<a class="self-link" aria-label="§" href="#reactive-resource-prefetching-prefetch"></a></h3>
+      <p>The <a href="#dfn-prefetch" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-prefetch-8"><code>prefetch</code></a> can be used to implement a "reactive prefetch strategy" that leverages the knowledge of where the user is heading next and enables the application to begin prefetching critical resources in parallel with the navigation request.</p>
+
+      <p>To achieve the above behavior the application can listen for click, or other user and application generated events, and dynamically insert relevant <a href="#dfn-prefetch" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-prefetch-9"><code>prefetch</code></a> relations for critical resources required by the next navigation. In turn, the user agent can fetch the hinted resources in parallel with the navigation request, making the critical resources available sooner.</p>
+
+      <p>The enabling feature of this strategy is that requests initiated via <a href="#dfn-prefetch" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-prefetch-10"><code>prefetch</code></a> relation may be allowed to persist across navigations.</p>
+    </section>
+
+    <section id="prerendering-prerender">
+      <h3 id="x4-5-prerendering-prerender"><bdi class="secno">4.5 </bdi>Prerendering (prerender)<a class="self-link" aria-label="§" href="#prerendering-prerender"></a></h3>
+      <p>The <a href="#dfn-prerender" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-prerender-6"><code>prerender</code></a> hint can be used to prerender the destination page, enabling an instant navigation experience once the user triggers the navigation.</p>
+
+      <p>To deliver an instant navigation experience the application can specify one or more <a href="#dfn-prerender" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-prerender-7"><code>prerender</code></a> relations, each of which points to a destination page (an HTML resource). In turn, the user agent may fetch and process the HTML document, fetch its subresources, and perform other work to deliver an instant navigation - i.e. "prerender" the page.</p>
+    </section>
+  </section>
+
+  <section id="security-and-privacy">
+    <h2 id="x5-security-and-privacy"><bdi class="secno">5. </bdi>Security and Privacy<a class="self-link" aria-label="§" href="#security-and-privacy"></a></h2>
+
+    <p>The use of <a href="#dfn-resource-hint-link" id="ref-for-dfn-resource-hint-link-8">resource hints</a> can provide new means to expose information about both the current page and user's activity on it. For example, observing the content of prefetched or prerendered resources, or observing the DNS, IP, and hostname information exposed during connection establishment, both for secure and plain-text connections, can reveal information about the page initiating such requests, and where dynamic resource hints are used, user's activity on it.</p>
+
+    <p>To mitigate some of the above risks, the user agent <em class="rfc2119">MUST</em>:</p>
+
+    <ul>
+      <li>Treat <a href="#dfn-resource-hint-link" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-resource-hint-link-9">resource hint link</a>'s as <a href="https://w3c.github.io/webappsec-mixed-content/#category-optionally-blockable">Optionally-blockable Content</a>, as defined by [<cite><a class="bibref" data-link-type="biblio" href="#bib-mixed-content" title="Mixed Content">MIXED-CONTENT</a></cite>].</li>
+      <li>Apply relevant <a href="https://w3c.github.io/webappsec/specs/CSP2/#complications">Processing Complications recommendations</a> for optimistic resource fetching, as defined by [<cite><a class="bibref" data-link-type="biblio" href="#bib-csp3" title="Content Security Policy Level 3">CSP3</a></cite>].</li>
+      <li>Apply relevant Referrer policy restrictions for <a href="#dfn-resource-hint-link" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-resource-hint-link-10">resource hint link</a>'s, as defined by [<cite><a class="bibref" data-link-type="biblio" href="#bib-referrer-policy" title="Referrer Policy">REFERRER-POLICY</a></cite>].</li>
+    </ul>
+
+    <p>Additionally, the user agent <em class="rfc2119">MAY</em> provide user setting to control the use of <a href="#dfn-resource-hint-link" id="ref-for-dfn-resource-hint-link-11">resource hints</a>.</p>
+
+    <p>The site author <em class="rfc2119">SHOULD</em> take necessary precautions to specify the relevant [<cite><a class="bibref" data-link-type="biblio" href="#bib-mixed-content" title="Mixed Content">MIXED-CONTENT</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-csp3" title="Content Security Policy Level 3">CSP3</a></cite>], and [<cite><a class="bibref" data-link-type="biblio" href="#bib-referrer-policy" title="Referrer Policy">REFERRER-POLICY</a></cite>] policies to allow the user agent to register and apply them prior to processing a <a href="#dfn-resource-hint-link" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-resource-hint-link-12">resource hint link</a>:</p>
+
+    <ul>
+      <li>If <a href="#dfn-resource-hint-link" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-resource-hint-link-13">resource hint link</a> is provided via HTML markup, then the relevant <code>&lt;meta&gt;</code> policies <em class="rfc2119">SHOULD</em> be declared ahead of them - e.g. <a href="https://www.w3.org/TR/CSP2/#delivery-html-meta-element">see <code>&lt;meta&gt;</code> recommendations</a> for CSP.</li>
+      <li>If <a href="#dfn-resource-hint-link" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-resource-hint-link-14">resource hint link</a> is provided via the <code>Link</code> HTTP response header, then the relevant policies should also be delivered as an HTTP response header - e.g. see <a href="https://w3c.github.io/webappsec/specs/content-security-policy/#complications">Processing Complications</a> for CSP.</li>
+    </ul>
+  </section>
+
+  <section id="conformance"><h2 id="x6-conformance"><bdi class="secno">6. </bdi>Conformance<a class="self-link" aria-label="§" href="#conformance"></a></h2><p>As well as sections marked as non-normative, all authoring guidelines, diagrams, examples, and notes in this specification are non-normative. Everything else in this specification is normative.</p><p>
+        The key words <em class="rfc2119">MAY</em>, <em class="rfc2119">MUST</em>, <em class="rfc2119">MUST NOT</em>, <em class="rfc2119">OPTIONAL</em>, <em class="rfc2119">SHOULD</em>, and <em class="rfc2119">SHOULD NOT</em> in this document
+        are to be interpreted as described in
+        <a href="https://tools.ietf.org/html/bcp14">BCP 14</a>
+        [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc2119" title="Key words for use in RFCs to Indicate Requirement Levels">RFC2119</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8174" title="Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words">RFC8174</a></cite>]
+        when, and only when, they appear in all capitals, as shown here.
+      </p>
+    <p>There is only one class of product that can claim conformance to this specification: a <dfn id="dfn-user-agent">user agent</dfn>.</p>
+  </section>
+
+  <section id="iana-considerations">
+    <h2 id="x7-iana-considerations"><bdi class="secno">7. </bdi>IANA Considerations<a class="self-link" aria-label="§" href="#iana-considerations"></a></h2>
+    <p>The link relation types below have been registered by IANA per Section 6.2.1 of [<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc5988" title="Web Linking">RFC5988</a></cite>]:</p>
+
+    <section id="dns-prefetch-link-relation-type">
+      <h3 id="x7-1-dns-prefetch-link-relation-type"><bdi class="secno">7.1 </bdi>dns-prefetch Link Relation Type<a class="self-link" aria-label="§" href="#dns-prefetch-link-relation-type"></a></h3>
+      <dl>
+        <dt>Relation Name:</dt>
+        <dd>dns-prefetch</dd>
+        <dt>Description:</dt>
+        <dd>Used to indicate an origin that will be used to fetch required resources for the link context, and that the user agent ought to resolve as early as possible.</dd>
+        <dt>Reference:</dt>
+        <dd><a href="https://www.w3.org/TR/resource-hints/"><abbr title="World Wide Web Consortium">W3C</abbr> Resource Hints Specification (https://www.w3.org/TR/resource-hints/)</a></dd>
+      </dl>
+    </section>
+
+    <section id="preconnect-link-relation-type">
+      <h3 id="x7-2-preconnect-link-relation-type"><bdi class="secno">7.2 </bdi>preconnect Link Relation Type<a class="self-link" aria-label="§" href="#preconnect-link-relation-type"></a></h3>
+      <dl>
+        <dt>Relation Name:</dt>
+        <dd>preconnect</dd>
+        <dt>Description:</dt>
+        <dd>Used to indicate an origin that will be used to fetch required resources for the link context. Initiating an early connection, which includes the DNS lookup, TCP handshake, and optional TLS negotiation, allows the user agent to mask the high latency costs of establishing a connection.</dd>
+        <dt>Reference:</dt>
+        <dd><a href="https://www.w3.org/TR/resource-hints/"><abbr title="World Wide Web Consortium">W3C</abbr> Resource Hints Specification (https://www.w3.org/TR/resource-hints/)</a></dd>
+      </dl>
+    </section>
+
+    <section id="prefetch-link-relation-type">
+      <h3 id="x7-3-prefetch-link-relation-type"><bdi class="secno">7.3 </bdi>prefetch Link Relation Type<a class="self-link" aria-label="§" href="#prefetch-link-relation-type"></a></h3>
+      <dl>
+        <dt>Relation Name:</dt>
+        <dd>prefetch</dd>
+        <dt>Description:</dt>
+        <dd>The prefetch link relation type is used to identify a resource that might be required by the next navigation from the link context, and that the user agent ought to fetch, such that the user agent can deliver a faster response once the resource is requested in the future.</dd>
+        <dt>Reference:</dt>
+        <dd><a href="https://www.w3.org/TR/resource-hints/"><abbr title="World Wide Web Consortium">W3C</abbr> Resource Hints Specification (https://www.w3.org/TR/resource-hints/)</a></dd>
+      </dl>
+    </section>
+
+    <section id="prerender-link-relation-type">
+      <h3 id="x7-4-prerender-link-relation-type"><bdi class="secno">7.4 </bdi>prerender Link Relation Type<a class="self-link" aria-label="§" href="#prerender-link-relation-type"></a></h3>
+      <dl>
+        <dt>Relation Name:</dt>
+        <dd>prerender</dd>
+        <dt>Description:</dt>
+        <dd>Used to identify a resource that might be required by the next navigation from the link context, and that the user agent ought to fetch and execute, such that the user agent can deliver a faster response once the resource is requested in the future.</dd>
+        <dt>Reference:</dt>
+        <dd><a href="https://www.w3.org/TR/resource-hints/"><abbr title="World Wide Web Consortium">W3C</abbr> Resource Hints Specification (https://www.w3.org/TR/resource-hints/)</a></dd>
+      </dl>
+    </section>
+
+  </section>
+
+  <section class="appendix" id="acknowledgments">
+    <h2 id="a-acknowledgments"><bdi class="secno">A. </bdi>Acknowledgments<a class="self-link" aria-label="§" href="#acknowledgments"></a></h2>
+    <p>This document reuses text from the [<cite><a class="bibref" data-link-type="biblio" href="#bib-html" title="HTML Standard">HTML</a></cite>] specification, edited by Ian Hickson, as permitted by the license of that specification.</p>
+  </section>
+
+
+
+<section id="references" class="appendix"><h2 id="b-references"><bdi class="secno">B. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="normative-references">
+    <h3 id="b-1-normative-references"><bdi class="secno">B.1 </bdi>Normative references<a class="self-link" aria-label="§" href="#normative-references"></a></h3>
+    <dl class="bibliography"><dt id="bib-csp3">[CSP3]</dt><dd><a href="https://www.w3.org/TR/CSP3/"><cite>Content Security Policy Level 3</cite></a>. Mike West.  W3C. 15 October 2018. W3C Working Draft. URL: <a href="https://www.w3.org/TR/CSP3/">https://www.w3.org/TR/CSP3/</a></dd><dt id="bib-html">[HTML]</dt><dd><a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></dd><dt id="bib-mixed-content">[MIXED-CONTENT]</dt><dd><a href="https://www.w3.org/TR/mixed-content/"><cite>Mixed Content</cite></a>. Mike West.  W3C. 2 August 2016. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/mixed-content/">https://www.w3.org/TR/mixed-content/</a></dd><dt id="bib-page-visibility">[PAGE-VISIBILITY]</dt><dd><a href="https://www.w3.org/TR/page-visibility/"><cite>Page Visibility (Second Edition)</cite></a>. Jatinder Mann; Arvind Jain.  W3C. 29 October 2013. W3C Recommendation. URL: <a href="https://www.w3.org/TR/page-visibility/">https://www.w3.org/TR/page-visibility/</a></dd><dt id="bib-preload">[PRELOAD]</dt><dd><a href="https://www.w3.org/TR/preload/"><cite>Preload</cite></a>. Ilya Grigorik; Yoav Weiss.  W3C. 26 June 2019. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/preload/">https://www.w3.org/TR/preload/</a></dd><dt id="bib-referrer-policy">[REFERRER-POLICY]</dt><dd><a href="https://www.w3.org/TR/referrer-policy/"><cite>Referrer Policy</cite></a>. Jochen Eisinger; Emily Stark.  W3C. 26 January 2017. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/referrer-policy/">https://www.w3.org/TR/referrer-policy/</a></dd><dt id="bib-rfc2119">[RFC2119]</dt><dd><a href="https://tools.ietf.org/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner.  IETF. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a></dd><dt id="bib-rfc5988">[RFC5988]</dt><dd><a href="https://tools.ietf.org/html/rfc5988"><cite>Web Linking</cite></a>. M. Nottingham.  IETF. October 2010. Proposed Standard. URL: <a href="https://tools.ietf.org/html/rfc5988">https://tools.ietf.org/html/rfc5988</a></dd><dt id="bib-rfc8174">[RFC8174]</dt><dd><a href="https://tools.ietf.org/html/rfc8174"><cite>Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words</cite></a>. B. Leiba.  IETF. May 2017. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc8174">https://tools.ietf.org/html/rfc8174</a></dd></dl>
+  </section></section><p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-resource-hint-link">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-resource-hint-link">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-resource-hint-link-1">3.1 Fetching the resource hint link</a> <a href="#ref-for-dfn-resource-hint-link-2">(2)</a> <a href="#ref-for-dfn-resource-hint-link-3">(3)</a> <a href="#ref-for-dfn-resource-hint-link-4">(4)</a> <a href="#ref-for-dfn-resource-hint-link-5">(5)</a> <a href="#ref-for-dfn-resource-hint-link-6">(6)</a> <a href="#ref-for-dfn-resource-hint-link-7">(7)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-resource-hint-link-8">5. Security and Privacy</a> <a href="#ref-for-dfn-resource-hint-link-9">(2)</a> <a href="#ref-for-dfn-resource-hint-link-10">(3)</a> <a href="#ref-for-dfn-resource-hint-link-11">(4)</a> <a href="#ref-for-dfn-resource-hint-link-12">(5)</a> <a href="#ref-for-dfn-resource-hint-link-13">(6)</a> <a href="#ref-for-dfn-resource-hint-link-14">(7)</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-speculative-fetch">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-speculative-fetch">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-speculative-fetch-1">3.1 Fetching the resource hint link</a> <a href="#ref-for-dfn-speculative-fetch-2">(2)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-speculative-fetch-3">3.2 Load and error events</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-dns-prefetch">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-dns-prefetch">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-dns-prefetch-1">Abstract</a> 
+  </li><li>
+    <a href="#ref-for-dfn-dns-prefetch-2">1. Introduction</a> 
+  </li><li>
+    <a href="#ref-for-dfn-dns-prefetch-3">2. Resource Hints</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-preconnect">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-preconnect">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-preconnect-1">Abstract</a> 
+  </li><li>
+    <a href="#ref-for-dfn-preconnect-2">1. Introduction</a> 
+  </li><li>
+    <a href="#ref-for-dfn-preconnect-3">2. Resource Hints</a> 
+  </li><li>
+    <a href="#ref-for-dfn-preconnect-4">3.1 Fetching the resource hint link</a> 
+  </li><li>
+    <a href="#ref-for-dfn-preconnect-5">3.2 Load and error events</a> 
+  </li><li>
+    <a href="#ref-for-dfn-preconnect-6">4.1 Dynamic request URL (preconnect)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-preconnect-7">4.2 Anonymizing redirect (preconnect)</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-initiate-a-preconnect">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-initiate-a-preconnect">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-initiate-a-preconnect-1">2.2 Preconnect</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-prefetch">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-prefetch">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-prefetch-1">Abstract</a> 
+  </li><li>
+    <a href="#ref-for-dfn-prefetch-2">1. Introduction</a> 
+  </li><li>
+    <a href="#ref-for-dfn-prefetch-3">2. Resource Hints</a> <a href="#ref-for-dfn-prefetch-4">(2)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-prefetch-5">2.4 Prerender</a> 
+  </li><li>
+    <a href="#ref-for-dfn-prefetch-6">4.3 Speculative resource prefetching (prefetch)</a> <a href="#ref-for-dfn-prefetch-7">(2)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-prefetch-8">4.4 Reactive resource prefetching (prefetch)</a> <a href="#ref-for-dfn-prefetch-9">(2)</a> <a href="#ref-for-dfn-prefetch-10">(3)</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-prerender">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-prerender">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+    <li>
+    <a href="#ref-for-dfn-prerender-1">Abstract</a> 
+  </li><li>
+    <a href="#ref-for-dfn-prerender-2">1. Introduction</a> 
+  </li><li>
+    <a href="#ref-for-dfn-prerender-3">2. Resource Hints</a> <a href="#ref-for-dfn-prerender-4">(2)</a> 
+  </li><li>
+    <a href="#ref-for-dfn-prerender-5">2.4 Prerender</a> 
+  </li><li>
+    <a href="#ref-for-dfn-prerender-6">4.5 Prerendering (prerender)</a> <a href="#ref-for-dfn-prerender-7">(2)</a> 
+  </li>
+  </ul>
+    </aside><aside class="dfn-panel" hidden="" id="dfn-panel-for-dfn-user-agent">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-user-agent">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respecIsReady) {
+  document.respecIsReady.then(dfnPanel);
+} else {
+  dfnPanel();
+}
+
+function dfnPanel() {
+  /** @type {HTMLElement} */
+  let panel;
+  document.body.addEventListener("click", event => {
+    if (!(event.target instanceof HTMLElement)) return;
+
+    /** @type {HTMLElement} */
+    const el = event.target;
+
+    const action = deriveAction(el);
+    switch (action) {
+      case "show": {
+        if (panel) hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = el.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        displayPanel(dfn, panel, { x: event.clientX, y: event.clientY });
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        break;
+      }
+    }
+  });
+}
+
+/** @param {HTMLElement} clickTarget */
+function deriveAction(clickTarget) {
+  const hitALink = !!clickTarget.closest("a");
+  if (clickTarget.closest("dfn, .index-term")) {
+    return hitALink ? null : "show";
+  }
+  if (clickTarget.closest(".dfn-panel")) {
+    if (hitALink) {
+      const clickedSelfLink = clickTarget.classList.contains("self-link");
+      return clickedSelfLink ? "hide" : "dock";
+    }
+    const panel = clickTarget.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : null;
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return null;
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>

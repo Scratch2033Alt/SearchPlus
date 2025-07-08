@@ -1,0 +1,47 @@
+/* tentative style for wikis.world; mainly based on https://userstyles.world/style/7548/mastodon-alt-text-indicator */
+
+/* highlight media without alt text in posts */
+:is(
+  .status,
+  .detailed-status
+) :is(
+  .audio-player__canvas,
+  .media-gallery__item-gifv-thumbnail:not(:fullscreen),
+  .media-gallery__item-thumbnail img,
+  .video-player:not(.fullscreen) video
+):is(
+  :not([title]),
+  [title=""]
+) {
+    /* add a border (outline would avoid affecting layout but isn’t visible, idk why) */
+    border: #ac6600 dashed 2px; /* Yellow30 */
+    /* reduce the impact of the border on the layout */
+    box-sizing: border-box;
+}
+
+/* ensure the whole border is visible in multi-image galleries */
+.media-gallery {
+    overflow: visible;
+}
+
+/* https://github.com/mastodon/mastodon/pull/32361 */
+.column {
+    width: clamp(380px, calc((100% - 350px) / 4), 400px);
+}
+
+.user-role-3 {
+  --user-role-accent: #e01b24;
+}
+
+.user-role-1 {
+  --user-role-accent: #2ec27e;
+}
+
+.user-role-4 {
+  --user-role-accent: #000000;
+}
+
+.user-role-2 {
+  --user-role-accent: #000000;
+}
+
