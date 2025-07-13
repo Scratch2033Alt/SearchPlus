@@ -34,7 +34,7 @@ def count_newlines(filepath):
         return "Error: File not found."
     except Exception as e:
         return f"An error occurred: {e}"
-TARGET_WEBSITES_LIMIT = count_newlines("seed.txt") + 2000
+TARGET_WEBSITES_LIMIT = count_newlines("seed.txt") + 856
 # Output control
 CRAWLED_PRINT_INTERVAL = 5 # Print crawled count every 5 pages
 CLEAR_OUTPUT_INTERVAL = 25 # Clear output every 25 crawled pages
